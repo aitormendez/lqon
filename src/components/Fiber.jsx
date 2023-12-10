@@ -12,9 +12,10 @@ const Scene = () => {
 
   return (
     <>
+      <directionalLight position={[1, 2, 3]} />
       <mesh ref={cubeRef} rotation-y={Math.PI * 0.25}>
         <boxGeometry />
-        <meshNormalMaterial />
+        <meshStandardMaterial color="orange" />
       </mesh>
       <CameraControls makeDefault />
     </>
