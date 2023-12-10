@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { CameraControls, Text } from "@react-three/drei";
+import { CameraControls, Text, Float } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import { ACESFilmicToneMapping } from "three";
 
@@ -21,7 +21,12 @@ const Scene = () => {
         <meshStandardMaterial color="orange" />
       </mesh>
 
-      <Text font="../fonts/CrimsonPro-Regular.woff" position-z={ 1 }>I LOVE R3F</Text>
+      <Float speed={2}>
+        <Text font="../fonts/CrimsonPro-Regular.woff" position-z={1}>
+          I LOVE R3F
+        </Text>
+      </Float>
+
       {/* <CameraControls makeDefault /> */}
     </>
   );
