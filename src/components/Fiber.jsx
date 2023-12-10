@@ -1,13 +1,18 @@
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { CameraControls } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 
 const Scene = () => {
-  const meshRef = useRef();
+  const cubeRef = useRef();
+
+  useFrame((state, delta) => {
+    cubeRef.current.rotation.y += delta;
+    cubeRef.current.rotation.x += delta;
+  });
 
   return (
     <>
-      <mesh ref={meshRef}>
+      <mesh ref={cubeRef} rotation-y={Math.PI * 0.25}>
         <boxGeometry />
         <meshNormalMaterial />
       </mesh>
