@@ -8,6 +8,8 @@ const Scene = () => {
   useFrame((state, delta) => {
     cubeRef.current.rotation.y += delta;
     cubeRef.current.rotation.x += delta;
+    const angle = state.clock.elapsedTime;
+    state.camera.position.x = Math.sin(angle);
   });
 
   return (
@@ -17,7 +19,7 @@ const Scene = () => {
         <boxGeometry />
         <meshStandardMaterial color="orange" />
       </mesh>
-      <CameraControls makeDefault />
+      {/* <CameraControls makeDefault /> */}
     </>
   );
 };
