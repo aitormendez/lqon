@@ -1,6 +1,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { CameraControls } from "@react-three/drei";
+import { CameraControls, Text } from "@react-three/drei";
 import { useEffect, useRef } from "react";
+import { ACESFilmicToneMapping } from "three";
 
 const Scene = () => {
   const cubeRef = useRef();
@@ -19,6 +20,8 @@ const Scene = () => {
         <boxGeometry />
         <meshStandardMaterial color="orange" />
       </mesh>
+
+      <Text font="../fonts/CrimsonPro-Regular.woff" position-z={ 1 }>I LOVE R3F</Text>
       {/* <CameraControls makeDefault /> */}
     </>
   );
@@ -27,6 +30,10 @@ const Scene = () => {
 export const Fiber = () => {
   return (
     <Canvas
+      gl={{
+        antialias: true,
+        toneMapping: ACESFilmicToneMapping,
+      }}
       camera={{ position: [0, 0, 5], fov: 45 }}
       style={{ height: "100%" }}
     >
