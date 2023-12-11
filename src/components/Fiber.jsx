@@ -3,21 +3,22 @@ import { CameraControls, Text, Float } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import { ACESFilmicToneMapping, Euler } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import Torno from "./torno";
 
 const Scene = () => {
   const tornoTorno01 = useRef();
   const tornoCuerpo01 = useRef();
 
-  useEffect(() => {
-    console.log(tornoTorno01);
-    tornoTorno01.current.rotation.z = 2.36;
-    // tornoTorno01.current.rotation.x = 1;
-  }, []);
+//   useEffect(() => {
+//     console.log(tornoTorno01);
+//     tornoTorno01.current.rotation.z = 2.36;
+//     // tornoTorno01.current.rotation.x = 1;
+//   }, []);
 
-  useFrame((state, delta) => {
-    tornoTorno01.current.rotateY(delta);
-  });
-  0;
+//   useFrame((state, delta) => {
+//     tornoTorno01.current.rotateY(delta);
+//   });
+//   0;
 
   const tornoTorno = useLoader(GLTFLoader, "../models/torno-torno.glb");
   const tornoCuerpo = useLoader(GLTFLoader, "../models/torno-cuerpo.glb");
@@ -26,7 +27,8 @@ const Scene = () => {
     <>
       <directionalLight castShadow position={[-1, 2, -2]} intensity={10} />
 
-      <primitive
+
+      {/* <primitive
         castShadow
         receiveShadow
         ref={tornoTorno01}
@@ -40,13 +42,11 @@ const Scene = () => {
         ref={tornoCuerpo01}
         object={tornoCuerpo.scene}
         scale={0.5}
-      />
+      /> */}
 
-      <mesh
-        receiveShadow
-        rotation-x={-Math.PI * 0.5}
-        scale={100}
-      >
+      <Torno scale={0.5} />
+
+      <mesh receiveShadow rotation-x={-Math.PI * 0.5} scale={100}>
         <planeGeometry />
         <meshStandardMaterial color="white" />
       </mesh>
