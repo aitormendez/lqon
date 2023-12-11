@@ -5,8 +5,18 @@ import Fiber from "../components/Fiber.jsx";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <div class="h-screen">
+    <div id="escena" class="h-[100vw] bg-white">
       <Fiber client:load />
     </div>
   </main>
 </Layout>
+
+<!-- <script>
+	const myTimeout = setTimeout(myGreeting, 5000);
+	const escena = document.getElementById('escena');
+  
+	function myGreeting() {
+		escena.style.height = '50vh';
+	}
+</script>
+   -->

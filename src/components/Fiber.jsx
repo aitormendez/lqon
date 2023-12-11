@@ -1,33 +1,32 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { CameraControls, Text, Float } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import { ACESFilmicToneMapping } from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const Scene = () => {
-  const cubeRef = useRef();
+  const tornoTorno01 = useRef();
+
+  useEffect(() => {
+    console.log(tornoTorno01);
+    // tornoTorno01.current.rotation.z = 1;
+    tornoTorno01.current.rotation.x = 1;
+  }, []);
 
   useFrame((state, delta) => {
-    cubeRef.current.rotation.y += delta;
-    cubeRef.current.rotation.x += delta;
-    const angle = state.clock.elapsedTime;
-    state.camera.position.x = Math.sin(angle);
+    tornoTorno01.current.rotation.y += delta;
   });
+  0;
+
+  const tornoTorno = useLoader(GLTFLoader, "../models/torno-torno.glb");
 
   return (
     <>
       <directionalLight position={[1, 2, 3]} />
-      <mesh ref={cubeRef} rotation-y={Math.PI * 0.25}>
-        <boxGeometry />
-        <meshStandardMaterial color="orange" />
-      </mesh>
 
-      <Float speed={2}>
-        <Text font="../fonts/CrimsonPro-Regular.woff" position-z={1}>
-          I LOVE R3F
-        </Text>
-      </Float>
+      <primitive ref={tornoTorno01} object={tornoTorno.scene} scale={0.5} />
 
-      {/* <CameraControls makeDefault /> */}
+      <CameraControls makeDefault />
     </>
   );
 };
@@ -39,6 +38,7 @@ export const Fiber = () => {
         antialias: true,
         toneMapping: ACESFilmicToneMapping,
       }}
+      shadows
       camera={{ position: [0, 0, 5], fov: 45 }}
       style={{ height: "100%" }}
     >
