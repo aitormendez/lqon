@@ -46,6 +46,15 @@ export default function Model(props) {
         geometry={nodes.anden.geometry}
         material={materials["baked.suelo"]}
       />
+
+      <mesh position={[-250, 18, -14.8]} material={materials.negro}>
+        <boxGeometry args={[100, 60, 40]} />
+      </mesh>
+
+      <mesh position={[250, 18, -14.8]} material={materials.negro}>
+        <boxGeometry args={[100, 60, 40]} />
+      </mesh>
+
       <mesh
         geometry={nodes.pared.geometry}
         material={materials["baked.pared"]}
