@@ -42,10 +42,6 @@ export default function Model(props) {
     <group {...props} dispose={null}>
       {/* <Nombre /> */}
       {nombres}
-      <mesh
-        geometry={nodes.anden.geometry}
-        material={materials["baked.suelo"]}
-      />
 
       <mesh position={[-250, 18, -14.8]} material={materials.negro}>
         <boxGeometry args={[100, 60, 40]} />
@@ -54,64 +50,48 @@ export default function Model(props) {
       <mesh position={[250, 18, -14.8]} material={materials.negro}>
         <boxGeometry args={[100, 60, 40]} />
       </mesh>
-
+      <mesh
+        geometry={nodes.anden.geometry}
+        material={materials["baked.suelo"]}
+      />
+      <mesh
+        geometry={nodes.anden.geometry}
+        material={materials["baked.suelo"]}
+      />
       <mesh
         geometry={nodes.pared.geometry}
         material={materials["baked.pared"]}
         position={[0, 9.5, -10]}
       />
       <mesh
-        geometry={nodes["soporte-señal2"].geometry}
-        material={materials.negro}
-        position={[-119.313, 22.358, -6.77]}
-        rotation={[0.461, 0, 0]}
-      />
-      <mesh
-        geometry={nodes["soporte-señal1"].geometry}
-        material={materials.negro}
-        position={[90.592, 22.358, -6.77]}
-        rotation={[0.461, 0, 0]}
-      />
-      <mesh
         geometry={nodes.pasillo.geometry}
         material={materials["baked.pasillo"]}
       />
       <mesh
-        geometry={nodes.Cube.geometry}
-        material={materials.negro}
-        position={[65.908, 22.256, -55.019]}
-      />
-      <mesh
-        geometry={nodes["soporte-señal-pasillo1"].geometry}
+        geometry={nodes.soportes.geometry}
         material={materials.negro}
         position={[86.607, 22.256, -55.019]}
       />
-      <mesh
-        geometry={nodes["soporte-señal-pasillo2"].geometry}
-        material={materials.negro}
-        position={[65.908, 22.256, -88.961]}
-        rotation={[0, Math.PI / 2, 0]}
-      />
       <mesh geometry={nodes.cartelmarco.geometry} material={materials.negro} />
-      <mesh
-        geometry={nodes.bancos.geometry}
-        material={materials.blanco}
-        position={[161.677, 13.215, -8.752]}
-      />
-      <mesh
-        geometry={nodes.mapamapa001.geometry}
-        material={materials["plano.002"]}
-        position={[0, 0, -0.572]}
-      />
       <mesh
         geometry={nodes.cartelcartel001.geometry}
         material={materials["Cartel.002"]}
         position={[0, 0, 0.08]}
       />
       <mesh
+        geometry={nodes.banco.geometry}
+        material={materials.banco}
+        position={[-151.306, 13.101, -8.752]}
+      />
+      <mesh
         geometry={nodes.mapamarco.geometry}
         material={materials.blanco}
         position={[0, 0, -1.351]}
+      />
+      <mesh
+        geometry={nodes.mapamapa001.geometry}
+        material={materials["plano.002"]}
+        position={[0, 0, -0.572]}
       />
     </group>
   );
