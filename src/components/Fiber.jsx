@@ -1,20 +1,30 @@
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { CameraControls, Text, Float } from "@react-three/drei";
+import { useThree, Canvas, useFrame } from "@react-three/fiber";
+import { CameraControls } from "@react-three/drei";
 import { useEffect, useRef } from "react";
-import { ACESFilmicToneMapping, Euler } from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { ACESFilmicToneMapping } from "three";
 // import Torno from "./torno";
 import Anden from "./Anden";
+import { xor } from "three/examples/jsm/nodes/Nodes.js";
 
 const Scene = () => {
-  const torno01 = useRef();
+  const { camera } = useThree();
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+    const duration = 10;
+    const start = 200;
+    const end = -160;
+
+    const x = end * (1 - Math.pow(1 - Math.min(t / duration, 1), 2)) + start;
+
+    camera.position.x = -x;
+    camera.rotation.set(0, 0, 0);
+  });
 
   return (
     <>
       <ambientLight intensity={2} />
-
-      <Anden scale={0.5} position={[-50, 0, 0]} />
-      <CameraControls makeDefault />
+      <Anden scale={1} position={[0, 0, 0]} />
+      {/* <CameraControls makeDefault /> */}
     </>
   );
 };
@@ -26,8 +36,7 @@ export const Fiber = () => {
         antialias: true,
         toneMapping: ACESFilmicToneMapping,
       }}
-      shadows
-      camera={{ position: [-70, 9.5, 30], fov: 20, rotation: [0, 0, 0] }}
+      camera={{ position: [-40, 20, 70], fov: 20 }}
       style={{ height: "30vw" }}
     >
       <Scene />
