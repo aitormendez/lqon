@@ -6,28 +6,33 @@ import { ACESFilmicToneMapping } from "three";
 import Anden from "./Anden";
 import { xor } from "three/examples/jsm/nodes/Nodes.js";
 
-const Scene = ({ isAnimating, addStation, removeFirstStation }) => {
+const Scene = ({
+  isAnimating,
+  setIsAnimating,
+  addStation,
+  removeFirstStation,
+}) => {
   const { camera } = useThree();
-  const [isMoving, setIsMoving] = useState(false);
+  const isMoving = useRef(false);
   const startTimeRef = useRef(null);
 
   useEffect(() => {
-    if (isAnimating && !isMoving) {
+    if (isAnimating && !isMoving.current) {
       addStation(); // Añade una nueva estación
       startTimeRef.current = null; // Reinicia el tiempo de inicio
-      setIsMoving(true); // Comienza el movimiento del tren
+      isMoving.current = true; // Comienza el movimiento del tren
     }
   }, [isAnimating, addStation, isMoving]);
 
   useFrame(({ clock }) => {
-    if (isMoving) {
+    if (isMoving.current) {
       const currentTime = clock.getElapsedTime();
       if (startTimeRef.current === null) {
         startTimeRef.current = currentTime;
       }
       const elapsedTime = currentTime - startTimeRef.current;
 
-      const duration = 10; // Duración total del viaje
+      const duration = 5; // Duración total del viaje
       const halfDuration = duration / 2; // Punto medio para cambiar de aceleración a desaceleración
       const start = 40; // Posición inicial
       const end = -460; // Posición final
@@ -45,9 +50,18 @@ const Scene = ({ isAnimating, addStation, removeFirstStation }) => {
 
       camera.position.x = -x;
 
+      console.log(`elapsed + 0.05: ${elapsedTime + 0.05}`);
+      console.log(`duration: ${duration}`);
+      console.log(`isMoving: ${isMoving}`);
+      console.log(`isAnimating: ${isAnimating}`);
+
       // Detener el tren al finalizar la animación
-      if (elapsedTime >= duration) {
-        setIsMoving(false);
+      if (elapsedTime + 0.05 >= duration) {
+        console.log("DETENER");
+        isMoving.current = false;
+        setIsAnimating(false);
+        console.log(`isMoving tras detener: ${isMoving}`);
+        console.log(`isAnimating tras detener: ${isAnimating}`);
         removeFirstStation(); // Elimina la primera estación
       }
     }
@@ -92,6 +106,7 @@ export const Fiber = () => {
         ))}
         <Scene
           isAnimating={isAnimating}
+          setIsAnimating={setIsAnimating}
           addStation={addStation}
           removeFirstStation={removeFirstStation}
         />
