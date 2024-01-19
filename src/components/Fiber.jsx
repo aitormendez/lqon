@@ -1,12 +1,12 @@
 import { useThree, Canvas, useFrame } from "@react-three/fiber";
 import { CameraControls } from "@react-three/drei";
-import { useState, useEffect, useRef } from "react";
+import { useCallback, useState, useEffect, useRef } from "react";
 import { ACESFilmicToneMapping } from "three";
 // import Torno from "./torno";
 import Anden from "./Anden";
-import { xor } from "three/examples/jsm/nodes/Nodes.js";
+// import Metro from "./Metro"
 
-const Scene = ({
+const Metro = ({
   isAnimating,
   setIsAnimating,
   addStation,
@@ -22,7 +22,7 @@ const Scene = ({
       startTimeRef.current = null; // Reinicia el tiempo de inicio
       isMoving.current = true; // Comienza el movimiento del tren
     }
-  }, [isAnimating, addStation, isMoving]);
+  }, [isAnimating, addStation]);
 
   useFrame(({ clock }) => {
     if (isMoving.current) {
@@ -50,18 +50,10 @@ const Scene = ({
 
       camera.position.x = -x;
 
-      console.log(`elapsed + 0.05: ${elapsedTime + 0.05}`);
-      console.log(`duration: ${duration}`);
-      console.log(`isMoving: ${isMoving}`);
-      console.log(`isAnimating: ${isAnimating}`);
-
       // Detener el tren al finalizar la animación
       if (elapsedTime + 0.05 >= duration) {
-        console.log("DETENER");
         isMoving.current = false;
         setIsAnimating(false);
-        console.log(`isMoving tras detener: ${isMoving}`);
-        console.log(`isAnimating tras detener: ${isAnimating}`);
         removeFirstStation(); // Elimina la primera estación
       }
     }
@@ -78,13 +70,34 @@ const Scene = ({
 
 export const Fiber = () => {
   const [isAnimating, setIsAnimating] = useState(false);
-  const [stations, setStations] = useState([{ id: 1, position: [0, 0, 0] }]);
+  const [stations, setStations] = useState([
+    { id: 1, nombre: "Oscar Cabanas", position: [0, 0, 0] },
+  ]);
+  const [currentStationIndex, setCurrentStationIndex] = useState(0);
 
-  const addStation = () => {
-    // Calcula la nueva posición de la estación y añade a la lista
+  const estaciones = [
+    { id: 1, nombre: "Oscar Cabanas" },
+    { id: 2, nombre: "Encikutao" },
+    { id: 3, nombre: "Taktel" },
+  ];
+
+  const addStation = useCallback(() => {
+    const newStationIndex = (currentStationIndex + 1) % estaciones.length;
+    setCurrentStationIndex(newStationIndex);
+
+    const uniqueId = `station-${Date.now()}`;
     const newPosition = [500, 0, 0];
-    const newStation = { id: stations.length + 1, position: newPosition };
-    setStations([...stations, newStation]);
+    const newStation = {
+      id: uniqueId,
+      nombre: estaciones[newStationIndex].nombre,
+      position: newPosition,
+    };
+    setStations((prevStations) => [...prevStations, newStation]);
+  }, [currentStationIndex, estaciones, setStations]);
+
+  const handleAnimationStart = () => {
+    addStation(); // Cambia el nombre antes de iniciar la animación
+    setIsAnimating(true);
   };
 
   const removeFirstStation = () => {
@@ -102,9 +115,13 @@ export const Fiber = () => {
         style={{ height: "30vw" }}
       >
         {stations.map((station) => (
-          <Anden key={station.id} scale={1} position={station.position} />
+          <Anden
+            key={station.id}
+            nombreEstacion={station.nombre}
+            position={station.position}
+          />
         ))}
-        <Scene
+        <Metro
           isAnimating={isAnimating}
           setIsAnimating={setIsAnimating}
           addStation={addStation}
@@ -113,7 +130,7 @@ export const Fiber = () => {
       </Canvas>
       <button
         className="text-white p-4 rounded bg-black m-4"
-        onClick={() => setIsAnimating(true)}
+        onClick={handleAnimationStart}
       >
         Iniciar Animación
       </button>

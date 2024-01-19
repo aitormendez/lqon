@@ -6,21 +6,7 @@ Command: npx gltfjsx@6.2.16 /Volumes/C/Documentos C/Trabajos/LQON (Lo quieras o 
 import React, { useRef } from "react";
 import { useGLTF, Text } from "@react-three/drei";
 
-const Nombre = () => {
-  return (
-    <Text
-      position={[-50, 22.2, -6.4]}
-      rotation-x={0.4}
-      font="../fonts/helveue-bold-webfont.woff"
-      fontSize={1.5}
-      color="#AC0000"
-    >
-      Oscar Cabanas
-    </Text>
-  );
-};
-
-export default function Model(props) {
+export default function Model({ nombreEstacion, ...props }) {
   const { nodes, materials } = useGLTF("../models/anden.glb");
 
   var nombres = [];
@@ -34,13 +20,12 @@ export default function Model(props) {
         fontSize={1.5}
         color="#AC0000"
       >
-        Oscar Cabanas
+        {nombreEstacion}
       </Text>
     );
   }
   return (
     <group {...props} dispose={null}>
-      {/* <Nombre /> */}
       {nombres}
 
       <mesh position={[-250, 18, -14.8]} material={materials.negro}>
