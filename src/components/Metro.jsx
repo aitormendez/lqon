@@ -1,5 +1,4 @@
 import { useThree, useFrame } from "@react-three/fiber";
-import { CameraControls } from "@react-three/drei";
 import React, { useEffect, useRef } from "react";
 import Anden from "./Anden";
 
@@ -8,6 +7,7 @@ const Metro = ({
   setIsAnimating,
   addStation,
   removeFirstStation,
+  stations,
 }) => {
   const { camera } = useThree();
   const isMoving = useRef(false);
@@ -58,9 +58,16 @@ const Metro = ({
 
   return (
     <>
-      <ambientLight intensity={2} />
       <Anden scale={1} position={[0, 0, 0]} />
-      {/* <CameraControls makeDefault /> */}
+      {stations.map((station) => (
+        <Anden
+          key={station.id}
+          nombreEstacion={station.nombre}
+          position={station.position}
+        />
+      ))}
     </>
   );
 };
+
+export default Metro;
