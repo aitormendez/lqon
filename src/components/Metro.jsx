@@ -1,12 +1,19 @@
 import { useThree, useFrame } from "@react-three/fiber";
-import { useCallback, useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Anden from "./Anden";
 
-const Metro = ({ isAnimating, setIsAnimating }) => {
+const Metro = ({
+  isAnimating,
+  setIsAnimating,
+  setCameraPositionStart,
+  cameraPositionStart,
+}) => {
   const { camera } = useThree();
   const isMoving = useRef(false);
   const startTimeRef = useRef(null);
   const [currentStationIndex, setCurrentStationIndex] = useState(0);
+  const [lastPositionX, setLastPositionX] = useState(0);
+  const [cameraTargetPositionEnd, setCameraTargetPositionEnd] = useState(-540);
 
   const allStations = [
     { id: 1, nombre: "Oscar Cabanas" },
@@ -15,22 +22,23 @@ const Metro = ({ isAnimating, setIsAnimating }) => {
   ];
 
   const [stations, setStations] = useState([
-    { id: 1, nombre: "Oscar Cabanas", position: [0, 0, 0] },
+    { id: 1, nombre: "Oscar Cabanas" },
   ]);
 
-  const addStation = useCallback(() => {
+  const addStation = () => {
     const newStationIndex = (currentStationIndex + 1) % allStations.length;
     setCurrentStationIndex(newStationIndex);
 
-    const uniqueId = `station-${Date.now()}`;
-    const newPosition = [500, 0, 0];
+    const newPositionX = lastPositionX - 500;
+    setLastPositionX(newPositionX);
+
     const newStation = {
-      id: uniqueId,
+      id: `station-${Date.now()}`,
       nombre: allStations[newStationIndex].nombre,
-      position: newPosition,
+      position: [newPositionX, 0, 0],
     };
     setStations((prevStations) => [...prevStations, newStation]);
-  }, [currentStationIndex, allStations]);
+  };
 
   const removeFirstStation = () => {
     setStations(stations.slice(1));
@@ -54,8 +62,8 @@ const Metro = ({ isAnimating, setIsAnimating }) => {
 
       const duration = 5; // Duración total del viaje
       const halfDuration = duration / 2; // Punto medio para cambiar de aceleración a desaceleración
-      const start = 40; // Posición inicial
-      const end = -460; // Posición final
+      const start = cameraPositionStart; // Posición inicial
+      const end = cameraTargetPositionEnd; // Posición final
 
       let x;
       if (elapsedTime < halfDuration) {
@@ -68,13 +76,16 @@ const Metro = ({ isAnimating, setIsAnimating }) => {
         x = end - ((end - start) * Math.pow(1 - t, 2)) / 2;
       }
 
-      camera.position.x = -x;
+      camera.position.x = x;
+      console.log(camera.position.x);
 
       // Detener el tren al finalizar la animación
       if (elapsedTime + 0.05 >= duration) {
         isMoving.current = false;
         setIsAnimating(false);
         removeFirstStation(); // Elimina la primera estación
+        setCameraPositionStart(cameraPositionStart - 500);
+        setCameraTargetPositionEnd(cameraTargetPositionEnd - 500);
       }
     }
   });
