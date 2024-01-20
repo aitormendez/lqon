@@ -17,8 +17,15 @@ const Metro = ({
 
   const allStations = [
     { id: 1, nombre: "Oscar Cabanas" },
-    { id: 2, nombre: "Encikutao" },
+    { id: 2, nombre: "Vorja Encikutao" },
     { id: 3, nombre: "Taktel" },
+    { id: 4, nombre: "Juan Carlos Gorreta" },
+    { id: 5, nombre: "Vicius" },
+    { id: 6, nombre: "Grupo Chusky" },
+    { id: 7, nombre: "Nono Murcia" },
+    { id: 8, nombre: "El Chirly" },
+    { id: 9, nombre: "Work Song" },
+    { id: 10, nombre: "Lucia Montenegro" },
   ];
 
   const [stations, setStations] = useState([
@@ -77,7 +84,6 @@ const Metro = ({
       }
 
       camera.position.x = x;
-      console.log(camera.position.x);
 
       // Detener el tren al finalizar la animación
       if (elapsedTime + 0.05 >= duration) {
