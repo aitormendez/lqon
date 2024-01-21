@@ -16,20 +16,70 @@ const Metro = ({
   const [cameraTargetPositionEnd, setCameraTargetPositionEnd] = useState(-540);
 
   const allStations = [
-    { id: 1, nombre: "Oscar Cabanas" },
-    { id: 2, nombre: "Vorja Encikutao" },
-    { id: 3, nombre: "Taktel" },
-    { id: 4, nombre: "Juan Carlos Gorreta" },
-    { id: 5, nombre: "Vicius" },
-    { id: 6, nombre: "Grupo Chusky" },
-    { id: 7, nombre: "Nono Murcia" },
-    { id: 8, nombre: "El Chirly" },
-    { id: 9, nombre: "Work Song" },
-    { id: 10, nombre: "Lucia Montenegro" },
+    {
+      id: 1,
+      nombre: "Oscar Cabanas",
+      materialCartel: "cartel-oscar-cabanas",
+      materialPlano: "plano-oscar-cabanas",
+    },
+    {
+      id: 2,
+      nombre: "Vorja Encikutao",
+      materialCartel: "cartel-vorja-encikutao",
+      materialPlano: "plano-vorja-encikutao",
+    },
+    {
+      id: 3,
+      nombre: "Taktel",
+      materialCartel: "cartel-taktel",
+      materialPlano: "plano-taxtel",
+    },
+    {
+      id: 4,
+      nombre: "Juan Carlos Gorreta",
+      materialCartel: "cartel-juan-carlos-gorreta",
+      materialPlano: "plano-juan-carlos-gorreta",
+    },
+    {
+      id: 5,
+      nombre: "Vicius",
+      materialCartel: "cartel-vicius",
+      materialPlano: "plano-vicius",
+    },
+    {
+      id: 6,
+      nombre: "Grupo Chasky",
+      materialCartel: "cartel-grupo-chasky",
+      materialPlano: "plano-grupo-chasky",
+    },
+    {
+      id: 7,
+      nombre: "Nono Murcia",
+      materialCartel: "cartel-nono-murcia",
+      materialPlano: "plano-nono-murcia",
+    },
+    {
+      id: 8,
+      nombre: "El Chirly",
+      materialCartel: "cartel-el-chirly",
+      materialPlano: "plano-el-chirly",
+    },
+    { id: 9, nombre: "Work Song", materialCartel: "", materialPlano: "" },
+    {
+      id: 10,
+      nombre: "Lucia Montenegro",
+      materialCartel: "",
+      materialPlano: "",
+    },
   ];
 
   const [stations, setStations] = useState([
-    { id: 1, nombre: "Oscar Cabanas" },
+    {
+      id: 1,
+      nombre: "Oscar Cabanas",
+      materialCartel: "cartel-oscar-cabanas",
+      materialPlano: "plano-oscar-cabanas",
+    },
   ]);
 
   const addStation = () => {
@@ -42,6 +92,8 @@ const Metro = ({
     const newStation = {
       id: `station-${Date.now()}`,
       nombre: allStations[newStationIndex].nombre,
+      materialCartel: allStations[newStationIndex].materialCartel,
+      materialPlano: allStations[newStationIndex].materialPlano,
       position: [newPositionX, 0, 0],
     };
     setStations((prevStations) => [...prevStations, newStation]);
@@ -50,6 +102,8 @@ const Metro = ({
   const removeFirstStation = () => {
     setStations(stations.slice(1));
   };
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
     if (isAnimating && !isMoving.current) {
@@ -106,6 +160,8 @@ const Metro = ({
         <Anden
           key={station.id}
           nombreEstacion={station.nombre}
+          materialCartel={station.materialCartel}
+          materialPlano={station.materialPlano}
           position={station.position}
         />
       ))}

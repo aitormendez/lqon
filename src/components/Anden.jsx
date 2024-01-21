@@ -6,11 +6,16 @@ Command: npx gltfjsx@6.2.16 /Volumes/C/Documentos C/Trabajos/LQON (Lo quieras o 
 import React, { useRef } from "react";
 import { useGLTF, Text } from "@react-three/drei";
 
-export default function Model({ nombreEstacion, ...props }) {
+export default function Model({
+  nombreEstacion,
+  materialPlano,
+  materialCartel,
+  ...props
+}) {
   const { nodes, materials } = useGLTF("../models/anden.glb");
+  let nombres = [];
 
-  var nombres = [];
-  for (var i = 0; i < 7; i++) {
+  for (let i = 0; i < 7; i++) {
     nombres.push(
       <Text
         key={`nombre-${i}`}
@@ -24,6 +29,7 @@ export default function Model({ nombreEstacion, ...props }) {
       </Text>
     );
   }
+
   return (
     <group {...props} dispose={null}>
       {nombres}
@@ -40,46 +46,39 @@ export default function Model({ nombreEstacion, ...props }) {
         geometry={nodes.anden.geometry}
         material={materials["baked.suelo"]}
       />
-
       <mesh
         geometry={nodes.pared.geometry}
         material={materials["baked.pared"]}
         position={[0, 9.5, -10]}
       />
-
       <mesh
         geometry={nodes.pasillo.geometry}
         material={materials["baked.pasillo"]}
       />
-
       <mesh
         geometry={nodes.soportes.geometry}
         material={materials.negro}
         position={[86.607, 22.256, -55.019]}
       />
-
       <mesh geometry={nodes.cartelmarco.geometry} material={materials.negro} />
       <mesh
         geometry={nodes.cartelcartel001.geometry}
-        material={materials["Cartel.002"]}
+        material={materials[materialCartel]}
         position={[0, 0, 0.08]}
       />
-
       <mesh
         geometry={nodes.banco.geometry}
         material={materials.banco}
         position={[-151.306, 13.101, -8.752]}
       />
-
       <mesh
         geometry={nodes.mapamarco.geometry}
         material={materials["marco.plano"]}
         position={[0, 0, -1.351]}
       />
-
       <mesh
         geometry={nodes.mapamapa001.geometry}
-        material={materials["plano.002"]}
+        material={materials[materialPlano]}
         position={[0, 0, -0.572]}
       />
     </group>
