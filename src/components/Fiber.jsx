@@ -1,14 +1,16 @@
 import { Canvas } from "@react-three/fiber";
 import { CameraControls } from "@react-three/drei";
 import { useState } from "react";
+import { useStore } from '@nanostores/react';
+import { isAnimating } from './stores';
 import Metro from "./Metro";
 
 export const Fiber = () => {
-  const [isAnimating, setIsAnimating] = useState(false);
+  const animating = useStore(isAnimating);
   const [cameraPositionStart, setCameraPositionStart] = useState(-40);
 
   const handleAnimationStart = () => {
-    setIsAnimating(true);
+    isAnimating.set(true);
   };
 
   return (
@@ -23,8 +25,7 @@ export const Fiber = () => {
         style={{ height: "30vw" }}
       >
         <Metro
-          isAnimating={isAnimating}
-          setIsAnimating={setIsAnimating}
+          isAnimating={animating}
           cameraPositionStart={cameraPositionStart}
           setCameraPositionStart={setCameraPositionStart}
         />
