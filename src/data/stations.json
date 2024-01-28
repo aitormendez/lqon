@@ -1,0 +1,69 @@
+[
+  {
+    "nombre": "Democracia",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto"
+  },
+  {
+    "nombre": "Oscar Cabanas",
+    "materialCartel": "cartel-oscar-cabanas",
+    "materialPlano": "plano-oscar-cabanas",
+    "tipo": "accion"
+  },
+  {
+    "nombre": "Vorja Encikutao",
+    "materialCartel": "cartel-vorja-encikutao",
+    "materialPlano": "plano-vorja-encikutao",
+    "tipo": "accion"
+  },
+  {
+    "nombre": "Taktel",
+    "materialCartel": "cartel-taktel",
+    "materialPlano": "plano-taxtel",
+    "tipo": "accion"
+  },
+  {
+    "nombre": "Juan Carlos Gorreta",
+    "materialCartel": "cartel-juan-carlos-gorreta",
+    "materialPlano": "plano-juan-carlos-gorreta",
+    "tipo": "accion"
+  },
+  {
+    "nombre": "Vicius",
+    "materialCartel": "cartel-vicius",
+    "materialPlano": "plano-vicius",
+    "tipo": "accion"
+  },
+  {
+    "nombre": "Grupo Chasky",
+    "materialCartel": "cartel-grupo-chasky",
+    "materialPlano": "plano-grupo-chasky",
+    "tipo": "accion"
+  },
+  {
+    "id": 7,
+    "nombre": "Nono Murcia",
+    "materialCartel": "cartel-nono-murcia",
+    "materialPlano": "plano-nono-murcia",
+    "tipo": "accion"
+  },
+  {
+    "nombre": "El Chirly",
+    "materialCartel": "cartel-el-chirly",
+    "materialPlano": "plano-el-chirly",
+    "tipo": "accion"
+  },
+  {
+    "nombre": "Work Song",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "accion"
+  },
+  {
+    "nombre": "Lucia Montenegro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "accion"
+  }
+]
