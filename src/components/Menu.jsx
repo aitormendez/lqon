@@ -1,19 +1,19 @@
-import { useStore } from "@nanostores/react";
-import allStations from "../data/stations.json";
+import { useStore } from '@nanostores/react';
+import { isAnimating } from './stores'; // Asegúrate de que la ruta sea correcta
 
 const Menu = () => {
+  const animating = useStore(isAnimating);
 
-
-  const goToNextStation = () => {
-
+  const handleAnimationStart = () => {
+    isAnimating.set(true);
   };
 
   return (
     <button
-      className="p-6 bg-black rounded m-4 text-white"
-      onClick={goToNextStation}
+      className="text-white p-4 rounded bg-black m-4"
+      onClick={handleAnimationStart}
     >
-      Siguiente Estación
+      Start Animation
     </button>
   );
 };
