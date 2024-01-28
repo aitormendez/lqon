@@ -32,12 +32,6 @@ export const Fiber = () => {
         {/* <CameraControls /> */}
         <ambientLight intensity={2} />
       </Canvas>
-      <button
-        className="text-white p-4 rounded bg-black m-4"
-        onClick={handleAnimationStart}
-      >
-        Start Animation
-      </button>
     </>
   );
 };

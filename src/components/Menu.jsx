@@ -1,10 +1,13 @@
-import { useStore } from '@nanostores/react';
-import { isAnimating } from './stores'; // Asegúrate de que la ruta sea correcta
+import { useStore } from "@nanostores/react";
+import { currentStationIndex, isAnimating } from "./stores";
+import allStations from "../data/stations.json";
 
 const Menu = () => {
   const animating = useStore(isAnimating);
 
   const handleAnimationStart = () => {
+    const nextIndex = (currentStationIndex.get() + 1) % allStations.length;
+    currentStationIndex.set(nextIndex);
     isAnimating.set(true);
   };
 
