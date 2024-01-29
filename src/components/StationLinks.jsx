@@ -2,13 +2,17 @@ import { currentStationIndex, isAnimating } from "./stores";
 import allStations from "../data/stations.json";
 
 const StationLinks = () => {
-  const goToStation = (stationUri) => {
-    const stationIndex = allStations.findIndex(
-      (station) => station.uri === stationUri
-    );
-    if (stationIndex !== -1) {
-      currentStationIndex.set(stationIndex);
-      isAnimating.set(true);
+  const goToStation = (stationUri, event) => {
+    if (isAnimating.get()) {
+      event.preventDefault();
+    } else {
+      const stationIndex = allStations.findIndex(
+        (station) => station.uri === stationUri
+      );
+      if (stationIndex !== -1) {
+        currentStationIndex.set(stationIndex);
+        isAnimating.set(true);
+      }
     }
   };
 
@@ -27,7 +31,7 @@ const StationLinks = () => {
             className="block m-2"
             key={`${station.nombre}-${index}`}
             href={`/textos/${station.uri}`}
-            onClick={() => goToStation(station.uri)}
+            onClick={(e) => goToStation(station.uri, e)}
           >
             {station.nombre}
           </a>
@@ -40,7 +44,7 @@ const StationLinks = () => {
             className="block m-2"
             key={`${station.nombre}-${index}`}
             href={`/acciones/${station.uri}`}
-            onClick={() => goToStation(station.uri)}
+            onClick={(e) => goToStation(station.uri, e)}
           >
             {station.nombre}
           </a>
