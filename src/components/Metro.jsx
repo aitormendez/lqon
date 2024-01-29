@@ -18,13 +18,21 @@ const Metro = ({ cameraPositionStart, setCameraPositionStart }) => {
 
   useEffect(() => {
     const path = window.location.pathname;
-    const stationUri = path.split("/").pop();
-    const stationIndex = allStations.findIndex(
-      (station) => station.uri === stationUri
-    );
+    let stationIndex;
+
+    if (path === "/") {
+      // Si la ruta es la raíz, establece el índice en 0 para la estación "home"
+      stationIndex = 0;
+    } else {
+      // De lo contrario, encuentra el índice basado en la URI de la estación
+      const stationUri = path.split("/").pop();
+      stationIndex = allStations.findIndex(
+        (station) => station.uri === stationUri
+      );
+    }
 
     if (stationIndex !== -1) {
-      currentStationIndex.set(stationIndex); // Actualiza el store
+      currentStationIndex.set(stationIndex);
 
       const station = allStations[stationIndex];
       setStations([
