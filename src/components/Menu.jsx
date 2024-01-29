@@ -7,6 +7,7 @@ import StationLinks from "./StationLinks";
 const Menu = () => {
   const currentIndex = useStore(currentStationIndex);
   const [nextStationHref, setNextStationHref] = useState("");
+  const animating = useStore(isAnimating);
 
   useEffect(() => {
     const updateHref = () => {
@@ -26,8 +27,7 @@ const Menu = () => {
   }, [currentIndex]);
 
   const goToNextStation = (event) => {
-    console.log("isAnimating: ", isAnimating.get());
-    if (isAnimating.get()) {
+    if (animating) {
       event.preventDefault();
     } else {
       const nextIndex = (currentStationIndex.get() + 1) % allStations.length;
@@ -36,17 +36,19 @@ const Menu = () => {
     }
   };
 
+  const navClasses = animating ? "pointer-events-none text-slate-400" : "";
+
   return (
-    <>
+    <nav id="menu" className={navClasses}>
       <a
-        className="inline-block text-white p-4 rounded bg-black m-4"
+        className="inline-block p-4 rounded bg-black m-4"
         href={nextStationHref}
         onClick={goToNextStation}
       >
         Próxima estación
       </a>
       <StationLinks />
-    </>
+    </nav>
   );
 };
 
