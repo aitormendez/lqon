@@ -25,10 +25,15 @@ const Menu = () => {
     return () => subscription();
   }, [currentIndex]);
 
-  const goToNextStation = () => {
-    const nextIndex = (currentIndex + 1) % allStations.length;
-    currentStationIndex.set(nextIndex);
-    isAnimating.set(true);
+  const goToNextStation = (event) => {
+    console.log("isAnimating: ", isAnimating.get());
+    if (isAnimating.get()) {
+      event.preventDefault();
+    } else {
+      const nextIndex = (currentStationIndex.get() + 1) % allStations.length;
+      currentStationIndex.set(nextIndex);
+      isAnimating.set(true);
+    }
   };
 
   return (
