@@ -22,10 +22,10 @@ const StationLinks = () => {
   return (
     <div className="m-4">
       <div className="inline-block">
-        {textoStations.map((station) => (
+        {textoStations.map((station, index) => (
           <a
             className="block m-2"
-            key={station.nombre}
+            key={`${station.nombre}-${index}`}
             href={`/textos/${station.uri}`}
             onClick={() => goToStation(station.uri)}
           >
@@ -35,10 +35,10 @@ const StationLinks = () => {
       </div>
 
       <div className="inline-block">
-        {accionStations.map((station) => (
+        {accionStations.map((station, index) => (
           <a
             className="block m-2"
-            key={station.nombre}
+            key={`${station.nombre}-${index}`}
             href={`/acciones/${station.uri}`}
             onClick={() => goToStation(station.uri)}
           >
