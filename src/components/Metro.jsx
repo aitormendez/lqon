@@ -14,15 +14,30 @@ const Metro = ({ cameraPositionStart, setCameraPositionStart }) => {
   const [lastPositionX, setLastPositionX] = useState(0);
   const [cameraTargetPositionEnd, setCameraTargetPositionEnd] = useState(-540);
 
-  const [stations, setStations] = useState([
-    {
-      id: 1,
-      nombre: "Democracia",
-      materialCartel: "",
-      materialPlano: "",
-      tipo: "texto",
-    },
-  ]);
+  const [stations, setStations] = useState([]);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    const stationUri = path.split("/").pop();
+    const stationIndex = allStations.findIndex(
+      (station) => station.uri === stationUri
+    );
+
+    if (stationIndex !== -1) {
+      currentStationIndex.set(stationIndex); // Actualiza el store
+
+      const station = allStations[stationIndex];
+      setStations([
+        {
+          id: `station-${Date.now()}`,
+          nombre: station.nombre,
+          materialCartel: station.materialCartel,
+          materialPlano: station.materialPlano,
+          tipo: station.tipo,
+        },
+      ]);
+    }
+  }, []);
 
   const addStation = () => {
     const newPositionX = lastPositionX - 500;
