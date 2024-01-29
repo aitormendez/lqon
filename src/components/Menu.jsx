@@ -1,6 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { currentStationIndex, isAnimating } from "./stores";
 import allStations from "../data/stations.json";
+import StationLinks from "./StationLinks";
 
 const Menu = () => {
   const animating = useStore(isAnimating);
@@ -12,12 +13,15 @@ const Menu = () => {
   };
 
   return (
+    <>
     <button
       className="text-white p-4 rounded bg-black m-4"
       onClick={handleAnimationStart}
     >
       Start Animation
     </button>
+    <StationLinks />
+    </>
   );
 };
 

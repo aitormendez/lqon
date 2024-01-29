@@ -3,67 +3,183 @@
     "nombre": "Democracia",
     "materialCartel": "",
     "materialPlano": "",
-    "tipo": "texto"
+    "tipo": "texto",
+    "uri": "presentacion"
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "una-deriva-psicogeografica-por-el-metro-de-madrid"
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "que-no-es-la-psicogeografia"
   },
   {
     "nombre": "Oscar Cabanas",
     "materialCartel": "cartel-oscar-cabanas",
     "materialPlano": "plano-oscar-cabanas",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": "oscar-cabanas"
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "no-lugar"
   },
   {
     "nombre": "Vorja Encikutao",
     "materialCartel": "cartel-vorja-encikutao",
     "materialPlano": "plano-vorja-encikutao",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": "vorja-encikutao"
+  },
+  {
+    "nombre": "Georges Brassens",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "la-muerte-declara-la-querra-a-los-gendarmes"
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "la-comunidad"
   },
   {
     "nombre": "Taktel",
     "materialCartel": "cartel-taktel",
     "materialPlano": "plano-taxtel",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": "taktel"
+  },
+  {
+    "nombre": "Daniel Villegas",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "canciones-de-trabajo"
   },
   {
     "nombre": "Juan Carlos Gorreta",
     "materialCartel": "cartel-juan-carlos-gorreta",
     "materialPlano": "plano-juan-carlos-gorreta",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": "juan-carlos-gorreta"
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": ""
   },
   {
     "nombre": "Vicius",
     "materialCartel": "cartel-vicius",
     "materialPlano": "plano-vicius",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": "vicius"
+  },
+  {
+    "nombre": "Democracia",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": ""
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": ""
   },
   {
     "nombre": "Grupo Chasky",
     "materialCartel": "cartel-grupo-chasky",
     "materialPlano": "plano-grupo-chasky",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": "grupo-chasky"
+  },
+  {
+    "nombre": "Luis Duno Gottberg",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "migracion-y-resistencia-indigena"
   },
   {
     "id": 7,
     "nombre": "Nono Murcia",
     "materialCartel": "cartel-nono-murcia",
     "materialPlano": "plano-nono-murcia",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": "nono-murcia"
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texo",
+    "uri": ""
   },
   {
     "nombre": "El Chirly",
     "materialCartel": "cartel-el-chirly",
     "materialPlano": "plano-el-chirly",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": "el-chirly"
   },
   {
-    "nombre": "Work Song",
+    "nombre": "Luis Navarro",
     "materialCartel": "",
     "materialPlano": "",
-    "tipo": "accion"
+    "tipo": "texto",
+    "uri": ""
+  },
+  {
+    "nombre": "Briana Weapons",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "accion",
+    "uri": "briana-weapons"
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texo",
+    "uri": ""
   },
   {
     "nombre": "Lucia Montenegro",
     "materialCartel": "",
     "materialPlano": "",
-    "tipo": "accion"
+    "tipo": "accion",
+    "uri": ""
+  },
+  {
+    "nombre": "Luis Duno Gottberg",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texo",
+    "uri": ""
+  },
+  {
+    "nombre": "Luis Navarro",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texo",
+    "uri": "post-logo"
   }
 ]
