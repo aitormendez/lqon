@@ -1,10 +1,8 @@
 import { Canvas } from "@react-three/fiber";
-import { CameraControls } from "@react-three/drei";
 import { useState, Suspense } from "react";
 import { useStore } from "@nanostores/react";
 import { isAnimating } from "./stores";
 import Metro from "./Metro";
-import Loader from "./Loader";
 
 export const Fiber = () => {
   const animating = useStore(isAnimating);
@@ -15,9 +13,6 @@ export const Fiber = () => {
   };
 
   return (
-    <>
-      <Loader />
-      <Suspense fallback={<Loader />}>
         <Canvas
           camera={{
             far: 4000,
@@ -35,8 +30,6 @@ export const Fiber = () => {
           {/* <CameraControls /> */}
           <ambientLight intensity={2} />
         </Canvas>
-      </Suspense>
-    </>
   );
 };
 
