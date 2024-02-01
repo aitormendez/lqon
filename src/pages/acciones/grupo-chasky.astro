@@ -9,11 +9,19 @@ import CustomTooltip from "../../components/CustomTooltip.jsx";
 
 <Layout title={titulo} tipo={tipo} autor={autor}>
   <p>{autor}</p>
+
+  prueba de texto
+
   <CustomTooltip
     client:load
     id="unique-tooltip"
-    content="Este es el <i>contenido</i> del tooltip"
+    content="<div class='max-w-sm'>Este es el <i>contenido</i> del tooltip Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptates ipsum illo laboriosam atque eveniet ratione soluta ullam reprehenderit est, minima perferendis veniam nesciunt veritatis dolorum porro quae neque praesentium!"
   >
-    <sup>Botón con Tooltip</sup>
+    <sup>1</sup>
   </CustomTooltip>
+
+  para ver cómo funciona Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Iusto voluptates ipsum illo laboriosam atque eveniet ratione soluta
+  ullam reprehenderit est, minima perferendis veniam nesciunt veritatis dolorum
+  porro quae neque praesentium!
 </Layout>
