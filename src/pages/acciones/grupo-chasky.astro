@@ -3,8 +3,17 @@ import Layout from "../../layouts/Layout.astro";
 const tipo = "accion";
 const autor = "Grupo Chasky";
 const titulo = "Movimiento indígena";
+import { Tooltip } from "react-tooltip";
+import CustomTooltip from "../../components/CustomTooltip.jsx";
 ---
 
 <Layout title={titulo} tipo={tipo} autor={autor}>
   <p>{autor}</p>
+  <CustomTooltip
+    client:load
+    id="unique-tooltip"
+    content="Este es el <i>contenido</i> del tooltip"
+  >
+    <sup>Botón con Tooltip</sup>
+  </CustomTooltip>
 </Layout>
