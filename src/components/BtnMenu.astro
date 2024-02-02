@@ -1,0 +1,29 @@
+---
+const baseClass =
+  "cursor-pointer bg-white p-[2vw] flex flex-col justify-center gap-[0.5vw] w-[10vw] items-center hover:bg-black";
+---
+
+<a id="burger" class={`${baseClass}`}>
+  <i class="block bg-red-600 w-[3vw] h-[0.7vw]"></i>
+  <i class="block bg-red-600 w-[3vw] h-[0.7vw]"></i>
+  <i class="block bg-red-600 w-[3vw] h-[0.7vw]"></i>
+</a>
+
+<script>
+  import { isAnimating } from "./stores.js";
+  console.log("cambio");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.getElementById("burger");
+
+    isAnimating.subscribe((value) => {
+      if (value) {
+        console.log("si");
+        burger.classList.add("pointer-events-none", "opacity-50");
+      } else {
+        console.log("no");
+        burger.classList.remove("pointer-events-none", "opacity-50");
+      }
+    });
+  });
+</script>

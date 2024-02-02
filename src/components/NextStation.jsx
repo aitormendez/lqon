@@ -4,7 +4,7 @@ import { currentStationIndex, isAnimating } from "./stores";
 import allStations from "../data/stations.json";
 import StationLinks from "./StationLinks";
 
-const Menu = () => {
+const NextStation = () => {
   const currentIndex = useStore(currentStationIndex);
   const [nextStationHref, setNextStationHref] = useState("");
   const animating = useStore(isAnimating);
@@ -29,6 +29,7 @@ const Menu = () => {
 
   const goToNextStation = (event) => {
     const videoLogo = document.getElementById("videoLogotipo");
+
     if (animating) {
       event.preventDefault();
     } else {
@@ -42,17 +43,19 @@ const Menu = () => {
     }
   };
 
-  const navClasses = animating ? "pointer-events-none text-slate-400" : "";
+  const navClasses = animating
+    ? "p-[2vw] w-[9vw] h-full bg-white flex pointer-events-none opacity-50"
+    : "p-[2vw] w-[9vw] h-full bg-white flex hover:bg-black";
 
   return (
-    <nav id="menu" className={navClasses}>
+    <nav id="menu">
       <a
-        className="inline-block p-6 w-[8vw] h-full bg-white flex"
+        className={navClasses}
         href={nextStationHref}
         onClick={goToNextStation}
       >
         <svg
-          className="w-full fill-red-600 hover:fill-black"
+          className="fill-red-600"
           viewBox="0 0 32 26"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -68,4 +71,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default NextStation;

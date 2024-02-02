@@ -2,6 +2,7 @@
 const { titulo, nombre, tipo } = Astro.props;
 import CommonHead from "../components/CommonHead.astro";
 import Header from "../components/Header.astro";
+import { slide } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -9,7 +10,7 @@ import Header from "../components/Header.astro";
   <CommonHead tipo={tipo} nombre={nombre} />
   <body class="text-white">
     <Header />
-    <main class="font-serif">
+    <main transition:animate={slide({ duration: "1s" })} class="font-serif">
       <slot />
     </main>
     <style is:global>
