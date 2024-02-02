@@ -1,13 +1,20 @@
 ---
+import { Image } from "astro:assets";
+import lqon from "../assets/img/lo-quieras-o-no.svg";
 import logotipo from "../assets/video/torno.mp4";
 import NextStation from "./NextStation.jsx";
 import Fiber from "../components/Fiber.jsx";
-import BtnMenu from "../components/BtnMenu.astro"
+import BtnMenu from "../components/BtnMenu.astro";
 ---
 
 <header transition:persist>
   <div id="banner" class="flex gap-[1vw] justify-between">
     <div class="logo-container bg-white flex-grow">
+      <Image
+        class:list={"absolute left-[7vw] top-[2vw] w-[16vw]"}
+        src={lqon}
+        alt="Lo quieras o no"
+      />
       <video class="w-[10vw]" id="videoLogotipo" muted playsinline>
         <source src={logotipo} type="video/mp4" />
         Tu navegador no soporta videos.

@@ -11,17 +11,14 @@ const baseClass =
 
 <script>
   import { isAnimating } from "./stores.js";
-  console.log("cambio");
 
   document.addEventListener("DOMContentLoaded", () => {
     const burger = document.getElementById("burger");
 
     isAnimating.subscribe((value) => {
       if (value) {
-        console.log("si");
         burger.classList.add("pointer-events-none", "opacity-50");
       } else {
-        console.log("no");
         burger.classList.remove("pointer-events-none", "opacity-50");
       }
     });
