@@ -1,18 +1,14 @@
 ---
-import Fiber from "../components/Fiber.jsx";
 const { titulo, nombre, tipo } = Astro.props;
 import CommonHead from "../components/CommonHead.astro";
-import Menu from "../components/Menu.jsx";
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <CommonHead tipo={tipo} nombre={nombre} />
   <body class="text-white">
-    <header transition:persist>
-      <Menu client:load />
-      <Fiber client:load />
-    </header>
+    <Header />
     <main class="font-serif">
       <slot />
     </main>
@@ -23,115 +19,116 @@ import Menu from "../components/Menu.jsx";
         background-size: 224px;
       }
     </style>
-  </body><style is:global>
-    @font-face {
-      font-family: "Helveue";
-      src: url("/fonts/helveue-regular-webfont.woff") format("woff");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
+    <style is:global>
+      @font-face {
+        font-family: "Helveue";
+        src: url("/fonts/helveue-regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Helveue";
-      src: url("/fonts/helveue-italic-webfont.woff") format("woff");
-      font-weight: normal;
-      font-style: italic;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Helveue";
+        src: url("/fonts/helveue-italic-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Helveue";
-      src: url("/fonts/helveue-black-webfont.woff") format("woff");
-      font-weight: 900;
-      font-style: normal;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Helveue";
+        src: url("/fonts/helveue-black-webfont.woff") format("woff");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Helveue";
-      src: url("/fonts/helveue-blackitalic-webfont.woff") format("woff");
-      font-weight: 900;
-      font-style: italic;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Helveue";
+        src: url("/fonts/helveue-blackitalic-webfont.woff") format("woff");
+        font-weight: 900;
+        font-style: italic;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Helveue";
-      src: url("/fonts/helveue-md-webfont.woff") format("woff");
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Helveue";
+        src: url("/fonts/helveue-md-webfont.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Helveue";
-      src: url("/fonts/helveue-mdit-webfont.woff") format("woff");
-      font-weight: 500;
-      font-style: italic;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Helveue";
+        src: url("/fonts/helveue-mdit-webfont.woff") format("woff");
+        font-weight: 500;
+        font-style: italic;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Crimson Pro";
-      src: url("/fonts/CrimsonPro-Regular.woff") format("woff");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Crimson Pro";
+        src: url("/fonts/CrimsonPro-Regular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Crimson Pro";
-      src: url("/fonts/CrimsonPro-Italic.woff") format("woff");
-      font-weight: 400;
-      font-style: italic;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Crimson Pro";
+        src: url("/fonts/CrimsonPro-Italic.woff") format("woff");
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Crimson Pro";
-      src: url("/fonts/CrimsonPro-Bold.woff") format("woff");
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Crimson Pro";
+        src: url("/fonts/CrimsonPro-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Crimson Pro";
-      src: url("/fonts/CrimsonPro-BoldItalic.woff") format("woff");
-      font-weight: 700;
-      font-style: italic;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Crimson Pro";
+        src: url("/fonts/CrimsonPro-BoldItalic.woff") format("woff");
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Crimson Pro";
-      src: url("/fonts/CrimsonPro-Light.woff") format("woff");
-      font-weight: 300;
-      font-style: normal;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Crimson Pro";
+        src: url("/fonts/CrimsonPro-Light.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
 
-    @font-face {
-      font-family: "Crimson Pro";
-      src: url("/fonts/CrimsonPro-LightItalic.woff") format("woff");
-      font-weight: 300;
-      font-style: italic;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "Crimson Pro";
+        src: url("/fonts/CrimsonPro-LightItalic.woff") format("woff");
+        font-weight: 300;
+        font-style: italic;
+        font-display: swap;
+      }
 
-    html {
-      font-family: Helveue, sans-serif;
-      color-scheme: dark light;
-    }
+      html {
+        font-family: Helveue, sans-serif;
+        color-scheme: dark light;
+      }
 
-    a {
-      color: rgb(185 28 28);
-      transition: color 0.5s;
-    }
+      a {
+        color: #b91c1c;
+        transition: color 0.5s;
+      }
 
-    a:hover {
-      color: white;
-    }
-  </style>
+      a:hover {
+        color: white;
+      }
+    </style>
+  </body>
 </html>

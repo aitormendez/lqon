@@ -13,23 +13,23 @@ export const Fiber = () => {
   };
 
   return (
-        <Canvas
-          camera={{
-            far: 4000,
-            position: [cameraPositionStart, 20, 70],
-            rotation: [0, 0, 0],
-            fov: 20,
-          }}
-          style={{ height: "30vw" }}
-        >
-          <Metro
-            isAnimating={animating}
-            cameraPositionStart={cameraPositionStart}
-            setCameraPositionStart={setCameraPositionStart}
-          />
-          {/* <CameraControls /> */}
-          <ambientLight intensity={2} />
-        </Canvas>
+    <Canvas
+      camera={{
+        far: 4000,
+        position: [cameraPositionStart, 20, 70],
+        rotation: [0, 0, 0],
+        fov: 20,
+      }}
+      style={{ height: "30vw" }}
+    >
+      <Metro
+        isAnimating={animating}
+        cameraPositionStart={cameraPositionStart}
+        setCameraPositionStart={setCameraPositionStart}
+      />
+      {/* <CameraControls /> */}
+      <ambientLight intensity={2} />
+    </Canvas>
   );
 };
 

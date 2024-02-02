@@ -1,7 +1,31 @@
 ---
+import logotipo from "../assets/video/torno.mp4";
+import Menu from "./NextStation.jsx";
+import Fiber from "../components/Fiber.jsx";
 ---
-<header>
-    <div class="logo">
-        
+
+<header transition:persist>
+  <div id="banner" class="flex gap-5">
+    <div class="logo w-[10vw]">
+      <video id="videoLogotipo" muted playsinline>
+        <source src={logotipo} type="video/mp4" />
+        Tu navegador no soporta videos.
+      </video>
     </div>
+    <button id="reiniciarVideoBtn">Reiniciar Video</button>
+    <Menu client:load />
+  </div>
+  <Fiber client:load />
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const boton = document.getElementById("reiniciarVideoBtn");
+    const video = document.getElementById("videoLogotipo");
+
+    boton.addEventListener("click", () => {
+      video.currentTime = 0; // Reinicia el tiempo del video a 0
+      video.play(); // Comienza la reproducción
+    });
+  });
+</script>

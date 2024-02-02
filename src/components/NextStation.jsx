@@ -28,12 +28,17 @@ const Menu = () => {
   }, [currentIndex]);
 
   const goToNextStation = (event) => {
+    const videoLogo = document.getElementById("videoLogotipo");
     if (animating) {
       event.preventDefault();
     } else {
       const nextIndex = (currentStationIndex.get() + 1) % allStations.length;
       currentStationIndex.set(nextIndex);
       isAnimating.set(true);
+      if (videoLogo) {
+        videoLogo.currentTime = 0; // Reinicia el tiempo del video a 0
+        videoLogo.play(); // Comienza la reproducción
+      }
     }
   };
 
@@ -42,13 +47,23 @@ const Menu = () => {
   return (
     <nav id="menu" className={navClasses}>
       <a
-        className="inline-block p-4 rounded bg-black m-4"
+        className="inline-block p-6 w-[8vw] h-full bg-white flex"
         href={nextStationHref}
         onClick={goToNextStation}
       >
-        Próxima estación
+        <svg
+          className="w-full fill-red-600 hover:fill-black"
+          viewBox="0 0 32 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M22.1876 10.9494L11.8997 0.857187L19.1492 0.857141L32 13.4636L19.2206 26L11.9715 26L22.1877 15.978L-8.7616e-07 15.9779L6.31363e-06 10.9494L22.1876 10.9494Z"
+          />
+        </svg>
       </a>
-      <StationLinks />
     </nav>
   );
 };
