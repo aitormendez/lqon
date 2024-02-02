@@ -23,6 +23,7 @@ export default function Model({
         font="../fonts/helveue-bold-webfont.woff"
         fontSize={1.5}
         color="#AC0000"
+        textAlign="left"
       >
         {nombreEstacion}
       </Text>

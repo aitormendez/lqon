@@ -53,7 +53,7 @@ const Metro = ({ cameraPositionStart, setCameraPositionStart }) => {
 
     const newStation = {
       id: `station-${Date.now()}`,
-      nombre: `${currentIndex} - ${allStations[currentIndex].nombre}`,
+      nombre: allStations[currentIndex].nombre,
       materialCartel: allStations[currentIndex].materialCartel,
       materialPlano: allStations[currentIndex].materialPlano,
       position: [newPositionX, 0, 0],
