@@ -1,0 +1,15 @@
+---
+tipo: "accion"
+autor: "Vorja Encikutao"
+titulo: "Las mala reputación"
+---
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout
+  title={frontmatter.titulo}
+  tipo={frontmatter.tipo}
+  autor={frontmatter.autor}
+>
+  <p>{frontmatter.autor}</p>
+</Layout>

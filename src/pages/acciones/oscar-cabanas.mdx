@@ -1,0 +1,15 @@
+---
+tipo: "accion"
+autor: "Oscar cabanas"
+titulo: "Mandamás"
+---
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout
+  titulo={frontmatter.titulo}
+  tipo={frontmatter.tipo}
+  autor={frontmatter.autor}
+>
+  <p>Escrito por: {frontmatter.autor}</p>
+</Layout>

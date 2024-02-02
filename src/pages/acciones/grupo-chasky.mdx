@@ -1,0 +1,32 @@
+---
+tipo: "accion"
+autor: "Grupo Chasky"
+titulo: "Movimiento indígena"
+---
+
+import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/Prose.astro";
+import { Tooltip } from "react-tooltip";
+import CustomTooltip from "../../components/CustomTooltip.jsx";
+
+<Layout title={frontmatter.titulo} tipo={frontmatter.tipo} autor={frontmatter.autor}>
+  <Prose>
+    <h1>
+      {frontmatter.autor}
+    </h1>
+
+    prueba de texto
+
+    <CustomTooltip
+      client:load
+      id="unique-tooltip"
+      content="<div class='max-w-sm'>Este es el <i>contenido</i> del tooltip Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptates ipsum illo laboriosam atque eveniet ratione soluta ullam reprehenderit est, minima perferendis veniam nesciunt veritatis dolorum porro quae neque praesentium!"
+    >
+      <sup>1</sup>
+    </CustomTooltip>
+    para ver cómo funciona Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Iusto voluptates ipsum illo laboriosam atque eveniet ratione soluta ullam reprehenderit
+    est, minima perferendis veniam nesciunt veritatis dolorum porro quae neque praesentium!
+
+  </Prose>
+</Layout>

@@ -4,24 +4,24 @@
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "home",
-    "uri": "presentacion"
+    "uri": ""
   },
   {
-    "nombre": "Democracia",
+    "nombre": "Lo quieras o no",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
     "uri": "presentacion"
   },
   {
-    "nombre": "Luis Navarro",
+    "nombre": "Deriva psicogeográfica 1",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
     "uri": "una-deriva-psicogeografica-por-el-metro-de-madrid"
   },
   {
-    "nombre": "Luis Navarro",
+    "nombre": "Qué no es la psicogeografía",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
@@ -35,7 +35,7 @@
     "uri": "oscar-cabanas"
   },
   {
-    "nombre": "Luis Navarro",
+    "nombre": "Deriva psicogeográfica 2",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
@@ -49,14 +49,14 @@
     "uri": "vorja-encikutao"
   },
   {
-    "nombre": "Georges Brassens",
+    "nombre": "La muerte…",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
     "uri": "la-muerte-declara-la-querra-a-los-gendarmes"
   },
   {
-    "nombre": "Luis Navarro",
+    "nombre": "Deriva psicogeográfica 3",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
@@ -70,7 +70,7 @@
     "uri": "taktel"
   },
   {
-    "nombre": "Daniel Villegas",
+    "nombre": "Canciones de trabajo",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
@@ -84,11 +84,11 @@
     "uri": "juan-carlos-gorreta"
   },
   {
-    "nombre": "Luis Navarro",
+    "nombre": "Deriva psicogeográfica 4",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": ""
+    "uri": "juglaria"
   },
   {
     "nombre": "Vicius",
@@ -105,13 +105,6 @@
     "uri": ""
   },
   {
-    "nombre": "Luis Navarro",
-    "materialCartel": "",
-    "materialPlano": "",
-    "tipo": "texto",
-    "uri": ""
-  },
-  {
     "nombre": "Grupo Chasky",
     "materialCartel": "cartel-grupo-chasky",
     "materialPlano": "plano-grupo-chasky",
@@ -119,14 +112,13 @@
     "uri": "grupo-chasky"
   },
   {
-    "nombre": "Luis Duno Gottberg",
+    "nombre": "Resistencias migrantes",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
     "uri": "migracion-y-resistencia-indigena"
   },
   {
-    "id": 7,
     "nombre": "Nono Murcia",
     "materialCartel": "cartel-nono-murcia",
     "materialPlano": "plano-nono-murcia",
@@ -134,11 +126,11 @@
     "uri": "nono-murcia"
   },
   {
-    "nombre": "Luis Navarro",
+    "nombre": "Folclore",
     "materialCartel": "",
     "materialPlano": "",
-    "tipo": "texo",
-    "uri": ""
+    "tipo": "texto",
+    "uri": "folclore"
   },
   {
     "nombre": "El Chirly",
@@ -148,11 +140,11 @@
     "uri": "el-chirly"
   },
   {
-    "nombre": "Luis Navarro",
+    "nombre": "Deriva psicogeográfica 5",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": ""
+    "uri": "resonancias"
   },
   {
     "nombre": "Briana Weapons",
@@ -162,31 +154,24 @@
     "uri": "briana-weapons"
   },
   {
-    "nombre": "Luis Navarro",
-    "materialCartel": "",
-    "materialPlano": "",
-    "tipo": "texo",
-    "uri": ""
-  },
-  {
     "nombre": "Lucia Montenegro",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "accion",
-    "uri": ""
+    "uri": "lucia-montenegro"
   },
   {
-    "nombre": "Luis Duno Gottberg",
+    "nombre": "Casas de cartón",
     "materialCartel": "",
     "materialPlano": "",
-    "tipo": "texo",
-    "uri": ""
+    "tipo": "texto",
+    "uri": "casas-de-carton"
   },
   {
-    "nombre": "Luis Navarro",
+    "nombre": "Post logo",
     "materialCartel": "",
     "materialPlano": "",
-    "tipo": "texo",
+    "tipo": "texto",
     "uri": "post-logo"
   }
 ]

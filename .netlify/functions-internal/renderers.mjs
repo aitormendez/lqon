@@ -1,5 +1,6 @@
 import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
+import { o as AstroJSX, A as AstroError, p as renderJSX, n as createVNode } from './chunks/astro_fHSIkPwp.mjs';
 
 /**
  * Astro passes `children` as a string of HTML, so we need
@@ -56,7 +57,7 @@ const opts = {
 						experimentalReactChildren: false
 					};
 
-const slotName = (str) => str.trim().replace(/[-_]([a-z])/g, (_, w) => w.toUpperCase());
+const slotName$1 = (str) => str.trim().replace(/[-_]([a-z])/g, (_, w) => w.toUpperCase());
 const reactTypeof = Symbol.for('react.element');
 
 function errorIsComingFromPreactComponent(err) {
@@ -67,7 +68,7 @@ function errorIsComingFromPreactComponent(err) {
 	);
 }
 
-async function check(Component, props, children) {
+async function check$1(Component, props, children) {
 	// Note: there are packages that do some unholy things to create "components".
 	// Checking the $$typeof property catches most of these patterns.
 	if (typeof Component === 'object') {
@@ -96,7 +97,7 @@ async function check(Component, props, children) {
 		return React.createElement('div');
 	}
 
-	await renderToStaticMarkup(Tester, props, children, {});
+	await renderToStaticMarkup$1(Tester, props, children, {});
 
 	if (error) {
 		throw error;
@@ -115,7 +116,7 @@ function needsHydration(metadata) {
 	return metadata.astroStaticSlot ? !!metadata.hydrate : true;
 }
 
-async function renderToStaticMarkup(Component, props, { default: children, ...slotted }, metadata) {
+async function renderToStaticMarkup$1(Component, props, { default: children, ...slotted }, metadata) {
 	let prefix;
 	if (this && this.result) {
 		prefix = incrementId(this.result);
@@ -125,7 +126,7 @@ async function renderToStaticMarkup(Component, props, { default: children, ...sl
 	delete props['class'];
 	const slots = {};
 	for (const [key, value] of Object.entries(slotted)) {
-		const name = slotName(key);
+		const name = slotName$1(key);
 		slots[name] = React.createElement(StaticHtml, {
 			hydrate: needsHydration(metadata),
 			value,
@@ -248,11 +249,52 @@ async function renderToReadableStreamAsync(vnode, options) {
 }
 
 const _renderer0 = {
-	check,
-	renderToStaticMarkup,
+	check: check$1,
+	renderToStaticMarkup: renderToStaticMarkup$1,
 	supportsAstroStaticSlot: true,
 };
 
-const renderers = [Object.assign({"name":"@astrojs/react","clientEntrypoint":"@astrojs/react/client.js","serverEntrypoint":"@astrojs/react/server.js"}, { ssr: _renderer0 }),];
+const slotName = (str) => str.trim().replace(/[-_]([a-z])/g, (_, w) => w.toUpperCase());
+async function check(Component, props, { default: children = null, ...slotted } = {}) {
+  if (typeof Component !== "function")
+    return false;
+  const slots = {};
+  for (const [key, value] of Object.entries(slotted)) {
+    const name = slotName(key);
+    slots[name] = value;
+  }
+  try {
+    const result = await Component({ ...props, ...slots, children });
+    return result[AstroJSX];
+  } catch (e) {
+    const error = e;
+    if (Component[Symbol.for("mdx-component")]) {
+      throw new AstroError({
+        message: error.message,
+        title: error.name,
+        hint: `This issue often occurs when your MDX component encounters runtime errors.`,
+        name: error.name,
+        stack: error.stack
+      });
+    }
+  }
+  return false;
+}
+async function renderToStaticMarkup(Component, props = {}, { default: children = null, ...slotted } = {}) {
+  const slots = {};
+  for (const [key, value] of Object.entries(slotted)) {
+    const name = slotName(key);
+    slots[name] = value;
+  }
+  const { result } = this;
+  const html = await renderJSX(result, createVNode(Component, { ...props, ...slots, children }));
+  return { html };
+}
+var server_default = {
+  check,
+  renderToStaticMarkup
+};
+
+const renderers = [Object.assign({"name":"@astrojs/react","clientEntrypoint":"@astrojs/react/client.js","serverEntrypoint":"@astrojs/react/server.js"}, { ssr: _renderer0 }),Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),];
 
 export { renderers };

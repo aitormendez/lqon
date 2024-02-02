@@ -1,0 +1,15 @@
+---
+tipo: "accion"
+autor: "Juan Carlos Gorreta"
+titulo: "La vida de los exclavos en el siglo XXI"
+---
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout
+  title={frontmatter.titulo}
+  tipo={frontmatter.tipo}
+  autor={frontmatter.autor}
+>
+  <p>Escrito por: {frontmatter.autor}</p>
+</Layout>

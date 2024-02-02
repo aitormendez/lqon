@@ -1,0 +1,16 @@
+---
+tipo: "texto"
+autor: "Democracia"
+titulo: "Lo quieras o no"
+---
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout
+  titulo={frontmatter.titulo}
+  tipo={frontmatter.tipo}
+  autor={frontmatter.autor}
+>
+  <h1>{frontmatter.titulo}</h1>
+  <p>{frontmatter.autor}</p>
+</Layout>

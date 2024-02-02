@@ -10,20 +10,21 @@ const Menu = () => {
   const animating = useStore(isAnimating);
 
   useEffect(() => {
-    const updateHref = () => {
-      const nextIndex = (currentIndex + 1) % allStations.length;
-      const nextStation = allStations[nextIndex];
+    const nextIndex = (currentIndex + 1) % allStations.length;
+    const nextStation = allStations[nextIndex];
 
-      const tipoRuta = nextStation.tipo === "texto" ? "textos" : "acciones";
-      const href = `/${tipoRuta}/${nextStation.uri}`;
-      setNextStationHref(href);
-    };
+    let tipoRuta;
+    if (nextStation.tipo === "texto") {
+      tipoRuta = "textos";
+    } else if (nextStation.tipo === "accion") {
+      tipoRuta = "acciones";
+    } else {
+      // Caso "home"
+      tipoRuta = ""; // Ruta raíz para "home"
+    }
 
-    updateHref();
-
-    const subscription = currentStationIndex.subscribe(updateHref);
-
-    return () => subscription();
+    const href = tipoRuta ? `/${tipoRuta}/${nextStation.uri}` : "/";
+    setNextStationHref(href);
   }, [currentIndex]);
 
   const goToNextStation = (event) => {
