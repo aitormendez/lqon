@@ -44,30 +44,24 @@ const NextStation = () => {
   };
 
   const navClasses = animating
-    ? "p-[2vw] w-[9vw] h-full bg-white flex pointer-events-none opacity-50"
-    : "p-[2vw] w-[9vw] h-full bg-white flex hover:bg-black";
+    ? "px-[6vw] md:px-[2vw] md:w-[9vw] h-1/2 md:h-full bg-white flex pointer-events-none opacity-50"
+    : "px-[6vw] md:px-[2vw] md:w-[9vw] h-1/2 md:h-full bg-white flex md:hover:bg-black";
 
   return (
-    <nav id="menu">
-      <a
-        className={navClasses}
-        href={nextStationHref}
-        onClick={goToNextStation}
+    <a className={navClasses} href={nextStationHref} onClick={goToNextStation}>
+      <svg
+        className="fill-red-600 w-full"
+        viewBox="0 0 32 26"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          className="fill-red-600"
-          viewBox="0 0 32 26"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M22.1876 10.9494L11.8997 0.857187L19.1492 0.857141L32 13.4636L19.2206 26L11.9715 26L22.1877 15.978L-8.7616e-07 15.9779L6.31363e-06 10.9494L22.1876 10.9494Z"
-          />
-        </svg>
-      </a>
-    </nav>
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M22.1876 10.9494L11.8997 0.857187L19.1492 0.857141L32 13.4636L19.2206 26L11.9715 26L22.1877 15.978L-8.7616e-07 15.9779L6.31363e-06 10.9494L22.1876 10.9494Z"
+        />
+      </svg>
+    </a>
   );
 };
 
