@@ -5,11 +5,31 @@ titulo: ""
 ---
 
 import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/Prose.astro";
 
 <Layout
-  title={frontmatter.titulo}
+  titulo={frontmatter.titulo}
   tipo={frontmatter.tipo}
   autor={frontmatter.autor}
 >
-  <p>{frontmatter.autor}</p>
+
+<Prose>
+  <h1>{frontmatter.autor}</h1>
+</Prose>
+
+<div class="w-full">
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe
+      src="https://iframe.mediadelivery.net/embed/201842/577b0eae-876e-441a-ab9f-830d776e1589?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+      loading="lazy"
+      style="border:0;position:absolute;top:0;height:100%;width:100%;"
+      allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+      allowfullscreen="true"
+    ></iframe>
+  </div>
+</div>
+
+<Prose>
+
+</Prose>
 </Layout>

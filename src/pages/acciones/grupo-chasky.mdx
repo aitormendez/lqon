@@ -9,17 +9,29 @@ import Prose from "../../components/Prose.astro";
 import { Tooltip } from "react-tooltip";
 import CustomTooltip from "../../components/CustomTooltip.jsx";
 
-<Layout title={frontmatter.titulo} tipo={frontmatter.tipo} autor={frontmatter.autor}>
-  <Prose>
-    <h1>
-      {frontmatter.autor}
-    </h1>
+<Layout
+  titulo={frontmatter.titulo}
+  tipo={frontmatter.tipo}
+  autor={frontmatter.autor}
+>
 
-prueba de texto
+<Prose>
+  <h1>{frontmatter.autor}</h1>
+</Prose>
 
-para ver cómo funciona Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-voluptates ipsum illo laboriosam atque eveniet ratione soluta ullam reprehenderit
-est, minima perferendis veniam nesciunt veritatis dolorum porro quae neque praesentium!
+<div class="w-full">
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe
+      src="https://iframe.mediadelivery.net/embed/201842/c244011c-d2da-4ddb-97f2-18f139356f39?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+      loading="lazy"
+      style="border:0;position:absolute;top:0;height:100%;width:100%;"
+      allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+      allowfullscreen="true"
+    ></iframe>
+  </div>
+</div>
 
-  </Prose>
+<Prose>
+
+</Prose>
 </Layout>
