@@ -10,10 +10,8 @@ const StationLinks = () => {
       const stationIndex = allStations.findIndex(
         (station) => station.uri === stationUri
       );
-      if (stationIndex !== -1) {
-        currentStationIndex.set(stationIndex);
-        isAnimating.set(true);
-      }
+      currentStationIndex.set(stationIndex);
+      isAnimating.set(true);
     }
 
     if (solapaAbierta.value) {

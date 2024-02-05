@@ -2,7 +2,8 @@
 import { Image } from "astro:assets";
 import lqon from "../assets/img/lo-quieras-o-no.svg";
 import logotipo from "../assets/video/torno.mp4";
-import NextStation from "./BtnNextStation.jsx";
+import BtnNextStation from "./BtnNextStation.jsx";
+import BtnHome from "./BtnHome.jsx";
 import Fiber from "../components/Fiber.jsx";
 import BtnMenu from "../components/BtnMenu.astro";
 import Solapa from "./Solapa.astro";
@@ -10,20 +11,12 @@ import Solapa from "./Solapa.astro";
 
 <header transition:persist>
   <div id="banner" class="flex gap-[2vw] md:gap-[1vw] justify-between">
-    <div class="logo-container bg-white flex-grow">
-      <Image
-        class:list={"absolute left-[32vw] md:left-[8vw] top-[9vw] md:top-[2vw] w-[40vw] md:w-[16vw] z-10"}
-        src={lqon}
-        alt="Lo quieras o no"
-      />
-      <video class="relative w-[40vw] md:w-[10vw] left-[4vw] md:left-2" id="videoLogotipo" muted playsinline>
-        <source src={logotipo} type="video/mp4" />
-        Tu navegador no soporta videos.
-      </video>
-    </div>
-    <div class="flex gap-[2vw] md:gap-[1vw] flex-col md:flex-row w-[20vw] md:w-none justify-between">
+    <BtnHome client:load />
+    <div
+      class="flex gap-[2vw] md:gap-[1vw] flex-col md:flex-row w-[20vw] md:w-none justify-between"
+    >
       <BtnMenu />
-      <NextStation client:load />
+      <BtnNextStation client:load />
     </div>
   </div>
   <Fiber client:load />

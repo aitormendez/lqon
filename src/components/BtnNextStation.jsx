@@ -2,9 +2,8 @@ import { useState, useEffect } from "react";
 import { useStore } from "@nanostores/react";
 import { currentStationIndex, isAnimating } from "./stores";
 import allStations from "../data/stations.json";
-import StationLinks from "./StationLinks";
 
-const NextStation = () => {
+const BtnNextStation = () => {
   const currentIndex = useStore(currentStationIndex);
   const [nextStationHref, setNextStationHref] = useState("");
   const animating = useStore(isAnimating);
@@ -65,4 +64,4 @@ const NextStation = () => {
   );
 };
 
-export default NextStation;
+export default BtnNextStation;
