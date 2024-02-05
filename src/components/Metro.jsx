@@ -81,7 +81,7 @@ const Metro = ({ cameraPositionStart, setCameraPositionStart }) => {
       }
       const elapsedTime = currentTime - startTimeRef.current;
 
-      const duration = 0.5; // Duración total del viaje
+      const duration = 5; // Duración total del viaje
       const halfDuration = duration / 2; // Punto medio para cambiar de aceleración a desaceleración
       const start = cameraPositionStart; // Posición inicial
       const end = cameraTargetPositionEnd; // Posición final
