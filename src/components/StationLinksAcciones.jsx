@@ -33,7 +33,7 @@ const StationLinks = () => {
     <>
       {accionStations.map((station, index) => (
         <a
-          className="block px-6 border-b py-2 text-white hover:text-red-600 last:border-none"
+          className="block px-6 md:px-20 border-b py-2 text-white hover:text-red-600 last:border-none"
           key={`${station.nombre}-${index}`}
           href={`/acciones/${station.uri}`}
           onClick={(e) => goToStation(station.uri, e)}

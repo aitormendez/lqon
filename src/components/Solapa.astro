@@ -5,18 +5,26 @@ import StationLinksTextos from "../components/StationLinksTextos";
 
 <nav
   id="solapa"
-  class="absolute bg-black w-full min-h-full -left-full z-50 top-0 transition-all duration-1000 flex flex-col md:flex-row md:gap-6"
+  class="absolute bg-black w-full min-h-full z-50 top-0 transition-all duration-1000 flex flex-col md:flex-row md:gap-6"
 >
   <div class="textos md:w-1/2">
-    <div class="text-3xl md:text-5xl text-center mt-12 md:mt-28 mb-8 md:mb-12">
+    <div
+      class="text-3xl md:text-[3vw] text-center mt-12 md:mt-[5vw] mb-8 md:mb-[3vw]"
+    >
       Acciones
     </div>
-    <StationLinksAcciones client:load />
+    <div class="md:text-[1.2vw]">
+      <StationLinksAcciones client:load />
+    </div>
   </div>
   <div class="acciones md:w-1/2">
-    <div class="text-3xl md:text-5xl text-center mt-12 md:mt-28 mb-8 md:mb-12">
+    <div
+      class="text-3xl md:text-[3vw] text-center mt-12 md:mt-[5vw] mb-8 md:mb-[3vw]"
+    >
       Textos
     </div>
-    <StationLinksTextos client:load />
+    <div class="md:text-[1.2vw]">
+      <StationLinksTextos client:load />
+    </div>
   </div>
 </nav>
