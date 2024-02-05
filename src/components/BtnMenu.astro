@@ -1,16 +1,19 @@
 ---
 const baseClass =
-  "cursor-pointer bg-white p-[2vw] flex flex-col justify-center gap-[0.5vw] w-[10vw] items-center hover:bg-black";
+  "bg-white p-[2vw] flex flex-col justify-center gap-[0.5vw] w-[10vw] items-center hover:bg-black";
 ---
 
-<a id="burger" class={`${baseClass}`}>
+<button id="burger" class={`${baseClass}`}>
   <i class="block bg-red-600 w-[3vw] h-[0.7vw]"></i>
   <i class="block bg-red-600 w-[3vw] h-[0.7vw]"></i>
   <i class="block bg-red-600 w-[3vw] h-[0.7vw]"></i>
-</a>
+</button>
 
 <script>
   import { isAnimating } from "./stores.js";
+  import { solapaAbierta } from "./stores.js";
+  const solapa = document.getElementById("solapa");
+  const burger = document.getElementById("burger");
 
   document.addEventListener("DOMContentLoaded", () => {
     const burger = document.getElementById("burger");
@@ -23,4 +26,21 @@ const baseClass =
       }
     });
   });
+
+  burger.addEventListener("click", abrirSolapa);
+
+  function abrirSolapa() {
+    console.log(solapaAbierta.value);
+    if (!solapaAbierta.value) {
+      console.log("abriendo");
+      solapa.classList.remove("-left-full");
+      solapa.classList.add("left-0");
+      solapaAbierta.set(true);
+    } else {
+      console.log("cerrando");
+      solapa.classList.remove("left-0");
+      solapa.classList.add("-left-full");
+      solapaAbierta.set(false);
+    }
+  }
 </script>

@@ -1,5 +1,6 @@
 import { currentStationIndex, isAnimating } from "./stores";
 import allStations from "../data/stations.json";
+import { solapaAbierta } from "./stores.js";
 
 const StationLinks = () => {
   const goToStation = (stationUri, event) => {
@@ -13,6 +14,14 @@ const StationLinks = () => {
         currentStationIndex.set(stationIndex);
         isAnimating.set(true);
       }
+    }
+
+    if (solapaAbierta.value) {
+      const solapa = document.getElementById("solapa");
+      console.log(solapa);
+      solapa.classList.remove("left-0");
+      solapa.classList.add("-left-full");
+      solapaAbierta.set(false);
     }
   };
 

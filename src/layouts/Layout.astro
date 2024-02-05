@@ -10,7 +10,7 @@ import { slide } from "astro:transitions";
   <CommonHead tipo={tipo} nombre={nombre} />
   <body class="text-white">
     <Header />
-    <main transition:animate={slide({ duration: "1s" })} class="font-serif">
+    <main class="font-serif">
       <slot />
     </main>
     <style is:global>
