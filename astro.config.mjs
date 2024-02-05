@@ -9,4 +9,12 @@ export default defineConfig({
   integrations: [react(), tailwind(), mdx()],
   output: "server",
   adapter: netlify(),
+  markdownOptions: {
+    render: [
+      "@astrojs/markdown-remark",
+      {
+        remarkPlugins: ["remark-gfm"],
+      },
+    ],
+  },
 });

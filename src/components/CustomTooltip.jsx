@@ -11,7 +11,6 @@ const CustomTooltip = ({ id, content, children }) => {
         data-tooltip-html={content}
         data-tooltip-class-name="max-w-80"
         style={{ maxWidth: "300px" }}
-        disableStyleInjection={true}
       >
         {children}
       </div>
