@@ -25,42 +25,23 @@ const StationLinks = () => {
     }
   };
 
-  const textoStations = allStations.filter(
-    (station) => station.tipo === "texto"
-  );
-
   const accionStations = allStations.filter(
     (station) => station.tipo === "accion"
   );
 
   return (
-    <div className="m-4">
-      <div className="inline-block">
-        {textoStations.map((station, index) => (
-          <a
-            className="block m-2"
-            key={`${station.nombre}-${index}`}
-            href={`/textos/${station.uri}`}
-            onClick={(e) => goToStation(station.uri, e)}
-          >
-            {station.nombre}
-          </a>
-        ))}
-      </div>
-
-      <div className="inline-block">
-        {accionStations.map((station, index) => (
-          <a
-            className="block m-2"
-            key={`${station.nombre}-${index}`}
-            href={`/acciones/${station.uri}`}
-            onClick={(e) => goToStation(station.uri, e)}
-          >
-            {station.nombre}
-          </a>
-        ))}
-      </div>
-    </div>
+    <>
+      {accionStations.map((station, index) => (
+        <a
+          className="block px-6 border-b py-2 text-white hover:text-red-600 last:border-none"
+          key={`${station.nombre}-${index}`}
+          href={`/acciones/${station.uri}`}
+          onClick={(e) => goToStation(station.uri, e)}
+        >
+          {station.nombre}
+        </a>
+      ))}
+    </>
   );
 };
 

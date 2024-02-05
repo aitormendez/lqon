@@ -1,10 +1,22 @@
 ---
-import StationLinks from "../components/StationLinks";
+import StationLinksAcciones from "../components/StationLinksAcciones";
+import StationLinksTextos from "../components/StationLinksTextos";
 ---
 
-<div
+<nav
   id="solapa"
-  class="absolute bg-black w-full min-h-full z-50 top-0 -left-full transition-all duration-1000"
+  class="absolute bg-black w-full min-h-full -left-full z-50 top-0 transition-all duration-1000 flex flex-col md:flex-row md:gap-6"
 >
-  <StationLinks client:load />
-</div>
+  <div class="textos md:w-1/2">
+    <div class="text-3xl md:text-5xl text-center mt-12 md:mt-28 mb-8 md:mb-12">
+      Acciones
+    </div>
+    <StationLinksAcciones client:load />
+  </div>
+  <div class="acciones md:w-1/2">
+    <div class="text-3xl md:text-5xl text-center mt-12 md:mt-28 mb-8 md:mb-12">
+      Textos
+    </div>
+    <StationLinksTextos client:load />
+  </div>
+</nav>
