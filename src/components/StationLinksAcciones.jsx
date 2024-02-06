@@ -36,7 +36,8 @@ const StationLinks = () => {
           href={`/acciones/${station.uri}`}
           onClick={(e) => goToStation(station.uri, e)}
         >
-          {station.nombre}
+          <p>{station.nombre}</p>
+          <p className="font-light">{station.tema} </p>
         </a>
       ))}
     </>

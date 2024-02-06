@@ -11,167 +11,191 @@
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "presentacion"
+    "uri": "presentacion",
+    "autor": "Democracia"
   },
   {
     "nombre": "Deriva psicogeográfica 1",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "una-deriva-psicogeografica-por-el-metro-de-madrid"
+    "uri": "una-deriva-psicogeografica-por-el-metro-de-madrid",
+    "autor": "Luis Navarro"
   },
   {
     "nombre": "Qué no es la psicogeografía",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "que-no-es-la-psicogeografia"
+    "uri": "que-no-es-la-psicogeografia",
+    "autor": "Luis Navarro"
   },
   {
     "nombre": "Oscar Cabanas",
     "materialCartel": "cartel-oscar-cabanas",
     "materialPlano": "plano-oscar-cabanas",
     "tipo": "accion",
-    "uri": "oscar-cabanas"
+    "uri": "oscar-cabanas",
+    "tema": "Mandamás"
   },
   {
     "nombre": "Deriva psicogeográfica 2",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "no-lugar"
+    "uri": "no-lugar",
+    "autor": "Luis Navarro"
   },
   {
     "nombre": "Vorja Encikutao",
     "materialCartel": "cartel-vorja-encikutao",
     "materialPlano": "plano-vorja-encikutao",
     "tipo": "accion",
-    "uri": "vorja-encikutao"
+    "uri": "vorja-encikutao",
+    "tema": "La mala reputación"
   },
   {
     "nombre": "La muerte…",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "la-muerte-declara-la-querra-a-los-gendarmes"
+    "uri": "la-muerte-declara-la-guerra-a-los-gendarmes",
+    "autor": "Georges Brassens"
   },
   {
     "nombre": "Deriva psicogeográfica 3",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "la-comunidad"
+    "uri": "la-comunidad",
+    "autor": "Luis Navarro"
   },
   {
     "nombre": "Taktel",
     "materialCartel": "cartel-taktel",
     "materialPlano": "plano-taxtel",
     "tipo": "accion",
-    "uri": "taktel"
+    "uri": "taktel",
+    "tema": "Reacción en cadena"
   },
   {
     "nombre": "Canciones de trabajo",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "canciones-de-trabajo"
+    "uri": "canciones-de-trabajo",
+    "autor": "Daniel Villegas"
   },
   {
     "nombre": "Juan Carlos Gorreta",
     "materialCartel": "cartel-juan-carlos-gorreta",
     "materialPlano": "plano-juan-carlos-gorreta",
     "tipo": "accion",
-    "uri": "juan-carlos-gorreta"
+    "uri": "juan-carlos-gorreta",
+    "tema": "La vida de los esclavos en el S. XXI"
   },
   {
     "nombre": "Deriva psicogeográfica 4",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "juglaria"
+    "uri": "juglaria",
+    "autor": "Luis Navarro"
   },
   {
     "nombre": "Vicius",
     "materialCartel": "cartel-vicius",
     "materialPlano": "plano-vicius",
     "tipo": "accion",
-    "uri": "vicius"
+    "uri": "vicius",
+    "tema": "Vacaciones en España"
   },
   {
     "nombre": "Punk",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "punk"
+    "uri": "punk",
+    "autor": "Democracia"
   },
   {
     "nombre": "Grupo Chasky",
     "materialCartel": "cartel-grupo-chasky",
     "materialPlano": "plano-grupo-chasky",
     "tipo": "accion",
-    "uri": "grupo-chasky"
+    "uri": "grupo-chasky",
+    "tema": "Movimiento indígena"
   },
   {
     "nombre": "Resistencias migrantes",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "migracion-y-resistencia-indigena"
+    "uri": "migracion-y-resistencia-indigena",
+    "autor": "Luis Duno-Gottberg"
   },
   {
     "nombre": "Nono Murcia",
     "materialCartel": "cartel-nono-murcia",
     "materialPlano": "plano-nono-murcia",
     "tipo": "accion",
-    "uri": "nono-murcia"
+    "uri": "nono-murcia",
+    "tema": "Fandangos"
   },
   {
     "nombre": "Folclore",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "folclore"
+    "uri": "folclore",
+    "autor": "Luis Navarro"
   },
   {
     "nombre": "El Chirly",
     "materialCartel": "cartel-el-chirly",
     "materialPlano": "plano-el-chirly",
     "tipo": "accion",
-    "uri": "el-chirly"
+    "uri": "el-chirly",
+    "tema": "Están cayendo bombas en Madrid"
   },
   {
     "nombre": "Deriva psicogeográfica 5",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "resonancias"
+    "uri": "resonancias",
+    "autor": "Luis Navarro"
   },
   {
     "nombre": "Briana Weapons",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "accion",
-    "uri": "briana-weapons"
+    "uri": "briana-weapons",
+    "tema": ""
   },
   {
     "nombre": "Lucia Montenegro",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "accion",
-    "uri": "lucia-montenegro"
+    "uri": "lucia-montenegro",
+    "tema": "Casas de cartón"
   },
   {
     "nombre": "Casas de cartón",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "casas-de-carton"
+    "uri": "casas-de-carton",
+    "autor": "Luis Duno-Gottberg"
   },
   {
     "nombre": "Post logo",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "post-logo"
+    "uri": "post-logo",
+    "autor": "Luis Navarro"
   }
 ]

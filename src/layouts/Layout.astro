@@ -26,16 +26,17 @@ import { slide } from "astro:transitions";
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+      
+      .footnotes ol {
+        max-width: 58ch;
+      }
 
-        ol {
-          max-width: 58ch;
-          li {
-            padding: 0.5em 0;
-            border-bottom: 1px solid white;
-            margin-left: 1em;
-            list-style-type: decimal;
-          }
-        }
+      .footnotes ol li {
+        padding: 0.5em 0;
+        border-bottom: 1px solid white;
+        margin-left: 1em;
+        list-style-type: decimal;
       }
 
       @font-face {
