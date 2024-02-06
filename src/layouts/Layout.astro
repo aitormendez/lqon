@@ -21,6 +21,23 @@ import { slide } from "astro:transitions";
       }
     </style>
     <style is:global>
+      .footnotes {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ol {
+          max-width: 58ch;
+          li {
+            padding: 0.5em 0;
+            border-bottom: 1px solid white;
+            margin-left: 1em;
+            list-style-type: decimal;
+          }
+        }
+      }
+
       @font-face {
         font-family: "Helveue";
         src: url("/fonts/helveue-regular-webfont.woff") format("woff");

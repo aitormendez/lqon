@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind(), mdx()],
+  integrations: [react(), tailwind({ nesting: true }), mdx()],
   output: "server",
   adapter: netlify(),
   markdownOptions: {

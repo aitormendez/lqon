@@ -8,7 +8,7 @@ import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
 import imageElvisDesktop from "../../assets/img/oscar-cabanas-elvis-desktop.png";
 import imageElvisMobile from "../../assets/img/oscar-cabanas-elvis-mobile.png";
-import ImageComponent from "../../components/ImageComponent.astro";
+import ImageNoCaption from "../../components/ImageNoCaption.astro";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -33,7 +33,7 @@ import ImageComponent from "../../components/ImageComponent.astro";
 </div>
 
 <Prose> 
-  <ImageComponent
+  <ImageNoCaption
     mobileImgUrl={imageElvisMobile}
     desktopImgUrl={imageElvisDesktop}
     alt="Portada disco Elvis. Big Boss Man"

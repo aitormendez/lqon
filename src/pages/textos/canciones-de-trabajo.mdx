@@ -6,12 +6,176 @@ titulo: "Recuperación & Reexplotación. Acerca de las canciones de trabajo"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageArbeitMobile from "../../assets/img/canciones-trabajo/Arbeit_macht_frei-mobile.jpg";
+import imageArbeitDesktop from "../../assets/img/canciones-trabajo/Arbeit_macht_frei-desktop.jpg";
+import imageCartelMobile from "../../assets/img/canciones-trabajo/cartel-mobile.jpg";
+import imageCartelDesktop from "../../assets/img/canciones-trabajo/cartel-desktop.jpg";
+import imageAlarmMobile from "../../assets/img/canciones-trabajo/alarm-clock-mobile.jpg";
+import imageAlarmDesktop from "../../assets/img/canciones-trabajo/alarm-clock-desktop.jpg";
+import imageAfricansMobile from "../../assets/img/canciones-trabajo/africans-americans-mobile.jpg";
+import imageAfricansDesktop from "../../assets/img/canciones-trabajo/africans-americans-desktop.jpg";
+import imageIntervencion1Mobile from "../../assets/img/canciones-trabajo/intervincion-anonima-1-mobile.jpg";
+import imageIntervencion1Desktop from "../../assets/img/canciones-trabajo/intervincion-anonima-1-desktop.jpg";
+import imageIntervencion2Mobile from "../../assets/img/canciones-trabajo/intervincion-anonima-2-mobile.jpg";
+import imageIntervencion2Desktop from "../../assets/img/canciones-trabajo/intervincion-anonima-2-desktop.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
   tipo={frontmatter.tipo}
   autor={frontmatter.autor}
 >
-  <h1>{frontmatter.titulo}</h1>
-  <p>{frontmatter.autor}</p>
+
+<Prose>
+# {frontmatter.titulo}
+_{frontmatter.autor}_
+
+<ImageCaption
+  mobileImgUrl={imageIntervencion2Mobile}
+  desktopImgUrl={imageIntervencion2Desktop}
+  caption="Pie de foto"
+  alt="alt"
+/>
+
+<ImageCaption
+  mobileImgUrl={imageIntervencion1Mobile}
+  desktopImgUrl={imageIntervencion1Desktop}
+  caption="Pie de foto"
+  alt="alt"
+/>
+
+<ImageCaption
+  mobileImgUrl={imageAfricansMobile}
+  desktopImgUrl={imageAfricansDesktop}
+  caption="Pie de foto"
+  alt="alt"
+/>
+
+<ImageCaption
+  mobileImgUrl={imageAlarmMobile}
+  desktopImgUrl={imageAlarmDesktop}
+  caption="Pie de foto"
+  alt="alt"
+/>
+
+<ImageCaption
+  mobileImgUrl={imageCartelMobile}
+  desktopImgUrl={imageCartelDesktop}
+  caption="Pie de foto"
+  alt="alt"
+/>
+
+La relación entre la música popular y el trabajo es una historia antigua. Precisar su origen, como el de tantos fenómenos históricos, resulta complejo y, hasta cierto punto, sin un mayor interés. Lo que, sin embargo, sería útil para entender dicho vínculo es examinar la genealogía de aquellas expresiones culturales que se han manifestado en este ámbito. Así, podemos rastrear en diversos contextos la existencia de canciones de trabajo que, con múltiples funciones, atraviesan distintos espacios geográficos y temporales. Tradicionalmente en África y Europa, por citar algunos de ellos, encontramos ejemplos de tales manifestaciones. Desde al menos la Edad Media en este último enclave aparecen los cantos de siega o canciones de faena, entre otras, cuya función sería la de aliviar las cargas del repetitivo trabajo agrícola. Sin embargo, en su evolución, la canción del trabajo desplegará muchos otros significados que incluirán la queja ante las condiciones abusivas, el deseo de emancipación, el resentimiento contra capataces y dueños o la ironía frente al sistema de explotación que expropia y controla las fuerzas vitales de una parte de población en beneficio de otra. Este género musical, en definitiva, aborda las complejas relaciones existentes en las distintas sociedades con sus respectivas nociones de trabajo, teniendo en cuenta que, al menos en Occidente y hasta hace relativamente poco, ha sido entendido predominantemente como un tormento, tal y como se infiere de una etimología que proviene del latín _tripalium_, del que a su vez derivaría _tripaliare_, y que se popularizó en el lenguaje cotidiano como torturar o causar dolor y sufrimiento.
+
+Con la expansión del capitalismo colonial-imperial, la emergencia del modelo extractivista y la especialización laboral se producirá un enorme desarrollo de las canciones de trabajo, extendiéndose sus variantes a muchos y distintos campos laborales. Ejemplo de ello lo podemos encontrar en la aparición, durante el siglo XIX, de distintos palos del flamenco que abordan esta cuestión, como los Martinetes, las Mineras o las Trilleras. En la anterior centuria ya se podían escuchar, en las plantaciones norteamericanas, las _work songs_ en su modalidad de cantos de esclavitud. De herencia cultural africana, estas canciones de “llamada y respuesta” que entonaba la población esclava tenían por objeto tanto hacer pervivir la memoria sobre el lugar de origen como expresar un lamento por su pérdida, las brutales condiciones a las que había sido sometida y, muy especialmente en el caso de las mujeres afroamericanas esclavizadas, establecer un modo de resistencia simbólico frente a la tiranía de los terratenientes blancos. Sin embargo, en ocasiones, y en sentido contrario, eran los capataces los que obligaban al canto para mantener el ritmo de producción.
+
+No sorprende que, con la abolición de la esclavitud y dada la situación de subalternidad de la comunidad negra estadounidense, este tipo de canción se trasmitiera a través de las cárceles —como paralelamente sucediera en el ámbito del flamenco con la instauración del palo de la Carcelera— y, de manera particular, en las _chain gang_ compuestas por grupos de presos unidos por cadenas y castigados a trabajos forzados en la construcción del ferrocarril, carreteras y otras obras públicas. De hecho, a partir de la década de 1930, el musicólogo y folclorista John Lomax en su labor de preservación de la música popular grabaría una buena parte de sus registros sonoros, de entre este _corpus_ de cantos de esclavitud, en penitenciarías.
+
+Es de sobra conocido que las _work songs_ y, de modo más específico, los cantos de esclavitud estarían en la raíz del _blues_, que aparecería a comienzos del siglo XX en el delta del Misisipi y más concretamente, como no podía ser de otro modo, en las plantaciones de algodón donde la población afroamericana, aunque emancipada de su condición de esclava, era explotada por los grandes propietarios blancos del sur, delineando una situación donde se perpetuaban los nefastos efectos del esclavismo. Al igual que sus ancestros cantaban su pesar y queja frente al extractivismo al que eran sometidos. Eso sí, como aquéllos, de un modo codificado debido al riesgo que suponía enfrentarse directamente con patrón blanco que, _de facto_, mantenía intactas sus prerrogativas sobre la vida de los ahora empleados, estableciéndose una continuidad con el régimen esclavista. Así, si se referían en una canción a los maltratos de una mujer estaban aludiendo de manera cifrada a sus jefes. Es, en definitiva, esta atmósfera de penurias, abuso, desigualdad, racismo sistémico y subjetivo, vinculada especialmente al marco del trabajo, donde se originará el _blues_ y éste constituye la raíz de dos de las canciones de las que trataremos en este texto: _Big Boss Man_ y _La canción del trabajo_ (_Work Song_).
+
+Ambas piezas, en sus versiones originales, invocan el régimen de explotación en el trabajo al que están sometidas las clases subalternas y, en este caso, la comunidad afroamericana. Como se ha señalado, su vínculo con los cantos de esclavitud resulta genealógicamente evidente. En el caso de la primera, debido a su filiación con el _blues_, y la segunda, por tratarse de un estándar de _jazz_, situado, por tanto, en un estilo musical que deviene del primero y ambos son derivaciones de la música que se desarrolló en las plantaciones del sur de Estados Unidos. Entre dichas canciones existe, sin embargo, una nítida diferencia en términos de la posición que adopta quien enuncia frente a una situación de injusticia en el trabajo. Mientras que la letra de _Big Boss Man_ manifiesta una actitud de queja ante la explotación y busca en el propio sistema de relaciones de poder instituido una salida más tolerable, _Work Song_ se sumerge en sus causas, marcadas por la violencia institucional y la desigualdad. Lo que, sin embargo, comparten, más allá de su inserción en la misma tradición musical, es el hecho de haber sido sometidas a un análogo fenómeno de asimilación, o incluso recuperación, de las expresiones de resistencia y malestar por parte de la estructura que condena a multitudes a una condición de inferioridad. Este proceso puede entenderse de modos distintos, en cada uno de los casos, lo que constituirá el núcleo de los argumentos que se desplegarán a continuación en el análisis de las dos canciones.
+
+Composición atribuida al productor y cantante afroamericano Luther Dixon y a Al Smith, _Big Boss Man_ fue grabada por el músico de blues Jimmy Reed en 1961. En su letra se expresan las condiciones extremas de trabajo al que le somete un jefe y la desafección hacia esa figura de autoridad debido a su conducta, tal como puede inferirse del siguiente fragmento:
+
+Big boss man, can't you hear me when I call? Can't you hear me when I call?\
+I said you ain't so big, you're just tall that's all.[^1]
+
+Sin embargo, el tipo de desidentificación que se produce, en este caso, no es sistémica en relación con una estructura racista y de clase sino, más bien, subjetiva frente un mal jefe. En definitiva, no cuestiona el modelo de producción extractivista de las fuerzas vitales de una gran parte de la sociedad explotada. El problema aquí, por tanto, queda reducido a que la perversidad se asocia a los individuos y no al modo en el que está configurado un capitalismo que, en su asignación de roles concretos, produce con enorme violencia unas desigualdades en función de diversos vectores que definen la subalternidad. De este modo, el conflicto podría resolverse, según se sugiere en esta canción, con un cambio de quién ocupe la figura de autoridad dentro de un marco de explotación igualmente jerárquico. Esta solución suavizaría las formas de explotación sin afrontar sus causas profundas:
+
+I'm gonna get me a boss man\
+One that's gonna treat me right.[^2]
+
+No sorprende que, teniendo en cuenta el contenido aceptable de la letra para una buena parte de la sociedad blanca especialmente en lo relativo a su sector juvenil, fuera Elvis Presley quien, en 1967, grabó esta canción, popularizándola de un modo sin precedentes. Son suficientemente conocidas, en este sentido, las acusaciones de apropiación cultural que se han vertido sobre la producción musical del “Rey del _rock 'n' roll_”. El extractivismo al que sometió, en su carrera y dentro de un conglomerado industrial, a la música afroamericana es un asunto ampliamente referenciado. Así, Little Richard y Maceo Parker cantaban en 1990, dentro del tema _Elvis Is Dead_ compuesto por Vernon Reid:
+
+Elvis was a hero to most\
+But that's beside the point\
+A Black man taught him how to sing\
+And then he was crowned King.[^3]
+
+Lo que sucedió con esta canción, como con tantas otras, fue que, por inane que fuera para el sistema de explotación blanco-patriarcal, una expresión de malestar propia de la comunidad negra estadounidense, cuyas raíces se hundían en la música de resistencia frente a la esclavitud, terminó por convertirse en un material expropiado y explotado por una industria que mantenía en su configuración los privilegios de los grupos dominantes bajo un aspecto de diseñada rebeldía. La versión que años más tarde, en un disco homenaje a Elvis titulado de _Tributo al Rey_, realizó en 1997 Carlos Segarra (fundador del grupo rockabilly Los Rebeldes) sugerirá un tono más amenazante contra la figura simbólica de poder en el contexto del trabajo. _Big Boss Man_ será traducida aquí como _Mandamás_ y que también dará título a la canción. Esto se produce ya en un contexto donde el sistema de explotación se ha transformado, conformándose un paisaje más difuso. El modelo macho-confrontativo, dentro del cual se recupera esta canción, de enfrentamiento al fenómeno de las relaciones de trabajo no deja de resultar, en este caso, del todo anacrónica y, por tanto, inofensiva para unos mecanismos que han devenido más sofisticados, aunque igualmente lesivos. Esta variante es la que se incorpora en el proyecto del colectivo Democracia, en una adaptación libre cuyo interés radica en la incorporación de la experiencia personal del interprete.
+
+En cuanto a la segunda de las canciones cuyo análisis se propone en el presente texto, _Work Song_ se puede afirmar que se produjo, asimismo, un proceso de recuperación, pero en este caso implicando un mecanismo de traducción cultural, al ser adaptada al contexto del Estado español franquista. Esta canción apareció por primera vez, en su versión instrumental, en 1960 y fue compuesta y ejecutada por el cornetista de _jazz_ Nat Adderley. La pieza se inspiraba en un recuerdo de infancia del músico, quien rememora el encuentro, frente a su casa de Florida, con una cadena de presidiarios que cantaban mientras realizaban trabajos forzados de pavimentación. Esta circunstancia inscribe, de modo inequívoco, la pieza en la tradición de los cantos de las _chain gang_. Ese espíritu fue recogido por el también afroamericano Oscar Brown Jr. Compositor, poeta, cantante, actor, dramaturgo y activista por los derechos civiles, Brown escribió la letra e interpretó _Work Song_ el mismo año que Adderley lanzó su primera versión y, desde entonces, alcanzó una gran repercusión, siendo grabada por Nina Simone un año más tarde. A diferencia del contenido de _Big Boss Man_, la letra de la canción aludía directamente a la violencia sistémica y estructura de explotación a la que estaba sometida la población negra estadounidense, como puede apreciarse en la siguiente estrofa:
+
+I commited crime Lord I needed\
+Crime of being hungry and poor\
+I left the grocery store man bleeding (breathing?)\
+When they caught me robbing his store.[^4]
+
+Condenados a la delincuencia y a sus consecuencias judiciales y penitenciarias. Tal es la condición de la que nos habla _Work Song_. La de aquellas comunidades expulsadas a los márgenes sociales en virtud de unos mecanismos de subalternidad que nos remite a los terribles resultados de la agenda de racialización. Sin negociar con el _statu quo_, esta canción se se manifiesta como un análisis del mismo con la intención de transformar ese estado de cosas.
+
+El asunto que aquí nos ocupa, sin embargo, se vincula al modo en el que esta canción fue apropiada, en el contexto del franquismo, y como su sentido se pudo alterar desde un espacio inicialmente reivindicativo —recordemos la filiación activista del autor de la letra— al más afirmativo en lo relativo a las nociones de trabajo situadas, evidentemente, en cada contexto social concreto. Sea como fuere, resulta de gran interés el proceso de recuperación de esta pieza musical desde su contexto original estadounidense, atravesado por la guerra cultural protagonizada por los movimientos por los derechos civiles, hasta el del desarrollismo franquista, en el que la cultura jugará un rol destacado en ciertas transformaciones sociales espoleadas por gobiernos tecnocráticos y, de modo particular, en el intento del régimen de homologación internacional con los estándares democráticos occidentales.
+
+_La Canción del trabajo_, como se tradujo esta pieza, fue adaptada instrumentalmente por Manuel Alejandro, que le daría un ritmo _ska_, y fue Manuel Clavero (seudónimo de Manuel López-Quiroga) tradujo libremente la letra, circunstancia que es especialmente relevante, transformando su sentido para sintonizar con ciertos aspectos culturales que atravesaban el tiempo histórico y político de la última etapa franquista. La adaptación se realizó en 1966 y, ese mismo año, fue grabada por Raphael. Que fuera, precisamente, este cantante el que interpretara la pieza resultó de lo más conveniente para la operación modificadora de sentido respecto de la original. Esta elección no parece casual, teniendo en cuenta que Raphael conectó con las aspiraciones de modernización y blanqueamiento de la imagen de la fase final del franquismo. Su posicionamiento, aparentemente apolítico, unido a una performatividad ambigua en relación con la heteronorma, pero siempre dispuesto a colaborar tanto con el régimen como con otras dictaduras del contexto latinoamericano, hicieron de él un agente de propagación de un nuevo imaginario en relación con la modernización de costumbres, la expansión del consumo y el cambio en la ética del trabajo.
+
+_La Canción del trabajo_ supone un fenómeno cultural paradigmático del referido giro que se situaría entre un sistema y otro de valores, especialmente en lo asociado a la consideración del trabajo. Cuando se examina su letra adaptada al castellano podemos observar el descrito tránsito desde el espacio nacionalcatólico al tecnocrático, con sus respectivos modos de abordar una noción, lo laboral, que en esos momentos se hallaba en un proceso de mutación. En su primera estrofa puede apreciarse cómo se despliega la moral tradicional del catolicismo asociada a este concepto y que proveniente de la idea del trabajo como maldición bíblica ocasionada por el pecado original. Su inevitabilidad, por mandato divino, nos sitúa en el territorio de la resignación. Nada se puede hacer salvo aceptar una pena que no puede ser cuestionada en absoluto. La canción, en definitiva, incita a mantener y reproducir, asumiendo nuestra culpa, las relaciones de poder que definen dicho espacio de actividad como parte de nuestra constitución humana naturalizada, obedeciendo acríticamente unas presuntas leyes inmutables. Es, en este sentido, en el que interpretamos aquí los versos iniciales:
+
+Arrastrar la dura cadena\
+Trabajar sin tregua y sin fin\
+Es lo mismo que una condena\
+Que ninguno puede eludir\
+El trabajo nace con la persona\
+Va grabado sobre su piel, y ya siempre\
+Le acompaña\
+Como el amigo más fiel.
+
+Este mensaje de sacrificio, sin embargo, difícilmente podría sintonizar con las expectativas de una juventud, la de los años sesenta del pasado siglo, atravesada por el anhelo de libertad y transformación frente a las precarias y asfixiantes condiciones vitales a las que se habían visto sometidos sus mayores en la etapa autárquica del régimen franquista. Enunciada la imposibilidad de eludir el castigo que supone el trabajo, y de ahí que esta pieza suponga un punto de inflexión en la consideración de este concepto, propone un escenario en el que transmutar sus valores constitutivos y que, en contraste con las posibilidades de cambio político más profundo, se interna en la atmósfera del deseo del consumo individualista que se conciliaba con el _ethos_ predominante en el contexto occidental. Toda vez que hay que conformarse con esa imposición que supone la obligación del trabajo, el modo en el que se podía asegurar la avenencia era la de inocular una visión positiva en términos de progreso y autorrealización a través de un desempeño laboral que, además de ser plenamente conveniente como mecanismo de control social, conectaba perfectamente con las demandas del capitalismo internacional:
+
+Vale más tener confianza\
+Y luchar por algo mejor\
+Trabajar con fe y esperanza\
+Por lograr un mundo de amor.
+
+La apelación a una cierta libertad individual, aun cuando se habitara en un régimen dictatorial, basada en la mejora de la posición económica que implicaba, en consecuencia, una ampliación de la capacidad de consumo, vincularía _La Canción del trabajo_ con el espíritu liberal del emprendimiento que, en la fase del desarrollismo económico franquista, comenzaba a manifestarse como valor social en alza. Estos argumentos se relacionan directamente con el cambio que se estaba produciendo, por aquel entonces, en el interior del régimen y que intentaba garantizar la continuidad del mismo. En su proceso de homologación internacional, la apariencia de un aperturismo y la articulación de señales de liberalización a través de las manifestaciones artísticas, articulan un mecanismo de propaganda bien estudiado y que podemos tanto inferir de la política cultural franquista en el exterior, con la promoción del informalismo y su expresión del “genio” individual, como de esta nueva disposición social hacia el trabajo y el consumo. Todo ello manifestaciones de cierta idea de libertad que, por otro lado, se adecuarían a los parámetros de las democracias occidentales. La disposición de un nuevo imaginario del trabajo, a la que contribuiría esta canción, tendría el objetivo de establecer una nueva conformidad social que, al menos en apariencia, colocaba el régimen en un espacio de mayor aceptación internacional y, lo que es más importante, respondía a la definición de unas condiciones que facilitaban la expansión económica diseñada por un sistema que, ya en la mencionada década, era claramente de corte tecnocrático.
+
+En la versión en castellano de _Work Song_ quedaban lejos esos cantos de esclavos y la música epigonal de las _chain gang_, con su potencia cuestionadora y de resistencia ante la violencia ejercida a través del trabajo. El proceso que implicaría su traducción al contexto franquista estaría marcado por una recuperación, para los intereses dominantes, de las expresiones culturales de malestar de las comunidades oprimidas. Tanto en esta canción como en el devenir de _Big Boss Man_ encontramos un mismo mecanismo, aunque de modos distintos. El proyecto del colectivo Democracia, que incluye ambas piezas, nos interroga sobre las condiciones necesarias para hacer útil de nuevo, para quienes desde la subalternidad expresan su disconformidad, esas herramientas musicales. Desde la posibilidad de encarnarlas con versiones que respondan a su situación actual, pasando por la consideración del contexto de difusión de las mismas hasta el modo de performatividad mediante la que se interpretan. Todas estas cuestiones, y de seguro algunas otras, serán fundamentales en la consideración de dicha potencialidad.
+
+## Coda en torno a las canciones de resistencia-abolición del trabajo
+
+Además de las dos piezas musicales, analizadas anteriormente, en relación con la resistencia y denuncia de las condiciones de trabajo, el presente proyecto del colectivo Democracia incluye otras canciones que abordan una diversa temática socio-política. En este contexto, y directamente relacionadas con las canciones de trabajo, se encuentran las expresiones que explícitamente rechazan esta actividad y que critican la productividad como un modo de violencia y control hacia la población. Ese es el caso de las dos que han sido seleccionadas en este ámbito: _Esclavos del siglo XXI_ del grupo punk Gatillazo (fundado por el cantante de La polla, Evaristo) grabado en 2013 y _Reacción en cadena_ de la formación de rock progresivo Difícil Equilibrio y que vio la luz ese mismo año.
+
+Primeramente, y antes de entrar en consideraciones en relación con las citadas canciones, habría que plantear el contexto en el que surgen. Nos referimos aquí a cierta tradición de rechazo del trabajo en el ámbito occidental. A su consideración negativa se opondrá la reforma protestante, que en alianza con el desarrollo del capitalismo, instaurará un cierto prestigio que servirá para apuntalar la expansión de este sistema de producción y que continuará con las tesis productivistas del marxismo clásico. Sin embargo, desde espacios más heterodoxos de este mismo marco ideológico se producirá una reacción en contra del modelo social basado en el trabajo, como puede encontrarse en la célebre obra de Paul Lafargue publicada, en 1883, bajo el título de _El derecho a la pereza_. En este texto se proponía la abolición del trabajo o, si ésta no era posible, al menos una reducción de la jornada laboral a tres horas para liberar a la humanidad de la esclavitud laboral. Se trataba de invertir los valores de la ética protestante del trabajo, calificando la holgazanería y el goce como virtudes, y la productividad como una actividad degradante y viciosa. Del “Jamais je ne travaillerai”[^5] proclamado, diez años antes de la aparición del libro de Lafargue, por Arthur Rimbaud, hasta el “Ne travaillez jamais”[^6] escrito en un muro parisino por Guy Debord en 1953, distan setenta años, período en el que desde determinadas corrientes marxistas y anarquistas se extenderá un rechazo hacia el trabajo en su vertiente asalariada propia del capitalismo.
+
+Más cercano en el tiempo el Grupo Krisis insistiría, en 1999, en su _Manifiesto contra el trabajo_, en el desmantelamiento del mismo mediante la apropiación de los medios de producción para terminar, de ese modo, con una maquinaria de control, coercitiva y de explotación de las fuerzas vitales de los individuos. Se incardinaba, de este modo, en una genealogía de rechazo del trabajo en tanto forma de dominio, aunque como señalaron algunas voces críticas, por ejemplo Jorge Semprún en _El fantasma de la teoría. Notas sobre el Manifiesto contra el Trabajo_ (1997), podría resultar ingenuo entender que pueden recuperarse intactas las técnicas y tecnologías, despojándolas de su forma capitalista. Sea como fuere, y de este último asunto se ha debatido extensamente en las últimas décadas, lo que podemos afirmar es que la idea de trabajo se ha ido transformando de manera dramática en los últimos años y que, incluso desde perspectivas neoliberales, han ido apareciendo reflexiones que tratan de dilucidar el incierto futuro de dicha noción, como la de Jeremy Rifkin en _El fin del trabajo_ (1995). Desde entonces, la emergencia tecnológica ha trastocado las relaciones laborales y las condiciones de producción. Con la consecuente precarización y autoexplotación derivadas de estas dinámicas, las exhortaciones clásicas contra el trabajo, aun resultando legítimas, adolecen de cierta insuficiencia para enfrentarse a un mundo mucho más complejo. Por otra parte, como sucede con muchas otras perspectivas críticas provenientes del mundo occidental, habría que señalar que esta genealogía no logra interpelar a muchos de los colectivos subalternos como los constituidos por migrantes racializad+s cuya situación les ubica en problemáticas de otro orden.
+
+Volviendo a los temas citados en este apartado, _Esclavos del siglo XXI_ alude a la alienación de la vida que propone el trabajo asalariado y que, bajo un simulacro de vida libre, solo ofrece una nueva forma de esclavitud, estableciendo, de esta manera, un vínculo con los planteamientos que, desde finales del siglo XIX apuntados con anterioridad, se han propuesto acabar con el trabajo como sistema de control y disciplina social. En el caso de la segunda canción, _Reacción en cadena_ establece, por su parte, una secuencia lógica de conceptos que definen una serie de asociaciones que vinculan el trabajo con las ideas de obediencia, productividad, expolio, control y, después de establecer numerosos pares de nociones, con una cierta forma de libertad de estirpe capitalista neoliberal conectada a la frase nacionalsocialista, que presidía los campos de exterminio, “El trabajo os hará libre” (_Arbeit macht_ _frei_). Se plantea, de este modo, la continuidad del control totalitario en las sociedades demoliberales a partir de una consigna que se emplea como estribillo.
+
+{" "}
+
+<ImageCaption
+  mobileImgUrl={imageArbeitMobile}
+  desktopImgUrl={imageArbeitDesktop}
+  caption="Pie de foto"
+  alt="Portada disco Elvis. Big Boss Man"
+/>
+
+Más allá de vivir situados en un contexto complejo en lo relativo a una idea de trabajo en transformación o disolución, recuperar a día de hoy estas manifestaciones musicales, con el arrastre genealógico que suponen en términos ideológicos, puede ser útil. Siempre y cuando, como se sostuvo en la primera parte de este texto, seamos capaces de hacer que, mediante una reflexión y generación de las condiciones en las que éstas se producen y se distribuyen, interpelen a quienes, actualmente, continúan en un régimen de explotación de sus fuerzas vitales, sea cual sea la definición que podamos dar a una noción tan problemática como es la de trabajo en nuestra época.
+
+[^1]: “Gran jefe, ¿no me oyes cuando te llamo? ¿No me oyes cuando te llamo?
+
+    Dije que no eres tan grande, solo eres alto eso es todo”.
+
+[^2]: “Voy a conseguir un jefe
+
+    Uno que me trate bien”.
+
+[^3]: “Elvis era un héroe para la mayoría
+
+    Pero eso no viene al caso
+
+    Un negro le enseñó a cantar
+
+    Y luego fue coronado rey”.
+
+[^4]: “Cometí el crimen Señor que necesitaba
+
+    Crimen de estar hambriento y ser pobre
+
+    Dejé al hombre de la tienda sangrando (¿respirando?)
+
+    Cuando me atraparon robando su tienda”.
+
+[^5]: “Jamás trabajaré...”. Esta frase proviene de del poema _Virgen Loca_ incluido en _Una temporada en el infierno_ (1873).
+[^6]: “Nunca trabajes”.
+
+</Prose>
 </Layout>
