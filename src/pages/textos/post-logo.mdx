@@ -12,6 +12,10 @@ import Prose from "../../components/Prose.astro";
   tipo={frontmatter.tipo}
   autor={frontmatter.autor}
 >
-  <h1>{frontmatter.titulo}</h1>
-  <p>{frontmatter.autor}</p>
+
+<Prose>
+# {frontmatter.titulo}
+_{frontmatter.autor}_
+
+</Prose>
 </Layout>

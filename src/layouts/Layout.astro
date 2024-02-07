@@ -10,7 +10,7 @@ import { slide } from "astro:transitions";
   <CommonHead tipo={tipo} nombre={nombre} />
   <body class="text-white">
     <Header />
-    <main class="font-serif flex flex-col items-center px-6 md:px-0">
+    <main class="font-serif flex flex-col items-center px-6 md:px-0 pb-20">
       <slot />
     </main>
     <style is:global>
@@ -21,13 +21,18 @@ import { slide } from "astro:transitions";
       }
     </style>
     <style is:global>
+      a[data-footnote-ref] {
+        color: #b91c1c;
+        text-decoration: none;
+      }
+
       .footnotes {
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      
+
       .footnotes ol {
         max-width: 58ch;
       }
