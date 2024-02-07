@@ -6,6 +6,9 @@ titulo: "Reacción en cadena"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageCartelMobile from "../../assets/img/taktel-cartel-mobile.jpg";
+import imageCartelDesktop from "../../assets/img/taktel-cartel-desktop.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -30,6 +33,71 @@ import Prose from "../../components/Prose.astro";
 </div>
 
 <Prose>
+
+<ImageCaption
+  mobileImgUrl={imageCartelMobile}
+  desktopImgUrl={imageCartelDesktop}
+  caption="Pie de foto"
+  alt="alt"
+  clase="mt-20"
+/>
+
+## Reacción en cadena
+
+_Difícil equilibrio_
+
+Trabajar es libertad\
+Libertad es obedecer\
+Obedecer es progreso\
+Progreso es sumisión\
+Sumisión es riqueza\
+Riqueza es expoliar\
+Expoliar es desarrollo\
+Desarrollo es consumir
+
+Gritad conmigo:\
+¡El trabajo os hará libres!
+
+Consumir es democracia\
+Democracia es silenciar\
+Silenciar es producir\
+Producir es tu religión\
+Religión es beneficio\
+Beneficio es justicia\
+Justicia es dinero\
+Y el dinero es Dios
+
+Gritad conmigo:\
+¡El trabajo os hará libres!\
+
+Dios es violencia\
+Violencia es capitalismo\
+Capitalismo es guerra\
+La guerra es paz\
+Y la paz es temor\
+Temor es prosperidad\
+Prosperidad es abuso\
+Abuso es salario
+
+Gritad conmigo\
+Gritad conmigo:\
+¡El trabajo os hará libres!
+
+Salario es deuda\
+La deuda es éxito\
+Éxito es especulación\
+Especulación es control\
+Control es televisión\
+Televisión es quimera\
+Quimera es crédito\
+Crédito es economía\
+Economía es ley\
+La ley es trabajar\
+Y trabajar es libertad
+
+Gritad conmigo\
+Gritad conmigo:\
+¡El trabajo os hará libres!
 
 </Prose>
 </Layout>

@@ -6,6 +6,9 @@ titulo: "La vida de los exclavos en el siglo XXI"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageCartelMobile from "../../assets/img/gorreta-cartel-mobile.jpg";
+import imageCartelDesktop from "../../assets/img/gorreta-cartel-desktop.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -30,6 +33,49 @@ import Prose from "../../components/Prose.astro";
 </div>
 
 <Prose>
+<ImageCaption
+  mobileImgUrl={imageCartelMobile}
+  desktopImgUrl={imageCartelDesktop}
+  caption="Pie de foto"
+  alt="alt"
+  clase="mt-20"
+/>
+
+## La vida de los esclavos en el siglo XXI
+
+_Gatillazo_
+
+Un trabajo de mierda\
+Una casa pequeñaUn amor aplastado\
+Por impuestos y deudas\
+Unos niños preciosos\
+Aprendiendo en la escuela\
+La vida de los esclavos en el siglo XXI
+
+La vida de los esclavos en el siglo XXI\
+La vida de los esclavos en el siglo XXI
+
+Atrapados en el precio\
+De una crisis eterna\
+Por tener esas cosas\
+Que no nos interesan\
+Protestar débilmente\
+Reprimidos con fuerza\
+La vida de los esclavos en el siglo XXI
+
+La vida de los esclavos en el siglo XXI\
+La vida de los esclavos en el siglo XXI
+
+Unos nos arrastramos\
+Otros sueñan con ello\
+Unos se desesperanOtros se suicidad\
+Buscando una maneraDe librarse de esto\
+De una vida de esclavos en el siglo XXI
+
+La vida de los esclavos en el siglo XXI\
+La vida de los esclavos en el siglo XXI\
+La vida de los esclavos, la vida de los esclavos\
+La vida de los esclavos en el siglo XXI
 
 </Prose>
 </Layout>

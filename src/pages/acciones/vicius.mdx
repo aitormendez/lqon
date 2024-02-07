@@ -6,6 +6,11 @@ titulo: "Vacaciones en España"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imagePortadaMobile from "../../assets/img/vicius-1-vacaciones-mobile.jpg";
+import imagePortadaDesktop from "../../assets/img/vicius-1-vacaciones-desktop.jpg";
+import imageContraportadaMobile from "../../assets/img/vicius-2-vacaciones-mobile.jpg";
+import imageContraportadaDesktop from "../../assets/img/vicius-2-vacaciones-desktop.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -30,6 +35,70 @@ import Prose from "../../components/Prose.astro";
 </div>
 
 <Prose>
+
+
+## Vacaciones en España
+
+_Democracia_
+
+<ImageCaption
+  mobileImgUrl={imagePortadaMobile}
+  desktopImgUrl={imagePortadaDesktop}
+  caption="Pie de foto"
+  alt="alt"
+  clase="mt-20"
+/>
+
+<ImageCaption
+  mobileImgUrl={imageContraportadaMobile}
+  desktopImgUrl={imageContraportadaDesktop}
+  caption="Pie de foto"
+  alt="alt"
+  clase="mt-20"
+/>
+
+Así que piensas tú que es tu sangre azul\
+porque naciste en el lado cool\
+Ya no existe el muro de Berlín\
+nos lo habéis traído al sur.\
+Vive con lo puesto y sigue lo dispuesto\
+por las Fuerzas de Seguridad.\
+Curra dando gracias por la democracia\
+y la Reforma Laboral.\
+Ven a gozar de sol y libertad\
+pero hoy entrarás por la puerta de atrás.\
+Vas a sentir calor.\
+Vas a pasar pasión.
+
+Vacaciones en España\
+Mucha fiesta y diversión\
+con el tiempo y una caña\
+seguiremos cara al sol.\
+
+Todo por la patria, todo por la pasta\
+corrupción y represión.\
+Un millón de muertos no lo tapa el tiempo\
+ni la falsa Transición.\
+Novio de la muerte, vas a tener suerte\
+Hoy te van a fusilar\
+Dejarás tu vida en una corrida\
+con bravura y dignidad.\
+Ven a disfrutar la Fiesta Nacional\
+pero hoy jugarás la Gran Final.\
+Vas a sentir calor.\
+Vas a pasar pasión.
+
+Vacaciones en España\
+en la guerra y en la paz\
+enterrado en la montaña\
+o arrojado al puto mar.\
+
+Spain is pain
+
+Vacaciones en España\
+Mucha fiesta y diversión\
+con el tiempo y una caña\
+seguiremos cara al sol.
 
 </Prose>
 </Layout>
