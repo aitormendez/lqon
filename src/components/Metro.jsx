@@ -4,6 +4,7 @@ import { currentStationIndex, isAnimating } from "./stores";
 import { useState, useEffect, useRef } from "react";
 import Anden from "./Anden";
 import allStations from "../data/stations.json";
+import { v4 as uuidv4 } from "uuid";
 
 const Metro = ({ cameraPositionStart, setCameraPositionStart }) => {
   const { camera } = useThree();
@@ -37,7 +38,7 @@ const Metro = ({ cameraPositionStart, setCameraPositionStart }) => {
       const station = allStations[stationIndex];
       setStations([
         {
-          id: `station-${Date.now()}`,
+          id: uuidv4(),
           nombre: station.nombre,
           materialCartel: station.materialCartel,
           materialPlano: station.materialPlano,
@@ -52,11 +53,12 @@ const Metro = ({ cameraPositionStart, setCameraPositionStart }) => {
     setLastPositionX(newPositionX);
 
     const newStation = {
-      id: `station-${Date.now()}`,
+      id: uuidv4(),
       nombre: allStations[currentIndex].nombre,
       materialCartel: allStations[currentIndex].materialCartel,
       materialPlano: allStations[currentIndex].materialPlano,
       position: [newPositionX, 0, 0],
+      tipo: allStations[currentIndex].tipo,
     };
     setStations((prevStations) => [...prevStations, newStation]);
   };
@@ -119,6 +121,7 @@ const Metro = ({ cameraPositionStart, setCameraPositionStart }) => {
           materialCartel={station.materialCartel}
           materialPlano={station.materialPlano}
           position={station.position}
+          tipo={station.tipo}
         />
       ))}
     </>

@@ -5,10 +5,11 @@ Command: npx gltfjsx@6.2.16 /Volumes/C/Documentos C/Trabajos/LQON (Lo quieras o 
 
 import { useGLTF, Text } from "@react-three/drei";
 
-export default function Model({
+export default function Anden({
   nombreEstacion,
   materialPlano,
   materialCartel,
+  tipo,
   ...props
 }) {
   const { nodes, materials } = useGLTF("../models/anden.glb");
@@ -48,7 +49,11 @@ export default function Model({
       />
       <mesh
         geometry={nodes.pared.geometry}
-        material={materials["baked.pared"]}
+        material={
+          tipo === "accion"
+            ? materials["baked.pared"]
+            : materials["baked.pared-sin-cartel"]
+        }
         position={[0, 9.5, -10]}
       />
       <mesh
@@ -60,27 +65,34 @@ export default function Model({
         material={materials.negro}
         position={[86.607, 22.256, -55.019]}
       />
-      <mesh geometry={nodes.cartelmarco.geometry} material={materials.negro} />
-      <mesh
-        geometry={nodes.cartelcartel001.geometry}
-        material={materials[materialCartel]}
-        position={[0, 0, 0.08]}
-      />
       <mesh
         geometry={nodes.banco.geometry}
         material={materials.banco}
         position={[-151.306, 13.101, -8.752]}
       />
-      <mesh
-        geometry={nodes.mapamarco.geometry}
-        material={materials["marco.plano"]}
-        position={[0, 0, -1.351]}
-      />
-      <mesh
-        geometry={nodes.mapamapa001.geometry}
-        material={materials[materialPlano]}
-        position={[0, 0, -0.572]}
-      />
+      {tipo === "accion" && (
+        <>
+          <mesh
+            geometry={nodes.cartelmarco.geometry}
+            material={materials.negro}
+          />
+          <mesh
+            geometry={nodes.cartelcartel001.geometry}
+            material={materials[materialCartel]}
+            position={[0, 0, 0.08]}
+          />
+          <mesh
+            geometry={nodes.mapamarco.geometry}
+            material={materials["marco.plano"]}
+            position={[0, 0, -1.351]}
+          />
+          <mesh
+            geometry={nodes.mapamapa001.geometry}
+            material={materials[materialPlano]}
+            position={[0, 0, -0.572]}
+          />
+        </>
+      )}
     </group>
   );
 }

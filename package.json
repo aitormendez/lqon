@@ -34,6 +34,7 @@
     "react-tooltip": "^5.26.0",
     "remark-gfm": "^4.0.0",
     "tailwindcss": "^3.0.24",
-    "three": "^0.159.0"
+    "three": "^0.159.0",
+    "uuid": "^9.0.1"
   }
 }
