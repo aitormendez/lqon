@@ -38,8 +38,9 @@ const StationLinks = () => {
           href={`/textos/${station.uri}`}
           onClick={(e) => goToStation(station.uri, e)}
         >
-          <p>{station.nombre}</p>
-          <p className="font-light">{station.autor} </p>
+          <p className="md:inline">{station.nombre}</p>
+          <span className="px-2">|</span>
+          <p className="font-light md:inline italic">{station.autor} </p>
         </a>
       ))}
     </>
