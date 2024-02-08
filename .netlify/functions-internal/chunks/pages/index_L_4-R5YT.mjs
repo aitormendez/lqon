@@ -1,33 +1,29 @@
----
-import Layout from "../layouts/Layout.astro";
-import tornos from "../assets/video/torno-fila-frontal.mp4";
-const claseArticle = "w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 p-2";
-const claseImg = "aspect-video rounded object-cover w-full";
-import { Image } from "astro:assets";
-import imageDeriva1 from "../assets/img/deriva-psico-1-.png";
-import ilogoLQON from "../assets/img/Logotipo-principal.jpg";
-import imageIntervencionMetro from "../assets/img/canciones-trabajo/intervincion-anonima-2-mobile.jpg";
-import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
----
+/* empty css                                   */
+import { e as createAstro, f as createComponent, r as renderTemplate, i as renderComponent, m as maybeRenderHead, h as addAttribute } from '../astro_N4Ixt6P6.mjs';
+import 'kleur/colors';
+import { $ as $$Image, a as $$Layout } from './briana-weapons_qK5G95lh.mjs';
 
-<Layout title="Welcome to Astro.">
-  <video id="videoLogotipo" class="w-full" muted playsinline autoplay loop>
-    <source src={tornos} type="video/mp4" />
-    Tu navegador no soporta videos.
-  </video>
+const tornos = "/_astro/torno-fila-frontal.aY1laav1.mp4";
 
-  <div class="w-full mt-14 flex flex-wrap px-2">
-    <article class={claseArticle}>
-      <a
-        class="enlace text-3xl"
-        href="textos/presentacion"
-        data-uri="presentacion"><p>Presentación</p></a
-      >
-      <p class="mb-2 text-xl">Democracia</p>
-      <Image class={claseImg} src={ilogoLQON} alt="Logotipo Lo quieras o no" />
-    </article>
+const ilogoLQON = new Proxy({"src":"/_astro/Logotipo-principal.k1FSnFhG.jpg","width":842,"height":596,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							
+							return target[name];
+						}
+					});
 
-    <!-- <article class={claseArticle}>
+const $$Astro = createAstro();
+const $$Index = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$Index;
+  const claseArticle = "w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 p-2";
+  const claseImg = "aspect-video rounded object-cover w-full";
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Welcome to Astro." }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<video id="videoLogotipo" class="w-full" muted playsinline autoplay loop> <source${addAttribute(tornos, "src")} type="video/mp4">
+Tu navegador no soporta videos.
+</video> <div class="w-full mt-14 flex flex-wrap px-2"> <article${addAttribute(claseArticle, "class")}> <a class="enlace text-3xl" href="textos/presentacion" data-uri="presentacion"><p>Presentación</p></a> <p class="mb-2 text-xl">Democracia</p> ${renderComponent($$result2, "Image", $$Image, { "class": claseImg, "src": ilogoLQON, "alt": "Logotipo Lo quieras o no" })} </article> <!-- <article class={claseArticle}>
       <a
         class="text-3xl"
         href="textos/una-deriva-psicogeografica-por-el-metro-de-madrid"
@@ -267,24 +263,10 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
       <a class="text-3xl" href="textos/post-logo"><p>Post-logo</p></a>
       <p class="mb-2 text-xl">Luis Navarro</p>
     </article>
-  </div> -->
-  </div>
+  </div> --> </div>  ` })}`;
+}, "/Users/aitor/Documents/Sites/lqon/src/pages/index.astro", void 0);
 
-  <script>
-    import { goToStation } from "./../components/goToStation.js";
-    console.log("index");
+const $$file = "/Users/aitor/Documents/Sites/lqon/src/pages/index.astro";
+const $$url = "";
 
-    document.addEventListener("DOMContentLoaded", (event) => {
-      const enlaces = document.getElementsByClassName("enlace");
-      console.log("enlaces", enlaces);
-
-      Array.from(enlaces).forEach((enlace) => {
-        enlace.addEventListener("click", (e) => {
-          const uri = e.currentTarget.dataset.uri;
-          console.log("uri", uri);
-          goToStation(uri, e);
-        });
-      });
-    });
-  </script>
-</Layout>
+export { $$Index as default, $$file as file, $$url as url };
