@@ -7,22 +7,29 @@ interface Props {
   desktopImgUrl: string | ImageMetadata;
   alt: string;
   caption: string;
+  clase: string;
+  hasCaption: boolean;
 }
 
-const { mobileImgUrl, desktopImgUrl, alt, caption, clase } = Astro.props;
+const {
+  mobileImgUrl,
+  desktopImgUrl,
+  alt,
+  caption,
+  clase,
+  hasCaption = true,
+} = Astro.props;
 
 const mobileImg = await getImage({
   src: mobileImgUrl,
   format: "webp",
-  width: 200,
-  height: 200,
+  width: 400,
 });
 
 const desktopImg = await getImage({
   src: desktopImgUrl,
   format: "webp",
   width: 800,
-  height: 200,
 });
 ---
 
@@ -32,5 +39,5 @@ const desktopImg = await getImage({
     <source media="(min-width: 800px)" srcset={desktopImg.src} />
     <img src={desktopImg.src} alt={alt} />
   </picture>
-  <figcaption>{caption}</figcaption>
+  {hasCaption && <figcaption set:html={caption} />}
 </figure>

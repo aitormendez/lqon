@@ -7,8 +7,8 @@ titulo: "La vida de los exclavos en el siglo XXI"
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
 import ImageCaption from "../../components/ImageCaption.astro";
-import imageCartelMobile from "../../assets/img/gorreta-cartel-mobile.jpg";
 import imageCartelDesktop from "../../assets/img/gorreta-cartel-desktop.jpg";
+import imageDespertador from "../../assets/img/gorreta-despertador.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -33,9 +33,18 @@ import imageCartelDesktop from "../../assets/img/gorreta-cartel-desktop.jpg";
 </div>
 
 <Prose>
+
 <ImageCaption
-  mobileImgUrl={imageCartelMobile}
+  mobileImgUrl={imageCartelDesktop}
   desktopImgUrl={imageCartelDesktop}
+  caption="Pie de foto"
+  alt="alt"
+  clase="mt-20"
+/>
+
+<ImageCaption
+  mobileImgUrl={imageDespertador}
+  desktopImgUrl={imageDespertador}
   caption="Pie de foto"
   alt="alt"
   clase="mt-20"

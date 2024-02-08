@@ -7,8 +7,7 @@ titulo: "Mandamás"
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
 import imageElvisDesktop from "../../assets/img/oscar-cabanas-elvis-desktop.png";
-import imageElvisMobile from "../../assets/img/oscar-cabanas-elvis-mobile.png";
-import ImageNoCaption from "../../components/ImageNoCaption.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -33,13 +32,17 @@ import ImageNoCaption from "../../components/ImageNoCaption.astro";
 </div>
 
 <Prose> 
-  <ImageNoCaption
-    mobileImgUrl={imageElvisMobile}
+  <ImageCaption
+    mobileImgUrl={imageElvisDesktop}
     desktopImgUrl={imageElvisDesktop}
-    alt="Portada disco Elvis. Big Boss Man"
+    alt="Elvis. Big Boss Man"
+    caption="Big Boss Man. <i>Elvis</i>"
+    clase="mt-20"
   />
 
-## Big boss man. _Jimmy Reed_
+## Big boss man.
+
+_Jimmy Reed_
 
 Big boss man\
 Can't you hear me when I call?\
@@ -69,7 +72,9 @@ Can't you hear me when I call?\
 Well, you ain't so big\
 You re just tall, that's all
 
-## Mandamás. _Carlos Segarra_
+## Mandamás
+
+_Carlos Segarra_
 
 Trabajo para ti\
 Hasta la puesta del sol\
@@ -112,7 +117,9 @@ Tú llegaste antes que yo\
 Y aquí te estaré esperando\
 Y soñando
 
-## MANDAMÁS-Óscar Cabanas “Ojkital”.
+## Mandamás
+
+_Óscar Cabanas “Ojkital”_
 
 Mandamás, aunque alto te veas tú,\
 Mandamás, aunque alto te veas tú,\

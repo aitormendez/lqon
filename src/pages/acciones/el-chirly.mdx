@@ -6,11 +6,15 @@ titulo: "Están cayendo bombas en Madrid"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageCartel1 from "../../assets/img/el-chirly-cartel-1.jpg";
+import imageCartel2 from "../../assets/img/el-chirly-cartel-2.jpg";
+import imageCartel3 from "../../assets/img/el-chirly-cartel-3.jpg";
 
 <Layout
-  titulo={frontmatter.titulo}
-  tipo={frontmatter.tipo}
-  autor={frontmatter.autor}
+ titulo={frontmatter.titulo}
+ tipo={frontmatter.tipo}
+ autor={frontmatter.autor}
 >
 
 <Prose>
@@ -30,6 +34,77 @@ import Prose from "../../components/Prose.astro";
 </div>
 
 <Prose>
+
+<ImageCaption
+  mobileImgUrl={imageCartel1}
+  desktopImgUrl={imageCartel1}
+  alt=""
+  caption="pie"
+  clase="mt-20"
+  hasCaption={true}
+/>
+
+<ImageCaption
+  mobileImgUrl={imageCartel2}
+  desktopImgUrl={imageCartel2}
+  alt=""
+  caption="pie"
+  clase="mt-20"
+  hasCaption={true}
+/>
+
+<ImageCaption
+  mobileImgUrl={imageCartel3}
+  desktopImgUrl={imageCartel3}
+  alt=""
+  caption="pie"
+  clase="mt-20"
+  hasCaption={true}
+/>
+
+## Están cayendo bombas en Madrid
+
+_Albert Pla_
+
+Muy buenas noches mis queridos ciudadanos de Madrid\
+Esto es un mensaje del Ejército de Protección Civil:\
+se advierte a los vecinos del barrio de Malasaña y Chamberí\
+si empieza el bombardeo, se dirijan al refugio antiaéreo más cercano.
+
+Hemos habilitado las estaciones de metro de Gran Vía y Tribunal,\
+de San Bernardo y de Bilbao y...
+
+Sálvese quien pueda, sálvese quien pueda,\
+están cayendo bombas en Madrid\
+Sálvese quien pueda, sálvese quien pueda,\
+están cayendo bombas en Madrid
+
+Muy buenas noches mis queridos ciudadanos de Madrid\
+No lleven los heridos al hospital de la Moncloa, ha sido destruido,\
+hemos habilitado un hospital de campaña en la plaza Dos de Mayo,\
+atención ciudadanos,\
+los niños fallecidos serán incinerados en la calle Noviciado.
+
+Sálvese quien pueda, sálvese quien pueda,\
+están cayendo bombas en Madrid\
+Sálvese quien pueda, sálvese quien pueda,\
+están cayendo bombas en Madrid
+
+Muy buenas noches mis queridos ciudadanos de Madrid\
+Hoy hay racionamiento: se repartirán madroños en el ayuntamiento,\
+no olvide el ciudadano la cartilla de afiliado a nuestro sindicato\
+¡y que viva el gobierno!\
+Nuestros gloriosos gobernantes cuidarán de nuestro pueblo.
+
+Esto es un mensaje del Ejército Civil, que vivan los madrileños,\
+viva el pueblo de Madrid.\
+Esto es un mensaje que no tiene mensaje, sólo que ya pasó,\
+que podría pasar, que volverá a pasar...
+
+Sálvese quien pueda, sálvese quien pueda,\
+están cayendo bombas en Madrid\
+Sálvese quien pueda, sálvese quien pueda,\
+están cayendo bombas en Madrid
 
 </Prose>
 </Layout>

@@ -6,6 +6,9 @@ titulo: "Fandangos"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageNonoCNT from "../../assets/img/nono-cnt-ret.jpg";
+import imageNono2 from "../../assets/img/nono-2.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -34,6 +37,25 @@ import Prose from "../../components/Prose.astro";
 ## Fandangos
 
 _El Cabrero_
+
+  <ImageCaption
+    mobileImgUrl={imageNonoCNT}
+    desktopImgUrl={imageNonoCNT}
+    alt=""
+    caption="pie"
+    clase="mt-20"
+    hasCaption={true}
+  />
+
+  <ImageCaption
+    mobileImgUrl={imageNono2}
+    desktopImgUrl={imageNono2}
+    alt=""
+    caption="pie"
+    clase="mt-20"
+    hasCaption={true}
+  />
+
 
 Nadie sabe adónde llega\
 El lamento de un fandango \
