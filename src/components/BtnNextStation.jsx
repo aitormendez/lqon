@@ -43,8 +43,8 @@ const BtnNextStation = () => {
   };
 
   const navClasses = animating
-    ? "px-[6vw] md:px-[2vw] md:w-[9vw] h-1/2 md:h-full bg-white flex pointer-events-none opacity-50"
-    : "px-[6vw] md:px-[2vw] md:w-[9vw] h-1/2 md:h-full bg-white flex md:hover:bg-black";
+    ? "px-[6vw] md:px-[2vw] md:w-[9vw] h-1/2 md:h-full bg-white flex transition-opacity pointer-events-none opacity-50"
+    : "px-[6vw] md:px-[2vw] md:w-[9vw] h-1/2 md:h-full bg-white flex transition-opacity md:hover:bg-black";
 
   return (
     <a className={navClasses} href={nextStationHref} onClick={goToNextStation}>
