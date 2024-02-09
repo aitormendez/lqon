@@ -1538,6 +1538,13 @@ astring@^1.8.0:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.6.tgz#2c9c157cf1739d67561c56ba896e6948f6b93731"
   integrity sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==
 
+astro-favicons@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/astro-favicons/-/astro-favicons-2.0.2.tgz#2f50e55cb80d4f9f1553c7bd0344d7aec6861ae0"
+  integrity sha512-6eysmlOzTl1NdgWeZ9dENyhzQP7ok182SIaXjxGWc2uDhGNVJ5Lkg0dMR5ClMCJHupSwbDT0T7L2zM67GHpJvg==
+  dependencies:
+    favicons-lib "^7.1.6"
+
 astro-imagetools@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/astro-imagetools/-/astro-imagetools-0.9.0.tgz#dcea6bdb67d26ab47ecf5344ef09cc5a5ddde74a"
@@ -2208,6 +2215,11 @@ escalade@^3.1.1:
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
 
+escape-html@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
+  integrity sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==
+
 escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
@@ -2333,6 +2345,15 @@ fastq@^1.6.0:
   integrity sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==
   dependencies:
     reusify "^1.0.4"
+
+favicons-lib@^7.1.6:
+  version "7.1.6"
+  resolved "https://registry.yarnpkg.com/favicons-lib/-/favicons-lib-7.1.6.tgz#bec5eb16bfaea359095443305372c70afad9cacf"
+  integrity sha512-U+4zNl1sCJTiKJoK7z35Uaz0SwTVGSb28eJrkkUAMnHfixp1DT/Sqjt3spQrWkijzPlhOqOuvndmzz4SF7FDEA==
+  dependencies:
+    escape-html "^1.0.3"
+    sharp "^0.32.4"
+    xml2js "^0.6.1"
 
 fflate@^0.6.9, fflate@~0.6.10:
   version "0.6.10"
@@ -4689,7 +4710,7 @@ sharp@^0.29.3:
     tar-fs "^2.1.1"
     tunnel-agent "^0.6.0"
 
-sharp@^0.32.5:
+sharp@^0.32.4, sharp@^0.32.5:
   version "0.32.6"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.32.6.tgz#6ad30c0b7cd910df65d5f355f774aa4fce45732a"
   integrity sha512-KyLTWwgcR9Oe4d9HwCwNM2l7+J0dUQwn/yf7S0EnTtb0eVS4RxO0eUSvxPtzT4F3SY+C4K6fqdv/DO27sJ/v/w==
@@ -5461,6 +5482,14 @@ xml2js@^0.4.5:
   version "0.4.23"
   resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.23.tgz#a0c69516752421eb2ac758ee4d4ccf58843eac66"
   integrity sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug==
+  dependencies:
+    sax ">=0.6.0"
+    xmlbuilder "~11.0.0"
+
+xml2js@^0.6.1:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.6.2.tgz#dd0b630083aa09c161e25a4d0901e2b2a929b499"
+  integrity sha512-T4rieHaC1EXcES0Kxxj4JWgaUQHDk+qwHcYOCFHfiwKz7tOVPLq7Hjq9dM1WCMhylqMEfP7hMcOIChvotiZegA==
   dependencies:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"
