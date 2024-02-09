@@ -2,7 +2,6 @@
 const { titulo, nombre, tipo } = Astro.props;
 import CommonHead from "../components/CommonHead.astro";
 import Header from "../components/Header.astro";
-import { slide } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -154,5 +153,14 @@ import { slide } from "astro:transitions";
         color: white;
       }
     </style>
+    <script>
+      import { goToStation } from "../components/goToStation.js";
+      window.addEventListener("popstate", function (event) {
+        const pathArray = window.location.pathname.split("/");
+        const stationUri =
+          pathArray[pathArray.length - 1] || pathArray[pathArray.length - 2]; // En caso de que la URL termine con '/'
+        goToStation(stationUri, event);
+      });
+    </script>
   </body>
 </html>
