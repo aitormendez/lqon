@@ -327,7 +327,7 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
   import { goToStation } from "./../components/goToStation.js";
   console.log("index");
 
-  document.addEventListener("DOMContentLoaded", (event) => {
+  document.addEventListener("astro:page-load", () => {
     const enlaces = document.getElementsByClassName("enlace");
     console.log("enlaces", enlaces);
 
