@@ -3,16 +3,18 @@ import allStations from "../data/stations.json";
 import { solapaAbierta } from "./stores.js";
 
 export function goToStation(stationUri, event) {
+  const videoLogo = document.getElementById("videoLogotipo");
+
   if (isAnimating.get()) {
     event.preventDefault();
   } else {
     const stationIndex = allStations.findIndex(
       (station) => station.uri === stationUri
     );
-    if (stationIndex !== -1) {
-      currentStationIndex.set(stationIndex);
-      isAnimating.set(true);
-    }
+    currentStationIndex.set(stationIndex);
+    isAnimating.set(true);
+    videoLogo.currentTime = 0; // Reinicia el tiempo del video a 0
+    videoLogo.play(); // Comienza la reproducción
   }
 
   if (solapaAbierta.value) {
