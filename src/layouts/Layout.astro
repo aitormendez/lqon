@@ -162,6 +162,14 @@ import Footer from "../components/Footer.astro";
           pathArray[pathArray.length - 1] || pathArray[pathArray.length - 2];
         goToStation(stationUri, event);
       });
+
+      document.addEventListener("astro:page-load", () => {
+        const footnotes = document.querySelector("section.footnotes");
+        const mainElement = document.querySelector("main");
+        if (footnotes && mainElement) {
+          mainElement.appendChild(footnotes);
+        }
+      });
     </script>
   </body>
 </html>
