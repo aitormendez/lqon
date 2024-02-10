@@ -325,6 +325,7 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
 
 <script>
   import { goToStation } from "./../components/goToStation.js";
+  import { isAnimating } from "../components/stores.js";
 
   document.addEventListener("astro:page-load", () => {
     const enlaces = document.getElementsByClassName("enlace");
@@ -336,5 +337,19 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         goToStation(uri, e);
       });
     });
+
+    // nanostores test
+    console.log(isAnimating);
+    const unsubscribe = isAnimating.subscribe(updateLinkState);
+
+    function updateLinkState(value) {
+      Array.from(enlaces).forEach((enlace) => {
+        if (value) {
+          enlace.classList.add("pointer-events-none", "opacity-70");
+        } else {
+          enlace.classList.remove("pointer-events-none", "opacity-70");
+        }
+      });
+    }
   });
 </script>
