@@ -27,10 +27,19 @@ import Footer from "../components/Footer.astro";
       }
 
       .footnotes {
-        padding: 1.5rem;
+        margin-top: 2rem;
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      .footnotes ol {
+        max-width: 40rem !important;
+      }
+
+      .footnotes h2 {
+        display: none;
       }
 
       .footnotes ol {

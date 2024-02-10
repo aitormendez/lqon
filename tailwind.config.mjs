@@ -8,6 +8,11 @@ export default {
         serif: ["Crimson Pro", "serif"],
       },
       typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: "40rem",
+          },
+        },
         lqon: {
           css: {
             "--tw-prose-body": theme("colors.neutral[300]"),
