@@ -28,8 +28,8 @@ const BtnHome = () => {
   };
 
   const navClasses = animating
-    ? "bg-white flex-grow pointer-events-none"
-    : "bg-white flex-grow";
+    ? "bg-white hover:opacity-80 flex-grow pointer-events-none"
+    : "bg-white hover:opacity-80 flex-grow";
 
   return (
     <>

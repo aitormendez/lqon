@@ -6,6 +6,8 @@ titulo: "Casas de cartón"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageCasasDeCarton from "../../assets/img/los-guaraguao-casas-de-carton-upscaled.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -14,6 +16,14 @@ import Prose from "../../components/Prose.astro";
 >
 
 <Prose>
+<ImageCaption
+  mobileImgUrl={imageCasasDeCarton}
+  desktopImgUrl={imageCasasDeCarton}
+  caption="Pie de foto"
+  alt="alt"
+  clase="mt-20"
+/>
+
   <h1>{frontmatter.autor}</h1>
 </Prose>
 
