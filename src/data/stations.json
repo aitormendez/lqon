@@ -168,16 +168,16 @@
   },
   {
     "nombre": "Briana Weapons",
-    "materialCartel": "",
-    "materialPlano": "",
+    "materialCartel": "cartel-briana-weapons",
+    "materialPlano": "plano-briana-weapons",
     "tipo": "accion",
     "uri": "briana-weapons",
     "tema": "La canción del trabajo"
   },
   {
     "nombre": "Lucia Montenegro",
-    "materialCartel": "",
-    "materialPlano": "",
+    "materialCartel": "cartel-lucia-montenegro",
+    "materialPlano": "plano-lucia-montenegro",
     "tipo": "accion",
     "uri": "lucia-montenegro",
     "tema": "Casas de cartón"

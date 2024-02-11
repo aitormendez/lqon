@@ -6,6 +6,9 @@ titulo: "La muerte declara la guerra a los gendarmes"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imagePolicia1 from "../../assets/img/policia-pixel.jpg";
+import imagePolicia2 from "../../assets/img/policia-2.png";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -14,6 +17,17 @@ import Prose from "../../components/Prose.astro";
 >
 
 <Prose>
+
+<ImageCaption
+  mobileImgUrl={imagePolicia1}
+  desktopImgUrl={imagePolicia1}
+  alt=""
+  caption="pie"
+  clase="mt-20"
+  hasCaption={true}
+/>
+
+
 # {frontmatter.titulo}
 _{frontmatter.autor}. (Seudónimo de Georges Brassens)_
 
