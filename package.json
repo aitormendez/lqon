@@ -29,6 +29,7 @@
     "astro-imagetools": "^0.9.0",
     "astro-remote": "^0.2.4",
     "gsap": "^3.12.3",
+    "lottie-react": "^2.4.0",
     "nanostores": "^0.9.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
