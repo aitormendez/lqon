@@ -6,6 +6,8 @@ titulo: "La canción del trabajo"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageRaphael from "../../assets/img/raphael.png";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -15,6 +17,7 @@ import Prose from "../../components/Prose.astro";
 
 <Prose>
   <h1>{frontmatter.autor}</h1>
+
 </Prose>
 
 <div class="w-full">
@@ -30,6 +33,56 @@ import Prose from "../../components/Prose.astro";
 </div>
 
 <Prose>
+<ImageCaption
+  mobileImgUrl={imageRaphael}
+  desktopImgUrl={imageRaphael}
+  caption="La canción del trabajo. Raphael"
+  alt="La canción del trabajo. Raphael"
+  clase="mt-20"
+/>
+
+## La canción del trabajo
+
+_Raphael_
+
+Arrastrar la dura cadena\
+Trabajar sin tregua y sin fin\
+Es lo mismo que una condena\
+Que ninguno puede eludir
+
+El trabajo nace con la persona\
+Va grabado sobre su piel, y ya siempre\
+Le acompaña\
+Como el amigo más fiel
+
+Trabajar con nieve y con frío\
+Con la fe del que ha de triunfar\
+Porque el agua que lleva el río\
+No regresa nunca del mar
+
+El trabajo nace con la persona\
+Va grabado sobre su piel, y ya siempre\
+Le acompaña\
+Como el amigo más fiel
+
+Vale más tener confianza\
+Y luchar por algo mejor\
+Trabajar con fe y esperanza\
+Por lograr un mundo de amor
+
+El trabajo nace con la persona\
+Va grabado sobre su piel, y ya siempre\
+Le acompaña\
+Como el amigo más fiel
+
+Arrastrar la dura cadena\
+Trabajar sin tregua y sin fin\
+Es lo mismo que una condena\
+Que ninguno puede eludir
+
+El trabajo nace con la persona\
+El trabajo nace con la persona\
+El trabajo nace con la persona
 
 </Prose>
 </Layout>

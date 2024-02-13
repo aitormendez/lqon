@@ -7,7 +7,9 @@ titulo: "Movimiento indígena"
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
 import { Tooltip } from "react-tooltip";
-import CustomTooltip from "../../components/CustomTooltip.jsx";
+import ImageCaption from "../../components/ImageCaption.astro";
+import image1 from "../../assets/img/grupo-chasky-1.png";
+import image2 from "../../assets/img/grupo-chasky-5.png";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -32,6 +34,24 @@ import CustomTooltip from "../../components/CustomTooltip.jsx";
 </div>
 
 <Prose>
+
+<ImageCaption
+  mobileImgUrl={image2}
+  desktopImgUrl={image2}
+  alt="Visuales del concierto Charijayak, Quito 1015"
+  caption="Visuales del concierto Charijayak, Quito 1015."
+  clase="mt-20"
+  hasCaption={false}
+/>
+
+<ImageCaption
+  mobileImgUrl={image1}
+  desktopImgUrl={image1}
+  alt="Visuales del concierto Charijayak, Quito 1015"
+  caption="Visuales del concierto Charijayak, Quito 1015."
+  clase=""
+  hasCaption={true}
+/>
 
 ## Movimiento Indígena
 
