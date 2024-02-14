@@ -6,6 +6,9 @@ titulo: "Deriva psicogeográfica 5"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageEstacionChamberi1 from "../../assets/img/chamberi-1.jpg";
+import imageEstacionChamberi2 from "../../assets/img/chamberi-2.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -39,6 +42,24 @@ Toda estación que se precie tiene su respectivo panel didáctico, que suele pas
 \* \* \*
 
 Entre las estaciones de Iglesia y Bilbao de la línea 1, los trenes se demoran atravesando la antigua estación de Chamberí, apodada como “estación fantasma”, al igual que muchas otras infraestructuras en desuso. Se trata de un vestigio de la primera línea que funcionó en España a principios de siglo, partiendo de Cuatro Caminos y finalizando su recorrido en la Puerta del Sol. Tras sucesivas ampliaciones, su trayecto transcurre hoy desde Ciudad Lineal hasta más allá de Villa de Vallecas, conectando las periferias nordeste y sureste de la capital y atravesando la almendra capitalina. Es la línea que articula los principales distritos de la ciudad, y por mucho tiempo fue también la más concurrida. Hoy este título lo ostenta la línea circular que rodea el núcleo urbano, imitando el recorrido de la M30.
+
+<ImageCaption
+  mobileImgUrl={imageEstacionChamberi1}
+  desktopImgUrl={imageEstacionChamberi1}
+  caption="Estación de Chamberí, conducto al metro. Fotografía de Benjamín Núñez González. (Creative Commons Attribution-Share Alike 4.0 International)"
+  alt="Estación de Chamberí, conducto al metro"
+  clase="my-20"
+  hasCaption={true}
+/>
+
+<ImageCaption
+  mobileImgUrl={imageEstacionChamberi2}
+  desktopImgUrl={imageEstacionChamberi2}
+  caption="Estación de metro Chamberí. Fotografía de Dracenae. (Creative Commons Attribution-Share Alike 4.0 International)"
+  alt="Estación de metro Chamberí"
+  clase="my-20"
+  hasCaption={true}
+/>
 
 La estación fue clausurada en 1966 por no resultar adaptable a los criterios desarrollistas adoptados por el régimen franquista en aquellos años para intentar modernizar las infraestructuras y potenciar su política exterior (trenes más largos, instalaciones adaptadas, desplazamientos más rápidos y eficientes). Permaneció cerrada más de 40 años, durante los que mantuvo casi intactas su estructura arquitectónica y la ambientación modernista que había imprimido en ella el regeneracionista Antonio Palacios, responsable también del logotipo romboide que todavía identifica los accesos de la red metropolitana, y artífice de muchos de los edificios madrileños que hoy se consideran emblemáticos. Durante estos años de abandono pudo eventualmente convertirse en refugio de indigentes, enclave fascinante para curiosos, y escenario de muchas leyendas urbanas.
 
