@@ -1,3 +1,15 @@
-<div id="footer" class="min-h-[500px] bg-black flex justify-center items-center">
-    <p class="text-5xl">Footer</p>
+---
+import { Image } from "astro:assets";
+import logoAyto from "../assets/img/firma_area_cultura turismo deporte_horizontal_blanco.png";
+import logoDemocracia from "../assets/img/logotipo-democracia.svg";
+---
+<div id="footer" class="bg-black flex flex-col p-6 items-center">
+    <div class="mt-20 w-[200px]">
+        <Image class="w-full" src={logoDemocracia} alt="Logotipo Democracia" />
+    </div>
+    <p class="text-bold mt-6 mb-20 pb-16 text-center text-lg">Un proyecto de Democracia</p>
+    <div class=" max-w-sm">
+        <p class="text-neutral-600 text-center mb-6 text-sm">Proyecto realizado con el apoyo del programa de Ayudas a la creación contemporánea del Ayuntamiento de Madrid 2022/2023.</p>
+        <Image class="" src={logoAyto} alt="Logotipo Cultura y Deporte Ayuntamiento de Madrid" />
+    </div>
 </div>
