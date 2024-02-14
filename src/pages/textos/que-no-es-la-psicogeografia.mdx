@@ -6,6 +6,15 @@ titulo: "Qué no es la psicogeografía"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import mapaAI from "../../assets/img/psicogeografia/Ejemplo-de-mapa-fantastico-aleatorio-generado-mediante-inteligencia-artificial.png";
+import mapaDebord from "../../assets/img/psicogeografia/Guia-psicogeografica-de-Paris-(Guy-Debord,-1957).jpg";
+import mapaLovecraft from "../../assets/img/psicogeografia/Mapa-de-Las-tierras-del-sueno-(Lovecraft,-1932).jpg";
+import mapaSimpsons from "../../assets/img/psicogeografia/Mapa-de-Springfield-(Los-Simpson).jpg";
+import mapaSurrealista from "../../assets/img/psicogeografia/Mapa-surrealista-del-mundo-(Varietes,-1929).png";
+import planoMadrid from "../../assets/img/psicogeografia/Plano-Madrid.png";
+import planoMetroMadrid from "../../assets/img/psicogeografia/Plano-Metro-Madrid.jpg";
+import planoAutovías from "../../assets/img/psicogeografia/Red-de-Autovia-y-autopistas-Madrid.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -19,9 +28,26 @@ _{frontmatter.autor}_
 
 Podemos hacernos hoy una idea bastante aproximada de cómo llevar a cabo una deriva psicogeográfica por la superficie. Existe una tradición al respecto desde mediados del siglo pasado, y numerosas descripciones y ejemplos que han terminado por definir un corpus sobre el que plantar nuestro campamento de campaña. Dentro de esta amplia tradición, podríamos optar por recorrer la ruta crítica que abrieron los situacionistas (_Formulario para un nuevo urbanismo,_ 1958), con un enfoque político emancipador que pone su énfasis en lo sensible, y que intentaría sistematizar más tarde Henri Lefebvre en clave sociológica (_El derecho a la ciudad,_ 1967); o seguir por la vía psicologista que trazó Kevin Lynch (*La imagen de la ciudad,*1960), más técnica y orientada hacia fines urbanísticos prácticos. Más allá del espacio urbano, hay ejemplos de estudios psicogeográficos en el entorno rural ya en las primeras experiencias de deriva que realizaron los surrealistas, aplicando el concepto de deriva que ya habían alumbrado Louis Aragon (_El campesino de París_, 1926) o André Breton (_Nadja,_ 1927) al deambular en la naturaleza. En esta línea es interesante referirse al trabajo de Paco Inclán incluido en su libro _Incertidumbre_ (2017), consistente en una aplicación de las técnicas psicogeográficas ya codificadas históricamente al contexto de la aldea gallega. Contamos también con una nutrida literatura de viajes que se remonta como mínimo hasta el siglo XIII.
 
+<ImageCaption
+  mobileImgUrl={mapaAI}
+  desktopImgUrl={mapaAI}
+  caption="Ejemplo de mapa fantástico aleatorio generado mediante inteligencia artificial"
+  alt="Ejemplo de mapa fantástico aleatorio generado mediante inteligencia artificial"
+  clase="my-20"
+/>
+
+
 Sin embargo, no existe una literatura sobre el suburbano cuyo volumen haya dado lugar a un género específico, ya que hablamos de un entorno de desarrollo relativamente reciente, concebido de forma estrictamente funcional, y poco inspirador. A diferencia de su hermano mayor el ferrocarril, cuyo origen está estrechamente vinculado al nacimiento de la era industrial, cubre un espacio reducido y cerrado, poco idóneo para la emoción, la sorpresa o la aventura. Los libros que han hecho del metro su escenario o su protagonista, como los anteriormente citados de Marc Augé, lo definen críticamente como un _no-lugar_, es decir, uno de esos espacios vacíos de significado, sin referencias emocionales ni cicatrices de la historia, concebidos para el tránsito y no para el encuentro, incapaces de generar un sentimiento o una identidad colectiva, o siquiera un vínculo con nuestro mundo personal. Estas características lo hacen equiparable a ambientes como aeropuertos, centros comerciales, salas de espera o locutorios, lugares a los que nunca vamos, pero que atravesamos a menudo.
 
 Ciertamente, poco tiene que ver el plano del metro con el callejero. Sus puntos de intersección son prácticamente intercambiables, ajustados al mismo diseño neutro, señalados por un simple punto. No existe correspondencia ni interacción con el medio geográfico. No hay distancias, trayectos ni paisajes. El tránsito entre estaciones no aporta ningún estímulo: se produce de forma mecánica, bajo una cadencia regular que nos permite calcular exactamente el tiempo que perdemos. La orientación es una mera cuestión técnica, ya que todo lo que en él ocurre está ostensiblemente señalizado: destinos, direcciones, comportamientos. No hay lugar para el extravío ni para el descubrimiento. No existen desvíos, sino trasbordos. Incluso nuestros movimientos están regulados y sujetos a un código estricto que la señalética determina de forma indudable. Apenas queda margen para la emoción en la búsqueda de un asiento libre, pero su uso también está sometido a estrictas normas de urbanidad. Nos transportamos a través de un paisaje sin relieve, sórdido y oscuro, acostumbrados al estrépito hiriente de la máquina que nos recuerda el rigor de la existencia, a olores que subrayan la miseria cotidiana, a superficies rígidas y sucias que evitamos palpar. Nuestros compañeros de viaje son fantasmas inexpresivos, adormecidos por el cansancio, sumidos en sus preocupaciones o abismados en dispositivos electrónicos. Ya casi nadie recurre a la evasión de la lectura, que propiciaría al menos alumbrar un momento íntimo y reflexivo. Únicamente un retraso o una avería perturban nuestra rutina, pues solo tenemos prisa, y a la salida no quedará rastro de ese tiempo irremediablemente malgastado. El no-lugar construye a su vez un _no-momento_, como el no-consumo de esos periódicos gratuitos que se distribuyen manualmente a la entrada y se abandonan casualmente en alguna papelera, convertidos ellos mismos también en unos minutos en _no-objetos_.
+
+<ImageCaption
+  mobileImgUrl={mapaDebord}
+  desktopImgUrl={mapaDebord}
+  caption="Guide psychogéographique de Paris (Guy Debord, 1957)"
+  alt="Guide psychogéographique de Paris (Guy Debord, 1957)"
+  clase="my-20"
+/>
 
 <p align="center">\* \* \*</p>
 
@@ -29,17 +55,42 @@ Se nos hizo imprescindible enfrentarnos a esta concepción de Augé, no solo por
 
 No obstante, y aun asumiendo la importancia del que seguramente es el ensayo más brillante y concienzudo que se ha escrito sobre la experiencia y el significado social de la red metropolitana, o al menos el único basado en procedimientos similares a los que queríamos poner en práctica, nuestra búsqueda aspiraba a trascender esta representación pesimista y abiertamente distópica con respecto a la impresión que produce habitar (o más bien no poder hacerlo) la red de metro en particular, y al propio concepto de no-lugar con que se identifica a determinados ambientes como si ello conllevase una suerte de condena o tribulación inexorable. Aparte de constatar que los metros son cadenas que nos mantienen sujetos al sistema productivo que monopoliza nuestro tiempo y nuestra energía, que reflejan de forma muy exacta su lógica despersonalizadora y su extenuante dinamismo, transportándonos repetida e incansablemente a ese otro no-lugar poco atendido y teorizado que es el “puesto de trabajo”, no renunciábamos a descubrir también ciertos puntos de fuga, a experimentar momentos de disrupción sensible que solo pueden darse en determinado escenario y en determinadas circunstancias, a explorar con actitud estética el ajuste de piezas diversas y contrastadas que componen el paisaje humano único que confluye en esa única corriente, a descifrar la emergencia de realidades colectivas que trascienden el estrecho marco de nuestra existencia. Y, si hubiere lugar a hacerlo, probar a intervenir en la producción de fenómenos capaces de singularizar un trayecto y dejar su pequeño rastro en la memoria.
 
+<ImageCaption
+  mobileImgUrl={mapaLovecraft}
+  desktopImgUrl={mapaLovecraft}
+  caption="Mapa de Las tierras del sueño (Lovecraft, 1932)"
+  alt="Mapa de Las tierras del sueño (Lovecraft, 1932)"
+  clase="my-20"
+/>
+
+
 <p align="center">\* \* \*</p>
 
 Por otra parte, nuestro planteamiento no compartía ninguna ambición científica. No íbamos a descubrir un nuevo fenómeno, ni a través de un experimento tal aspirábamos a establecer ningún axioma. Nuestra primera reserva atañe precisamente al supuesto carácter científico de la “psicogeografía”, así como a su creciente reconocimiento institucional y a la validez y eficacia de sus métodos y herramientas. No hay nada que avale este planteamiento, ni que justifique los numerosos intentos de aplicación práctica que se han hecho (a la psicología, el urbanismo o la arquitectura) mediante borrosos “estudios” desarrollados al amparo de excéntricos “programas de investigación” por audaces “investigadores” desde avanzados (y cómo no, transgresores) “departamentos académicos”.
 
 Se atribuye al geógrafo británico Kevin Lynch la codificación de esta joven ciencia y su legitimación en medios académicos. En su libro _La imagen de la ciudad_ (1960) Lynch define la psicogeografía como el "estudio de las relaciones entre las personas y su entorno físico". Tales relaciones se condensarían en lo que él llama “matriz de significado”, la cual estaría cargada de contenidos simbólicos y afectivos asociados a los lugares y nos permitiría descifrar la percepción y el uso que hacemos de los mismos, su influencia en nuestra sensibilidad y en nuestros hábitos y conductas. Puede representarse esta matriz mediante “mapas mentales” construidos a partir de experiencias y percepciones subjetivas que expresen gráficamente las relaciones y correspondencias que se han consolidado en nuestra psique. Lynch introdujo métodos cualitativos de alcance sociológico, como la entrevista y la encuesta, que permiten usar estos mapas como una herramienta operativa para la investigación y la toma de decisiones que afectan a la comunidad, y no solo al individuo.
 
+<ImageCaption
+  mobileImgUrl={mapaSimpsons}
+  desktopImgUrl={mapaSimpsons}
+  caption="Mapa de Springfield (Los Simpson)"
+  alt="Mapa de Springfield (Los Simpson)"
+  clase="my-20"
+/>
+
 No obstante Lynch no fue quien acuñó el concepto de psicogeografía. Tampoco sus aportes a este campo resultan originales ni apenas relevantes. Lynch se limita a sistematizar y afeitar un procedimiento experimental incipiente vinculado al desarrollo de los nuevos foros urbanos y a los cambios en la organización del sistema productivo. La absorción de los pequeños núcleos rurales por la metrópolis moderna había generado nuevos marcos de relación, nuevas formas de habitabilidad y desplazamiento, nuevas habilidades relacionales, una concepción distinta del transcurso temporal, y al albur de todo ello un sentimiento de extrañeza y de pérdida de anclajes con el territorio y la comunidad que se habían forjado sólidamente sobre raíces, tradiciones y costumbres. Todas las certezas que servían de soporte existencial y garantizaban la integración orgánica del sujeto al medio nativo se disolvían en un entorno extraño, neutro, artificial, precario, masificado, anómico y cínicamente irresponsable. Las promesas de un futuro próspero, pero incierto, se cimentaban sobre un olvido sordo y una mutilación irreparable en un proceso que, además, no contemplaba ninguna posibilidad de retorno.
 
 Ya hacia 1954, los disidentes letristas que más tarde comprenderían el núcleo más duro de la Internacional Situacionista empezaron a publicar en su boletín _Potlacht_ una serie de “juegos” y de “ejercicios psicogeográficos” que enfocaban realidades como la ciudad, las relaciones, así como también la arquitectura y el urbanismo, desde la óptica de la experimentación y el absurdo, cuando no del humor:
 
 “Construya una casa. Amuéblela. Saque el mejor partido posible de su decoración y de sus alrededores. Escoja un día y una hora. Reúna a las personas adecuadas y los discos y bebidas alcohólicas convenientes. La iluminación y la charla serán claramente circunstanciales, como el tiempo que hace o sus recuerdos. Si los cálculos no contienen errores, la respuesta debe ser satisfactoria”. [*Potlacht n.º 1*]
+
+<ImageCaption
+  mobileImgUrl={mapaSurrealista}
+  desktopImgUrl={mapaSurrealista}
+  caption="Mapa surrealista del mundo (Variétés, 1929)"
+  alt="Mapa surrealista del mundo (Variétés, 1929)"
+  clase="my-20"
+/>
 
 Por supuesto, el uso del concepto “psicogeografía” que hacían los letristas no aspiraba todavía a elevarse al rango de campo científico. Se concebía más bien como una práctica experimental ensayada por diversos grupos artísticos en la órbita del dadaísmo y el surrealismo con un sentido resueltamente utópico. A lo sumo pretendían proclamarse como un movimiento cultural que creía manejar ciertas claves. Su actividad tenía más que ver con una búsqueda recurrente en los grupos de vanguardia de la “obra de arte total”, capaz de romper con la separación entre arte y vida para realizar la plenitud de ambos. La Internacional Letrista, donde militaba Guy Debord como uno de sus más notables agentes, y con la que mantuvo cierta relación Ivan Chtcheglov (quien redactó el célebre _Formulario para un nuevo urbanismo_, más tarde incorporado por la Internacional Situacionista a su programa y considerado desde entonces como una suerte de “manifiesto inaugural”), enfrentaba la ciudad como un campo de juegos y experiencias. Ello no significa que no se tomasen dicha práctica absolutamente en serio, considerándola uno de los puntos clave en la agenda de cualquier grupo que se considerase revolucionario.
 
@@ -57,6 +108,14 @@ Y, en su “Teoría de la deriva”, publicada en el n.º 2 de la revista oficia
 
 “El azar juega en la deriva un papel tanto más importante cuanto menos asentada esté todavía la observación psicogeográfica. Pero la acción del azar es conservadora por naturaleza y tiende en un nuevo marco, a reducir todo a la alternancia de una serie limitada de variantes y a la costumbre. Al no ser el progreso más que la ruptura de alguno de los campos en los que actúa el azar mediante la creación de nuevas condiciones más favorables a nuestros designios, se puede decir que los azares de la deriva son esencialmente diferentes de los del paseo, pero que se corre el riesgo de que los primeros atractivos psicogegráficos que se descubren fijen al sujeto o al grupo que deriva alrededor de nuevos ejes recurrentes a los que todo les hace volver una y otra vez.” [*Internacional Situacionista n.º 2,* 1958]
 
+<ImageCaption
+  mobileImgUrl={planoAutovías}
+  desktopImgUrl={planoAutovías}
+  caption="Red de autovías y autopistas de la Comunidad de Madrid"
+  alt="Red de autovías y autopistas de la Comunidad de Madrid"
+  clase="my-20"
+/>
+
 Para dotar a la psicogeografía de cierto peso intelectual e incorporarla al debate político resultaron determinantes las aportaciones del grupo CoBrA, fusionado en la IS junto al Movimiento Internacional por una Bauhaus Imaginista. En particular, resultaron fundamentales las aportaciones del pintor Asger Jorn sobre el desvío (_detournement_), tanto en el plano cultural como aplicado a la “deriva” para resignificar la experiencia, y del arquitecto holandés Constant Nieuwenhuys, quien desarrolló los primeros proyectos de construcciones inspiradas en las ideas situacionistas.
 
 En sus primeros años, los situacionistas estaban convencidos del potencial de la psicogeografía como herramienta para transformar la conciencia y mejorar la vida de los ciudadanos. Tanto es así que Debord apresuraba a sus contemporáneos a desarrollarla en un sentido revolucionario antes de que fuese recuperada por el sistema y aplicada a sus propios fines, manipulando las conciencias con propósitos de control y dominación. Su proyecto de “urbanismo unitario”, que fusionaría todos los avances técnicos y científicos y los últimos descubrimientos de las artes en una “actividad compleja y continua que recrearía conscientemente el entorno del hombre según las concepciones más avanzadas en cada dominio” (Constant-Debord: “Declaración de Amsterdam”, _Internacional Situacionista n.º 2_, 1958) debía ser el horizonte y el producto final de la actividad psicogeográfica. Varios documentos críticos publicados por Constant en la revista mientras siguió siendo miembro y participando en los debates del grupo ponían de manifiesto la dificultad de llevar a cabo el proyecto total del “urbanismo unitario” desde una posición puramente ideológica, y sin una transformación total de la estructura. El hecho de haber señalado una contradicción que la IS no podía resolver desde su posición, mientras abogaba por seguir trabajando mientras tanto desde el arte en la construcción del proceso, provocó dos años después la expulsión unilateral del grupo tras un violento choque con Debord, quien denunció su actividad como reformista.
@@ -67,6 +126,14 @@ En la práctica, la expulsión de Constant suponía el reconocimiento de que las
 
 A medida que la IS se radicalizaba se iba vaciando de su contenido genuino. Esta reacción de repliegue y automarginalización, de la que Debord fue responsable en la mayor medida, obedecía a cálculos políticos precisos. Pronto había advertido que seguir por el mismo camino acabaría por desvirtuar y neutralizar el proyecto. Dos eran los fantasmas que amenazaban la realización del programa que la IS se había marcado desde su origen, y que Debord explicitó en su escrito _Informe sobre la construcción de situaciones y sobre las condiciones de la organización y la acción de la gtendencia situacionista internacional_, concebido como documento fundacional de la IS en 1957. Pese al celo de Debord por evitar la recuperación contrarrevolucionaria de sus ideas, ambos temores terminaron por concretarse en las dos tendencias, apuntadas al principio de este escrito, a través de las cuales se han seguido desarrollando posteriormente los contenidos y los métodos de la psicogeografía: la tendencia estetizante que tanto preocupaba a Debord desde un primer momento, y una adopción por parte del sistema del conocimiento producido por las investigaciones psicogeográficas, así como del potencial de impacto de los ambientes en los hábitos y emociones de las personas, con el objetivo desviado de manipular y controlar las conciencias.
 
+<ImageCaption
+  mobileImgUrl={planoMadrid}
+  desktopImgUrl={planoMadrid}
+  caption="Plano de Madrid"
+  alt="Plano de Madrid"
+  clase="my-20"
+/>
+
 Para Debord, el peligro de una adopción estetizante de tales planteamientos consistía en el vaciamiento de su potencial subversivo y su neutralización como arma política. En la medida en que Debord hubo de enfrentar este problema dentro del propio movimiento, ya que muchos artistas se acercaban al mismo atraídos por el reto que lanzaba sobre el sistema de las artes y por el campo de exploración inmenso que abría para la práctica experimental, no resulta extraño que fuese lo primero que preocupase a Debord, ni que provocase duras confrontaciones en cada una de las conferencias anuales que convocaban, que casi siempre resultaban en la expulsión de los miembros que defendían tales posiciones. Debord consideraba esta actitud como una especie de regresión al surrealismo, del que él mismo se había nutrido, pero que en su opinión habían estado durante años tratando de hacer la guerra con armas potentes pero sin munición, lo que habría provocado el estancamiento del movimiento. Con perspectiva histórica, quizá los desvelos de Debord se aplicaron en exceso a conjurar un fantasma inexistente intentando atajar un proceso que se descubriría inevitable, y que Constant había hecho patente a su propia costa. En cualquier caso, las herramientas que había puesto en marcha hacía tiempo que eran utilizadas no solo en el campo de las artes visuales (fue uno de los recursos retóricos más recurrentes entre los impresionistas, por ejemplo, además de funcionar como en elemento compositivo de casi toda la pintura anterior), sino que ya formaban parte del arsenal de recursos de muchos escritores, sobre todo del romanticismo (es claramente perceptible la utilización de recursos ambientales en las novelas de Allan Poe o de Emily Brontë, por ejemplo).
 
 En todo caso, la potencia de inspiración y de activación de deseos ocultos que podía transportar la novedosa aplicación que los situacionistas hicieron de estos conocimientos se desactivó muy pronto, del mismo modo que el situacionismo acabó por convertirse en una forma de ideología para sus epígonos, pese a su resistencia a hacerse reconocer como tal. Las apropiaciones que muchos artistas contemporáneos hemos hecho de ellas, con mayor o menor conciencia y propósito, pueden percibirse como adulteradas, pero resultan hoy en el peor de los casos inofensivas. Lo mismo ha ocurrido con la inevitable penetración de sus ideas en medios académicos, la mayoría de las veces de forma tergiversada y confusa.
@@ -76,6 +143,14 @@ En todo caso, la potencia de inspiración y de activación de deseos ocultos que
 Más peligroso y nocivo desde nuestro punto de vista ha sido el uso que se ha hecho de estos conocimientos desde instancias de poder, extrayendo de ellos técnicas de control ciudadano, y que se ha canalizado sobre todo a través de su recepción más académica y pretenciosamente científica.
 
 Un ejemplo de ello lo hemos visto con la aplicación del concepto de _distancia social_, estudiado y sistematizado por el antropólogo Edward T. Hall (_La dimensión oculta,_ 1966), durante la pandemia de COVID19. En su estudio del espacio social, Hall identificaba cuatro tipos de distancias interpersonales básicas que se usan distintamente de acuerdo con patrones que obedecen al alcance de la interacción (mayor o menor nivel de intimidad), las condiciones del medio y la idiosincrasia cultural plasmada en el hábito. Entre ellas, la “distancia social” (medida en un segmento que oscila entre los 1,20 y los 3,60 metros) representa una medida prudente para interacciones que no implican ningún tipo de contacto físico ni precisan de una confianza previa.
+
+<ImageCaption
+  mobileImgUrl={planoMetroMadrid}
+  desktopImgUrl={planoMetroMadrid}
+  caption="Plano Metro de Madrid"
+  alt="Plano Metro de Madrid"
+  clase="my-20"
+/>
 
 Bruscamente, y sin que mediase proceso de adaptación alguno, este concepto se impuso universalmente para cualquier tipo de interacción, junto a una batería de medidas lanzadas a discreción y destinadas a preservarla a toda costa con el pretexto de atajar el contagio. Además de confinar a la población en espacios privados, sobre todo privados de la posibilidad de encuentros y actividades comunes, así como de cualquier tipo de manifestación de afecto, incluso entre familiares cercanos y convivientes, se instauró un régimen cuartelario en toda la ciudad, que en el metro se reflejó de un modo aún más acusado y opresivo. La habitual señalética que exhibe el metro como espacio disciplinario se pobló de marcas que codificaban cualquier movimiento, desde las pistas por las que desplazarse hasta los puntos en que los pasajeros debían colocarse a lo largo del andén mientras esperaban estáticamente su convoy. Todavía se conservan estas marcas, no sabemos si como memoria de aquellos momentos o en previsión de futuras situaciones parecidas. En muchos otros lugares tampoco han desaparecido las constantes advertencias de sanidad cuya repetición y reproducción en las conciencias lograba mantener a la población en estado de pánico, consiguiendo que los ciudadanos se denunciasen unos a otros ante la más leve infracción. No solo los movimientos, sino también las interacciones fueron estrictamente reguladas. Más allá del uso obligatorio de mascarillas que anulaba toda individualidad y reprimía cualquier expresión o gesto, se recomendaba no hablar, y estaba prohibido por supuesto cantar, con lo que los habituales músicos que amenizaban ocasionalmente los aburridos, y ahora también desolados trayectos, dejaron de formar parte del paisaje cotidiano del metro durante muchos meses. Podría fácilmente pensarse que toda esta parafernalia estaba más orientada a producir un estado de shock en el ciudadano que lo predispusiese a aceptar sin la menor reserva, y sin permitir matización ni crítica algunas, cualquier imposición de emergencia que dictasen las autoridades. El concepto de “disciplina social” que encuadró toda la campaña resulta más que expresivo a este respecto, apelando a los más básicos instintos de sumisión y jerarquía.
 
