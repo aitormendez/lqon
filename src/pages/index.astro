@@ -10,8 +10,11 @@ const claseImg = "aspect-video rounded object-cover w-full";
 import { Image } from "astro:assets";
 import imageDeriva1 from "../assets/img/deriva-psico-1-.png";
 import ilogoLQON from "../assets/img/Logotipo-principal.jpg";
-import imageIntervencionMetro from "../assets/img/canciones-trabajo/intervincion-anonima-2-mobile.jpg";
+import imageIntervencionMetro from "../assets/img/canciones-trabajo/intervincion-anonima-2-desktop.jpg";
 import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
+import imagePolicia1 from "../assets/img/policia-pixel.jpg";
+import imageProtestasEcuador1 from "../assets/img/Protestas_en_Ecuador_1.jpg";
+import imageNonoCNT from "../assets/img/nono-cnt-ret.jpg";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -42,7 +45,7 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         <p>Deriva psicogeográfica 1</p>
       </a>
       <p class="mb-2 text-xl">Luis Navarro</p>
-      <video id="videoLogotipo" class="w-full" muted playsinline autoplay loop>
+      <video class="w-full rounded" muted playsinline autoplay loop>
         <source src={videoPlano} type="video/mp4" />
         Tu navegador no soporta videos.
       </video>
@@ -84,7 +87,7 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         ><p>Deriva psicogeográfica 2</p></a
       >
       <p class="mb-2 text-xl">Luis Navarro</p>
-      <video id="videoLogotipo" class="w-full" muted playsinline autoplay loop>
+      <video class="w-full rounded" muted playsinline autoplay loop>
         <source src={videoPlano} type="video/mp4" />
         Tu navegador no soporta videos.
       </video>
@@ -113,9 +116,10 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         class="enlace text-3xl"
         href="textos/la-muerte-declara-la-guerra-a-los-gendarmes"
         data-uri="la-muerte-declara-la-guerra-a-los-gendarmes"
-        ><p>La muerte declara la guerra a los gendarmes</p></a
+        ><p>La muerte declara la guerra…</p></a
       >
       <p class="mb-2 text-xl">Georges Brassens</p>
+      <Image class={claseImg} src={imagePolicia1} alt="Plano de Madrid" />
     </article>
 
     <article class={claseArticle}>
@@ -123,7 +127,7 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         ><p>Deriva psicogeográfica 3</p></a
       >
       <p class="mb-2 text-xl">Luis Navarro</p>
-      <video id="videoLogotipo" class="w-full" muted playsinline autoplay loop>
+      <video class="w-full rounded" muted playsinline autoplay loop>
         <source src={videoPlano} type="video/mp4" />
         Tu navegador no soporta videos.
       </video>
@@ -182,7 +186,7 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         ><p>Deriva psicogeográfica 4</p></a
       >
       <p class="mb-2 text-xl">Luis Navarro</p>
-      <video id="videoLogotipo" class="w-full" muted playsinline autoplay loop>
+      <video class="w-full rounded" muted playsinline autoplay loop>
         <source src={videoPlano} type="video/mp4" />
         Tu navegador no soporta videos.
       </video>
@@ -237,6 +241,11 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         ><p>Resistencia indígena</p></a
       >
       <p class="mb-2 text-xl">Luis Duno-Gottberg</p>
+      <Image
+        class={claseImg}
+        src={imageProtestasEcuador1}
+        alt="Plano de Madrid"
+      />
     </article>
 
     <article class={claseArticle}>
@@ -262,6 +271,7 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         ><p>Folclore</p></a
       >
       <p class="mb-2 text-xl">Mabel Quiñones</p>
+      <Image class={claseImg} src={imageNonoCNT} alt="Plano de Madrid" />
     </article>
 
     <article class={claseArticle}>
@@ -286,7 +296,7 @@ import imageCasas from "../assets/img/casas-de-carton/casas-de-carton-1.jpg";
         data-uri="resonancias"><p>Deriva psicogeográfica 5</p></a
       >
       <p class="mb-2 text-xl">Luis Navarro</p>
-      <video id="videoLogotipo" class="w-full" muted playsinline autoplay loop>
+      <video class="w-full rounded" muted playsinline autoplay loop>
         <source src={videoPlano} type="video/mp4" />
         Tu navegador no soporta videos.
       </video>
