@@ -111,12 +111,12 @@
     "tema": "Vacaciones en España"
   },
   {
-    "nombre": "Punk",
+    "nombre": "Deriva psicogeográfica 5",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "punk",
-    "autor": "Democracia"
+    "uri": "psico-6",
+    "autor": "Luis Navarro"
   },
   {
     "nombre": "Grupo Chasky",
@@ -159,7 +159,7 @@
     "tema": "Están cayendo bombas en Madrid"
   },
   {
-    "nombre": "Deriva psicogeográfica 5",
+    "nombre": "Deriva psicogeográfica 6",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
@@ -173,14 +173,6 @@
     "tipo": "accion",
     "uri": "briana-weapons",
     "tema": "La canción del trabajo"
-  },
-  {
-    "nombre": "Deriva psicogeográfica 6",
-    "materialCartel": "",
-    "materialPlano": "",
-    "tipo": "texto",
-    "uri": "psico-6",
-    "autor": "Luis Navarro"
   },
   {
     "nombre": "Lucia Montenegro",
