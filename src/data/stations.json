@@ -175,6 +175,14 @@
     "tema": "La canción del trabajo"
   },
   {
+    "nombre": "Deriva psicogeográfica 6",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "psico-6",
+    "autor": "Luis Navarro"
+  },
+  {
     "nombre": "Lucia Montenegro",
     "materialCartel": "cartel-lucia-montenegro",
     "materialPlano": "plano-lucia-montenegro",
@@ -191,7 +199,7 @@
     "autor": "Luis Duno-Gottberg"
   },
   {
-    "nombre": "Post logo",
+    "nombre": "Deriva psicogeográfica 7",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
