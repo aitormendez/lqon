@@ -17,7 +17,7 @@ const StationLinks = () => {
           onClick={(e) => goToStation(station.uri, e)}
         >
           <p className="md:inline">{station.nombre}</p>
-          <span className="px-2">|</span>
+          <span className="px-2 hidden md:inline">|</span>
           <p className="font-light md:inline italic">{station.autor} </p>
         </a>
       ))}
