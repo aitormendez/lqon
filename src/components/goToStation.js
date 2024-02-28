@@ -19,6 +19,16 @@ export function goToStation(stationUri, event) {
 
   if (solapaAbierta.value) {
     const solapa = document.getElementById("solapa");
+    const burgs = document.querySelectorAll(".burg");
+    const flechaCerrar = document.querySelectorAll(".flecha-cerrar");
+    burgs.forEach((burg) => {
+      burg.classList.remove("hidden");
+      burg.classList.add("flex");
+    });
+    flechaCerrar.forEach((flecha) => {
+      flecha.classList.add("hidden");
+      flecha.classList.remove("flex");
+    });
     solapa.classList.remove("left-0");
     solapa.classList.add("-left-full");
     solapaAbierta.set(false);
