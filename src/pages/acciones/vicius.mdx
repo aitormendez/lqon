@@ -11,6 +11,7 @@ import imagePortadaMobile from "../../assets/img/vicius-1-vacaciones-mobile.jpg"
 import imagePortadaDesktop from "../../assets/img/vicius-1-vacaciones-desktop.jpg";
 import imageContraportadaMobile from "../../assets/img/vicius-2-vacaciones-mobile.jpg";
 import imageContraportadaDesktop from "../../assets/img/vicius-2-vacaciones-desktop.jpg";
+import imageToreroTerrorista from "../../assets/img/torero-terrorista.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -39,18 +40,28 @@ import imageContraportadaDesktop from "../../assets/img/vicius-2-vacaciones-desk
 <ImageCaption
   mobileImgUrl={imagePortadaMobile}
   desktopImgUrl={imagePortadaDesktop}
-  caption="Pie de foto"
+  caption="Vacaciones en España. Contra la democracia. Portada"
   alt="alt"
   clase="mt-20"
+  hasCaption={true}
 />
 
 <ImageCaption
   mobileImgUrl={imageContraportadaMobile}
   desktopImgUrl={imageContraportadaDesktop}
-  caption="Pie de foto"
+  caption="Vacaciones en España. Contra la democracia. Contraportada"
   alt="alt"
   clase="mt-20"
-  hasCaption={false}
+  hasCaption={true}
+/>
+
+<ImageCaption
+  mobileImgUrl={imageToreroTerrorista}
+  desktopImgUrl={imageToreroTerrorista}
+  caption="Camiseta de Hola por qué para el grupo Sistema de monos"
+  alt="alt"
+  clase="mt-20"
+  hasCaption={true}
 />
 
 ## Vacaciones en España

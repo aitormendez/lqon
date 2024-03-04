@@ -8,7 +8,6 @@ import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
 import ImageCaption from "../../components/ImageCaption.astro";
 import imageCartelDesktop from "../../assets/img/gorreta-cartel-desktop.jpg";
-import imageDespertador from "../../assets/img/gorreta-despertador.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -40,15 +39,6 @@ import imageDespertador from "../../assets/img/gorreta-despertador.jpg";
   caption="Pie de foto"
   alt="Cartel Abajo el Trabajo"
   clase="mt-20"
-  hasCaption={false}
-/>
-
-<ImageCaption
-  mobileImgUrl={imageDespertador}
-  desktopImgUrl={imageDespertador}
-  caption="Despertador"
-  alt="Despertador"
-  clase=""
   hasCaption={false}
 />
 
