@@ -20,7 +20,7 @@
     "materialPlano": "",
     "tipo": "texto",
     "uri": "una-deriva-psicogeografica-por-el-metro-de-madrid",
-    "autor": "Luis Navarro"
+    "autor": ""
   },
   {
     "nombre": "Qué no es la psicogeografía",
@@ -44,7 +44,7 @@
     "materialPlano": "",
     "tipo": "texto",
     "uri": "no-lugar",
-    "autor": "Luis Navarro"
+    "autor": ""
   },
   {
     "nombre": "Vorja Encikutao",
@@ -68,7 +68,7 @@
     "materialPlano": "",
     "tipo": "texto",
     "uri": "la-comunidad",
-    "autor": "Luis Navarro"
+    "autor": ""
   },
   {
     "nombre": "Taktel",
@@ -100,7 +100,7 @@
     "materialPlano": "",
     "tipo": "texto",
     "uri": "juglaria",
-    "autor": "Luis Navarro"
+    "autor": ""
   },
   {
     "nombre": "Vicius",
@@ -116,7 +116,7 @@
     "materialPlano": "",
     "tipo": "texto",
     "uri": "psico-6",
-    "autor": "Luis Navarro"
+    "autor": ""
   },
   {
     "nombre": "Grupo Chasky",
@@ -143,7 +143,7 @@
     "tema": "Fandangos"
   },
   {
-    "nombre": "Folklore",
+    "nombre": "Tradición, industria, resistencia",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
@@ -164,7 +164,7 @@
     "materialPlano": "",
     "tipo": "texto",
     "uri": "resonancias",
-    "autor": "Luis Navarro"
+    "autor": ""
   },
   {
     "nombre": "Briana Weapons",
@@ -173,6 +173,14 @@
     "tipo": "accion",
     "uri": "briana-weapons",
     "tema": "La canción del trabajo"
+  },
+  {
+    "nombre": "Deriva psicogeográfica 7",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "trabajo",
+    "autor": ""
   },
   {
     "nombre": "Lucia Montenegro",
@@ -191,11 +199,11 @@
     "autor": "Luis Duno-Gottberg"
   },
   {
-    "nombre": "Deriva psicogeográfica 7",
+    "nombre": "Deriva psicogeográfica 8",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
     "uri": "post-logo",
-    "autor": "Luis Navarro"
+    "autor": ""
   }
 ]
