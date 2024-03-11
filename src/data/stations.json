@@ -47,7 +47,7 @@
     "autor": ""
   },
   {
-    "nombre": "Vorja Encikutao",
+    "nombre": "Vorja Enzikutao",
     "materialCartel": "cartel-vorja-encikutao",
     "materialPlano": "plano-vorja-encikutao",
     "tipo": "accion",
@@ -87,6 +87,14 @@
     "autor": "Daniel Villegas"
   },
   {
+    "nombre": "Deriva psicogeográfica 4",
+    "materialCartel": "",
+    "materialPlano": "",
+    "tipo": "texto",
+    "uri": "juglaria",
+    "autor": ""
+  },
+  {
     "nombre": "Juan Carlos Gorreta",
     "materialCartel": "cartel-juan-carlos-gorreta",
     "materialPlano": "plano-juan-carlos-gorreta",
@@ -95,11 +103,11 @@
     "tema": "La vida de los esclavos en el S. XXI"
   },
   {
-    "nombre": "Deriva psicogeográfica 4",
+    "nombre": "Deriva psicogeográfica 5",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "juglaria",
+    "uri": "resonancias",
     "autor": ""
   },
   {
@@ -111,7 +119,7 @@
     "tema": "Vacaciones en España"
   },
   {
-    "nombre": "Deriva psicogeográfica 5",
+    "nombre": "Deriva psicogeográfica 6",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
@@ -159,11 +167,11 @@
     "tema": "Están cayendo bombas en Madrid"
   },
   {
-    "nombre": "Deriva psicogeográfica 6",
+    "nombre": "Deriva psicogeográfica 7",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
-    "uri": "resonancias",
+    "uri": "psico-7",
     "autor": ""
   },
   {
@@ -175,7 +183,7 @@
     "tema": "La canción del trabajo"
   },
   {
-    "nombre": "Deriva psicogeográfica 7",
+    "nombre": "Deriva psicogeográfica 8",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
@@ -199,7 +207,7 @@
     "autor": "Luis Duno-Gottberg"
   },
   {
-    "nombre": "Deriva psicogeográfica 8",
+    "nombre": "Deriva psicogeográfica 9",
     "materialCartel": "",
     "materialPlano": "",
     "tipo": "texto",
