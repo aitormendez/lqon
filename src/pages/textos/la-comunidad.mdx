@@ -6,6 +6,9 @@ titulo: "Deriva psicogeográfica 3"
 
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
+import ImageCaption from "../../components/ImageCaption.astro";
+import imageTelegram1 from "../../assets/img/deriva-3-telegram-1.jpg";
+import imageTelegram2 from "../../assets/img/deriva-3-telegram-2.jpg";
 
 <Layout
   titulo={frontmatter.titulo}
@@ -15,6 +18,24 @@ import Prose from "../../components/Prose.astro";
 
 <Prose>
 _{frontmatter.autor}_
+
+<div class="flex flex-wrap md:flex-nowrap gap-5">
+  <ImageCaption
+    mobileImgUrl={imageTelegram1}
+    desktopImgUrl={imageTelegram1}
+    caption=""
+    alt=""
+    clase=""
+  />
+  <ImageCaption
+    mobileImgUrl={imageTelegram2}
+    desktopImgUrl={imageTelegram2}
+    caption=""
+    alt=""
+    clase=""
+    hasCaption = {false}
+  />
+</div>
 
 <div class="text-red-500">
 El músico abre la compuerta y accede al convoy portando una maletita con ruedas. Ha comprobado que no está muy saturado y puede crearse el espacio suficiente para ejecutar sin problemas. Los pasajeros liberan su zona de forma inconsciente, del mismo modo que adaptan unos a otros sus movimientos cuando se producen aglomeraciones. Tampoco viene demasiado vacío, de modo que es posible que consiga dos pavos, así que entra despreocupado y empieza a afinar su instrumento justo al lado de la puerta por la que ha entrado, ya que será también por la que salga una o dos estaciones después. Una sensación incómoda hace que levante la mirada, como obedeciendo a un instinto. Advierte entonces la ominosa sombra del vigilante que se ajusta el correaje haciendo ver que se dispone a actuar, pero con la suficiente parsimonia para dejar que su presa huya. Ya se conocen, puesto que se han encontrado en varias ocasiones. El músico es más veterano en la línea que el guardia, que antes cubría otro recorrido. Ambos interpretan el código que rige estos encuentros. No se trata de un código escrito, sino el del una suerte de ecosistema donde conviven especies adaptadas que respetan sus respectivos territorios. Se saludan, intercambian algunos sonidos guturales apaciguadores y se desean buen día. Antes de que las puertas automáticas vuelvan a cerrarse, el músico ya está en otra parte.
