@@ -30,7 +30,9 @@ export default defineConfig({
     }),
   ],
   output: "server",
-  adapter: netlify(),
+  adapter: netlify({
+    functionName: "entry", // Netlify function name must be alphanumeric/hyphen/underscore
+  }),
   markdownOptions: {
     render: [
       "@astrojs/markdown-remark",
