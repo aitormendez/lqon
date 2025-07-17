@@ -1,7 +1,7 @@
 /* empty css                                          */
 import { a as createComponent, b as createAstro, f as renderComponent, r as renderTemplate, m as maybeRenderHead, d as addAttribute } from '../chunks/astro/server_Zajxhskx.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_DazPIoD3.mjs';
+import { $ as $$Layout } from '../chunks/Layout_ClbmJAAN.mjs';
 import '@astrojs/internal-helpers/path';
 import { $ as $$Image } from '../chunks/_astro_assets_CNs7P3E_.mjs';
 import { i as imageIntervencionMetro } from '../chunks/intervincion-anonima-2-desktop_BoPh3WIG.mjs';

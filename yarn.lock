@@ -109,16 +109,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/netlify@npm:^4":
-  version: 4.1.1
-  resolution: "@astrojs/netlify@npm:4.1.1"
+"@astrojs/netlify@npm:^3":
+  version: 3.1.1
+  resolution: "@astrojs/netlify@npm:3.1.1"
   dependencies:
     "@astrojs/underscore-redirects": "npm:^0.3.3"
     "@netlify/functions": "npm:^2.0.1"
     esbuild: "npm:^0.19.5"
   peerDependencies:
     astro: ^3.0.0 || ^4.0.0
-  checksum: 10c0/d9c18a0721f2d2f82b15b2ccca26aca918bcd2e0cfe46f0572556f278ab4ae717abffc0a4fb003f257b47104b09518e3ef4d57d7ed0972b895e88876d81370f0
+  checksum: 10c0/ec44de16e81e84ebf84293c2108a570c3558eb68b2686a169e1defc26a53547e45db5291400b495defd023c5acedc98ce5209e7bdd684dadbc25cd21a82c0150
   languageName: node
   linkType: hard
 
@@ -5036,7 +5036,7 @@ __metadata:
   resolution: "lqon@workspace:."
   dependencies:
     "@astrojs/mdx": "npm:^2.1.1"
-    "@astrojs/netlify": "npm:^4"
+    "@astrojs/netlify": "npm:^3"
     "@astrojs/react": "npm:^3.6.3"
     "@astrojs/tailwind": "npm:^5.0.3"
     "@nanostores/persistent": "npm:^0.9.1"

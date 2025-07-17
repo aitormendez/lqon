@@ -2,7 +2,7 @@
 import { _ as __astro_tag_component__, c as createVNode, F as Fragment } from '../../chunks/astro/server_Zajxhskx.mjs';
 import '@astrojs/internal-helpers/path';
 import { $ as $$Image } from '../../chunks/_astro_assets_CNs7P3E_.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_DazPIoD3.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_ClbmJAAN.mjs';
 import { $ as $$Prose } from '../../chunks/Prose_Cyz7FRj5.mjs';
 import { $ as $$ImageCaption } from '../../chunks/ImageCaption_CTTwAwq1.mjs';
 import { i as imageProtestasEcuador1 } from '../../chunks/Protestas_en_Ecuador_1_DcYIRvxG.mjs';
