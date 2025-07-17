@@ -4,7 +4,9 @@ import { useStore } from "@nanostores/react";
 import { isAnimating } from "./stores";
 import Metro from "./Metro";
 
-export const Fiber = () => {
+export default function Fiber() {
+  if (typeof window === "undefined") return null;
+
   const animating = useStore(isAnimating);
   const [cameraPositionStart, setCameraPositionStart] = useState(-40);
 
@@ -31,6 +33,4 @@ export const Fiber = () => {
       <ambientLight intensity={2} />
     </Canvas>
   );
-};
-
-export default Fiber;
+}

@@ -16,6 +16,6 @@ import Solapa from "./Solapa.astro";
       <BtnNextStation client:load />
     </div>
   </div>
-  <Fiber client:load />
+  <Fiber client:only="react" />
   <Solapa />
 </header>

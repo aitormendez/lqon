@@ -1,6 +1,32 @@
 import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
-import { o as AstroJSX, A as AstroError, p as renderJSX, n as createVNode } from './chunks/astro_N4Ixt6P6.mjs';
+import { o as AstroUserError, A as AstroError } from './chunks/astro/assets-service_mix_4Q4T.mjs';
+import { i as renderJSX, c as createVNode, A as AstroJSX } from './chunks/astro/server_Zajxhskx.mjs';
+
+const contexts = new WeakMap();
+
+const ID_PREFIX = 'r';
+
+function getContext(rendererContextResult) {
+	if (contexts.has(rendererContextResult)) {
+		return contexts.get(rendererContextResult);
+	}
+	const ctx = {
+		currentIndex: 0,
+		get id() {
+			return ID_PREFIX + this.currentIndex.toString();
+		},
+	};
+	contexts.set(rendererContextResult, ctx);
+	return ctx;
+}
+
+function incrementId(rendererContextResult) {
+	const ctx = getContext(rendererContextResult);
+	const id = ctx.id;
+	ctx.currentIndex++;
+	return id;
+}
 
 /**
  * Astro passes `children` as a string of HTML, so we need
@@ -28,45 +54,8 @@ const StaticHtml = ({ value, name, hydrate = true }) => {
  */
 StaticHtml.shouldComponentUpdate = () => false;
 
-const contexts = new WeakMap();
-
-const ID_PREFIX = 'r';
-
-function getContext(rendererContextResult) {
-	if (contexts.has(rendererContextResult)) {
-		return contexts.get(rendererContextResult);
-	}
-	const ctx = {
-		currentIndex: 0,
-		get id() {
-			return ID_PREFIX + this.currentIndex.toString();
-		},
-	};
-	contexts.set(rendererContextResult, ctx);
-	return ctx;
-}
-
-function incrementId(rendererContextResult) {
-	const ctx = getContext(rendererContextResult);
-	const id = ctx.id;
-	ctx.currentIndex++;
-	return id;
-}
-
-const opts = {
-						experimentalReactChildren: false
-					};
-
 const slotName$1 = (str) => str.trim().replace(/[-_]([a-z])/g, (_, w) => w.toUpperCase());
 const reactTypeof = Symbol.for('react.element');
-
-function errorIsComingFromPreactComponent(err) {
-	return (
-		err.message &&
-		(err.message.startsWith("Cannot read property '__H'") ||
-			err.message.includes("(reading '__H')"))
-	);
-}
 
 async function check$1(Component, props, children) {
 	// Note: there are packages that do some unholy things to create "components".
@@ -75,12 +64,16 @@ async function check$1(Component, props, children) {
 		return Component['$$typeof'].toString().slice('Symbol('.length).startsWith('react');
 	}
 	if (typeof Component !== 'function') return false;
+	if (Component.name === 'QwikComponent') return false;
+
+	// Preact forwarded-ref components can be functions, which React does not support
+	if (typeof Component === 'function' && Component['$$typeof'] === Symbol.for('react.forward_ref'))
+		return false;
 
 	if (Component.prototype != null && typeof Component.prototype.render === 'function') {
 		return React.Component.isPrototypeOf(Component) || React.PureComponent.isPrototypeOf(Component);
 	}
 
-	let error = null;
 	let isReactComponent = false;
 	function Tester(...args) {
 		try {
@@ -88,20 +81,13 @@ async function check$1(Component, props, children) {
 			if (vnode && vnode['$$typeof'] === reactTypeof) {
 				isReactComponent = true;
 			}
-		} catch (err) {
-			if (!errorIsComingFromPreactComponent(err)) {
-				error = err;
-			}
-		}
+		} catch {}
 
 		return React.createElement('div');
 	}
 
 	await renderToStaticMarkup$1(Tester, props, children, {});
 
-	if (error) {
-		throw error;
-	}
 	return isReactComponent;
 }
 
@@ -139,35 +125,62 @@ async function renderToStaticMarkup$1(Component, props, { default: children, ...
 		...slots,
 	};
 	const newChildren = children ?? props.children;
-	if (children && opts.experimentalReactChildren) {
-		attrs['data-react-children'] = true;
-		const convert = await import('./chunks/vnode-children_3wEZly-Z.mjs').then((mod) => mod.default);
-		newProps.children = convert(children);
-	} else if (newChildren != null) {
+	if (newChildren != null) {
 		newProps.children = React.createElement(StaticHtml, {
 			hydrate: needsHydration(metadata),
 			value: newChildren,
 		});
 	}
+	const formState = this ? await getFormState(this) : undefined;
+	if (formState) {
+		attrs['data-action-result'] = JSON.stringify(formState[0]);
+		attrs['data-action-key'] = formState[1];
+		attrs['data-action-name'] = formState[2];
+	}
 	const vnode = React.createElement(Component, newProps);
 	const renderOptions = {
 		identifierPrefix: prefix,
+		formState,
 	};
 	let html;
-	if (metadata?.hydrate) {
-		if ('renderToReadableStream' in ReactDOM) {
-			html = await renderToReadableStreamAsync(vnode, renderOptions);
-		} else {
-			html = await renderToPipeableStreamAsync(vnode, renderOptions);
-		}
+	if ('renderToReadableStream' in ReactDOM) {
+		html = await renderToReadableStreamAsync(vnode, renderOptions);
 	} else {
-		if ('renderToReadableStream' in ReactDOM) {
-			html = await renderToReadableStreamAsync(vnode, renderOptions);
-		} else {
-			html = await renderToStaticNodeStreamAsync(vnode, renderOptions);
-		}
+		html = await renderToPipeableStreamAsync(vnode, renderOptions);
 	}
 	return { html, attrs };
+}
+
+/**
+ * @returns {Promise<[actionResult: any, actionKey: string, actionName: string] | undefined>}
+ */
+async function getFormState({ result }) {
+	const { request, actionResult } = result;
+
+	if (!actionResult) return undefined;
+	if (!isFormRequest(request.headers.get('content-type'))) return undefined;
+
+	const { searchParams } = new URL(request.url);
+	const formData = await request.clone().formData();
+	/**
+	 * The key generated by React to identify each `useActionState()` call.
+	 * @example "k511f74df5a35d32e7cf266450d85cb6c"
+	 */
+	const actionKey = formData.get('$ACTION_KEY')?.toString();
+	/**
+	 * The action name returned by an action's `toString()` property.
+	 * This matches the endpoint path.
+	 * @example "/_actions/blog.like"
+	 */
+	const actionName =
+		searchParams.get('_astroAction') ??
+		/* Legacy. TODO: remove for stable */ formData
+			.get('_astroAction')
+			?.toString();
+
+	if (!actionKey || !actionName) return undefined;
+
+	return [actionResult, actionKey, actionName];
 }
 
 async function renderToPipeableStreamAsync(vnode, options) {
@@ -191,32 +204,10 @@ async function renderToPipeableStreamAsync(vnode, options) {
 						destroy() {
 							resolve(html);
 						},
-					})
+					}),
 				);
 			},
 		});
-	});
-}
-
-async function renderToStaticNodeStreamAsync(vnode, options) {
-	const Writable = await getNodeWritable();
-	let html = '';
-	return new Promise((resolve, reject) => {
-		let stream = ReactDOM.renderToStaticNodeStream(vnode, options);
-		stream.on('error', (err) => {
-			reject(err);
-		});
-		stream.pipe(
-			new Writable({
-				write(chunk, _encoding, callback) {
-					html += chunk.toString('utf-8');
-					callback();
-				},
-				destroy() {
-					resolve(html);
-				},
-			})
-		);
 	});
 }
 
@@ -248,7 +239,18 @@ async function renderToReadableStreamAsync(vnode, options) {
 	return await readResult(await ReactDOM.renderToReadableStream(vnode, options));
 }
 
+const formContentTypes = ['application/x-www-form-urlencoded', 'multipart/form-data'];
+
+function isFormRequest(contentType) {
+	// Split off parameters like charset or boundary
+	// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type#content-type_in_html_forms
+	const type = contentType?.split(';')[0].toLowerCase();
+
+	return formContentTypes.some((t) => type === t);
+}
+
 const _renderer0 = {
+	name: '@astrojs/react',
 	check: check$1,
 	renderToStaticMarkup: renderToStaticMarkup$1,
 	supportsAstroStaticSlot: true,
@@ -256,8 +258,7 @@ const _renderer0 = {
 
 const slotName = (str) => str.trim().replace(/[-_]([a-z])/g, (_, w) => w.toUpperCase());
 async function check(Component, props, { default: children = null, ...slotted } = {}) {
-  if (typeof Component !== "function")
-    return false;
+  if (typeof Component !== "function") return false;
   const slots = {};
   for (const [key, value] of Object.entries(slotted)) {
     const name = slotName(key);
@@ -267,16 +268,7 @@ async function check(Component, props, { default: children = null, ...slotted } 
     const result = await Component({ ...props, ...slots, children });
     return result[AstroJSX];
   } catch (e) {
-    const error = e;
-    if (Component[Symbol.for("mdx-component")]) {
-      throw new AstroError({
-        message: error.message,
-        title: error.name,
-        hint: `This issue often occurs when your MDX component encounters runtime errors.`,
-        name: error.name,
-        stack: error.stack
-      });
-    }
+    throwEnhancedErrorIfMdxComponent(e, Component);
   }
   return false;
 }
@@ -287,13 +279,32 @@ async function renderToStaticMarkup(Component, props = {}, { default: children =
     slots[name] = value;
   }
   const { result } = this;
-  const html = await renderJSX(result, createVNode(Component, { ...props, ...slots, children }));
-  return { html };
+  try {
+    const html = await renderJSX(result, createVNode(Component, { ...props, ...slots, children }));
+    return { html };
+  } catch (e) {
+    throwEnhancedErrorIfMdxComponent(e, Component);
+    throw e;
+  }
 }
-var server_default = {
+function throwEnhancedErrorIfMdxComponent(error, Component) {
+  if (Component[Symbol.for("mdx-component")]) {
+    if (AstroUserError.is(error)) return;
+    throw new AstroError({
+      message: error.message,
+      title: error.name,
+      hint: `This issue often occurs when your MDX component encounters runtime errors.`,
+      name: error.name,
+      stack: error.stack
+    });
+  }
+}
+const renderer = {
+  name: "astro:jsx",
   check,
   renderToStaticMarkup
 };
+var server_default = renderer;
 
 const renderers = [Object.assign({"name":"@astrojs/react","clientEntrypoint":"@astrojs/react/client.js","serverEntrypoint":"@astrojs/react/server.js"}, { ssr: _renderer0 }),Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),];
 
