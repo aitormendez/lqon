@@ -54,12 +54,10 @@ const baseClass =
   });
 
   function abrirSolapa() {
-    console.log(solapaAbierta.value);
     const burgs = document.querySelectorAll(".burg");
     const flechaCerrar = document.querySelectorAll(".flecha-cerrar");
 
     if (!solapaAbierta.value) {
-      console.log("abriendo");
       solapa.classList.remove("-left-full");
       solapa.classList.add("left-0");
       solapaAbierta.set(true);
@@ -73,7 +71,6 @@ const baseClass =
         flecha.classList.add("flex");
       });
     } else {
-      console.log("cerrando");
       solapa.classList.remove("left-0");
       solapa.classList.add("-left-full");
       solapaAbierta.set(false);

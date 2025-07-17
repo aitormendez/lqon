@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import netlify from "@astrojs/netlify/functions";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import favicons from "astro-favicons";
@@ -29,10 +28,7 @@ export default defineConfig({
       faviconsDarkMode: false, // default `true`, Make favicon compatible with light and dark modes
     }),
   ],
-  output: "server",
-  adapter: netlify({
-    functionName: "entry", // Netlify function name must be alphanumeric/hyphen/underscore
-  }),
+  output: "static",
   markdownOptions: {
     render: [
       "@astrojs/markdown-remark",

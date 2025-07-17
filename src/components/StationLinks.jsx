@@ -18,7 +18,6 @@ const StationLinks = () => {
 
     if (solapaAbierta.value) {
       const solapa = document.getElementById("solapa");
-      console.log(solapa);
       solapa.classList.remove("left-0");
       solapa.classList.add("-left-full");
       solapaAbierta.set(false);

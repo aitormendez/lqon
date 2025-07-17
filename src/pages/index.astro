@@ -390,7 +390,6 @@ import imageBarrio23Enero from "../assets/img/casas-de-carton/casas-de-carton-Ba
     Array.from(enlaces).forEach((enlace) => {
       enlace.addEventListener("click", (e) => {
         const uri = e.currentTarget.dataset.uri;
-        console.log("uri", uri);
         goToStation(uri, e);
       });
     });
